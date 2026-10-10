@@ -44,7 +44,7 @@ function figMarkup(f) {
   if (!f) return "";
   const style = f.style === "engraving" ? "engraving" : "watercolour";
   return `<figure class="fig fig-${style}"><div class="fig-mount"><div class="im im-${esc(f.id)}" role="img" aria-label="${esc(f.alt)}"></div></div>
-    <figcaption><span class="fig-cap">${esc(f.caption)}</span> <span class="fig-credit">After ${esc(f.after)} by ${esc(f.author)}, <a href="${esc(f.source_url)}" target="_blank" rel="noopener">Wikimedia Commons</a>, ${f.licence_url ? `<a href="${esc(f.licence_url)}" target="_blank" rel="noopener">${esc(f.licence)}</a>` : esc(f.licence)}.</span></figcaption></figure>`;
+    <figcaption><span class="fig-cap">${esc(f.caption)}</span> <span class="fig-credit">After ${esc(f.after)}${f.author ? ` by ${esc(f.author)}` : ""}, <a href="${esc(f.source_url)}" target="_blank" rel="noopener">Wikimedia Commons</a>, ${f.licence_url ? `<a href="${esc(f.licence_url)}" target="_blank" rel="noopener">${esc(f.licence)}</a>` : esc(f.licence)}.</span></figcaption></figure>`;
 }
 
 /* ——— Memorial card ——— */

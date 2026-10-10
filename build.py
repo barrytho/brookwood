@@ -73,7 +73,7 @@ def load_figures():
         b64 = base64.b64encode(img.read_bytes()).decode("ascii")
         css.append(f'.im-{f["id"]}{{--img:url("data:image/webp;base64,{b64}");aspect-ratio:{f["w"]}/{f["h"]}}}')
         credit = (
-            f'After {html.escape(f["after"])} by {html.escape(f["author"])}, '
+            f'After {html.escape(f["after"])}' + (f' by {html.escape(f["author"])}' if f.get("author") else "") + ', '
             f'<a href="{html.escape(f["source_url"])}" target="_blank" rel="noopener">Wikimedia Commons</a>, '
             + (f'<a href="{html.escape(f["licence_url"])}" target="_blank" rel="noopener">{html.escape(f["licence"])}</a>'
                if f.get("licence_url") else html.escape(f["licence"]))
