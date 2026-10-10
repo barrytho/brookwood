@@ -126,15 +126,19 @@ let planGroup = "all";
 let activeWalk = null;
 
 function locate(id) {
-  const sec = $("#plan");
-  if (sec) sec.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  const plate = $("#plan .plate");
+  if (plate) plate.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   selectMarker(id, true);
 }
 function selectMarker(id, pan) {
   if (plan) plan.select(id, { pan });
   $$("#ref-list button").forEach(b => b.setAttribute("aria-current", b.dataset.id === id ? "true" : "false"));
+  // Scroll the key itself, never the page, so the plan stays in view.
   const btn = $(`#ref-list button[data-id="${CSS.escape(id)}"]`);
-  if (btn) btn.scrollIntoView({ block: "nearest" });
+  if (btn && refList) {
+    const lr = refList.getBoundingClientRect(), br = btn.getBoundingClientRect();
+    if (br.top < lr.top || br.bottom > lr.bottom) refList.scrollTop += br.top - lr.top - (lr.height - br.height) / 2;
+  }
 }
 function visibleMarker(m) {
   if (activeWalk) return activeWalk.stops.includes(m.id);

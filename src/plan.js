@@ -550,7 +550,7 @@
     host.appendChild(hint);
 
     /* ——— View state ——— */
-    let W = 0, H = 0, s0 = 1, narrow = false, R = 11, fsK = 1;
+    let W = 0, H = 0, s0 = 1, narrow = false, R = 11, fsK = 1, walkPts = null;
     const view = { cx: homeC[0], cy: homeC[1], z: 1 };
     const ZMIN = 1, ZMAX = 8;
     const S = () => s0 * view.z;
@@ -780,16 +780,19 @@
       if (roadMain) add(dyn.a322, a3HW, "main-road");
       roads.filter(r => r.kind === "path").forEach(r => add(r.pts, paHW, r.key));
       if (ringRoad) add(ringRoad, paHW, "ring", true);
+      if (walkPts) add(walkPts, 3, "route");
       return out;
     }
 
     /* ——— Instruments: neat line, compass, scales, note ——— */
+    const gMargin = el("path", { class: "hud-bg", "fill-rule": "evenodd" }, gHud);   // paper outside the neat line hides lines running off the plate
     const gNeat = el("rect", { class: "neat" }, gHud);
     const gCompass = el("g", { class: "hud-compass" }, gHud);
     const gScale = el("g", null, gHud);
     const gNote = el("text", { class: "nt" }, gHud);
-    let compassBox = null, scaleBox = null, noteBox = null, scaleKey = "";
+    let compassBox = null, scaleBox = null, noteBox = null, scaleKey = "", scaleBase = 0;
     function buildHud() {
+      gMargin.setAttribute("d", "M-2 -2H" + (W + 2) + "V" + (H + 2) + "H-2Z M4.5 4.5V" + (H - 4.5) + "H" + (W - 4.5) + "V4.5Z");
       gNeat.setAttribute("x", 4.5); gNeat.setAttribute("y", 4.5);
       gNeat.setAttribute("width", Math.max(0, W - 9)); gNeat.setAttribute("height", Math.max(0, H - 9));
       gCompass.textContent = "";
@@ -812,7 +815,8 @@
       compassBox = { x0: x - 8, y0: 0, x1: W, y1: y + cs + 8 };
       // Note on the geometry, bottom left
       gNote.textContent = "";
-      const fs = narrow ? 9.5 : 10.5, avail = Math.max(110, W - (narrow ? 150 : 190) - 24);
+      // On a narrow plate the note runs full width along the foot and the scales stand above it.
+      const fs = narrow ? 9.5 : 10.5, avail = narrow ? W - 28 : Math.max(110, W - 214);
       gNote.style.fontSize = fs + "px";
       const lines = wrap("Schematic plan: boundary, roads and railway estimated.", "nt", fs, avail)
         .concat(wrap("Dashed outlines: positions approximate.", "nt", fs, avail));
@@ -824,6 +828,7 @@
       let bb = null;
       try { bb = gNote.getBBox(); } catch (e) { bb = null; }
       noteBox = bb && bb.width ? { x0: bb.x - 5, y0: bb.y - 5, x1: bb.x + bb.width + 5, y1: H } : { x0: 0, y0: H - 40, x1: 220, y1: H };
+      scaleBase = narrow ? Math.round(noteBox.y0 - 1) : H - 14;
       scaleKey = "";
     }
     function pickScale(s, target, unitM, steps) {
@@ -845,10 +850,10 @@
       const target = narrow ? 88 : 118;
       const m = pickScale(s, target, 1, [5, 10, 20, 25, 50, 100, 200, 250, 500, 1000]);
       const c = pickScale(s, target, CHAIN_M, [1, 2, 5, 10, 20, 40, 80]);
-      const fs = narrow ? 8.5 : 9.5, uw = narrow ? 34 : 40;
-      const len = Math.max(m.tot, c.tot), x0 = Math.round(W - 16 - uw - len), yb = H - 14;
+      const fs = narrow ? 8.5 : 9.5, uw = narrow ? 42 : 50;
+      const len = Math.max(m.tot, c.tot), x0 = Math.round(W - 16 - uw - len), yb = scaleBase || H - 14;
       const ym = yb - 18, yc = yb - 12;           // bar tops
-      let h = '<rect class="hud-bg" x="' + (x0 - 10) + '" y="' + (yb - 33) + '" width="' + (len + uw + 22) + '" height="' + 40 + '"/>';
+      let h = '<rect class="hud-bg" x="' + (x0 - 10) + '" y="' + (yb - 33) + '" width="' + (len + uw + 22) + '" height="' + Math.max(40, H - 4.5 - (yb - 33)) + '"/>';
       const bar = (sc, y, unit, below) => {
         let out = "";
         for (let i = 0; i < sc.n; i++) out += '<rect class="' + (i % 2 ? "sb-off" : "sb-on") + '" x="' + f1(x0 + i * sc.seg) + '" y="' + y + '" width="' + f1(sc.seg) + '" height="3.5"/>';
@@ -859,12 +864,12 @@
           const v = i * sc.u;
           out += '<text class="sb-t" x="' + f1(x0 + i * sc.seg) + '" y="' + (below ? y + 3.5 + fs + 1 : y - 2.5) + '" style="font-size:' + fs + 'px">' + v + "</text>";
         }
-        out += '<text class="sb-u" x="' + f1(x0 + sc.tot + 6) + '" y="' + (below ? y + 3.5 + fs * 0.4 : y + 3.5) + '" style="font-size:' + fs + 'px">' + unit + "</text>";
+        out += '<text class="sb-u" x="' + f1(x0 + sc.tot + 14) + '" y="' + (below ? y + 3.5 + fs * 0.4 : y + 3.5) + '" style="font-size:' + fs + 'px">' + unit + "</text>";
         return out;
       };
       h += bar(m, ym, "Metres", false) + bar(c, yc, "Chains", true);
       gScale.innerHTML = h;
-      scaleBox = { x0: x0 - 14, y0: yb - 37, x1: W, y1: H };
+      scaleBox = { x0: x0 - 14, y0: yb - 37, x1: W, y1: yb + 8 };
     }
     function hudBoxes() {
       const out = [compassBox, scaleBox, noteBox];
@@ -995,7 +1000,6 @@
       trBody.setAttribute("d", b1); trShade.setAttribute("d", s1);
       avBody.setAttribute("d", b2); avShade.setAttribute("d", s2);
     }
-    let walkPts = null;
     function renderArrows() {
       if (!walkPts || walkPts.length < 2) { gArrows.setAttribute("d", ""); return; }
       let d = "";
@@ -1079,9 +1083,9 @@
     }
 
     /* ——— Layout: separate the key numbers, then set the lettering ——— */
-    function relax(items) {
+    function relax(items, keepOut) {
       const n = items.length, minD = 2 * R + 2.5;
-      if (n < 2) return;
+      if (!n) return;
       for (let it = 0; it < 160; it++) {
         let moved = false;
         for (let i = 0; i < n; i++) {
@@ -1100,7 +1104,17 @@
         }
         if (it < 110) for (const a of items) { a.x += (a.ax - a.x) * 0.035; a.y += (a.ay - a.y) * 0.035; }
         for (const a of items) {
-          if (a.ax >= 0 && a.ax <= W && a.ay >= 0 && a.ay <= H) { a.x = clamp(a.x, R + 3, W - R - 3); a.y = clamp(a.y, R + 3, H - R - 3); }
+          if (!(a.ax >= 0 && a.ax <= W && a.ay >= 0 && a.ay <= H)) continue;
+          // stay clear of the instruments (zoom buttons, compass, scales, note), and on the plate
+          for (const b of keepOut) {
+            const x0 = b.x0 - R - 2, x1 = b.x1 + R + 2, y0 = b.y0 - R - 2, y1 = b.y1 + R + 2;
+            if (a.x <= x0 || a.x >= x1 || a.y <= y0 || a.y >= y1) continue;
+            const opts = [[x0 - a.x, 0], [x1 - a.x, 0], [0, y0 - a.y], [0, y1 - a.y]]
+              .filter(o => a.x + o[0] >= R + 3 && a.x + o[0] <= W - R - 3 && a.y + o[1] >= R + 3 && a.y + o[1] <= H - R - 3)
+              .sort((p, q) => Math.abs(p[0] + p[1]) - Math.abs(q[0] + q[1]));
+            if (opts.length) { a.x += opts[0][0]; a.y += opts[0][1]; moved = true; }
+          }
+          a.x = clamp(a.x, R + 3, W - R - 3); a.y = clamp(a.y, R + 3, H - R - 3);
         }
         if (!moved && it >= 110) break;
       }
@@ -1117,9 +1131,10 @@
         if (a[0] < -80 || a[0] > W + 80 || a[1] < -80 || a[1] > H + 80) continue;
         act.push({ k, ax: a[0], ay: a[1], x: a[0], y: a[1] });
       }
-      relax(act);
+      const hud = hudBoxes();
+      relax(act, hud);
       act.forEach(a => { a.k.to = [a.x - a.ax, a.y - a.ay]; });
-      const boxes = hudBoxes().concat(act.map(a => ({ x0: a.x - R - 2, y0: a.y - R - 2, x1: a.x + R + 2, y1: a.y + R + 2 })));
+      const boxes = hud.concat(act.map(a => ({ x0: a.x - R - 2, y0: a.y - R - 2, x1: a.x + R + 2, y1: a.y + R + 2 })));
       if (pond) {
         const p0 = toScreen(pond.x0, pond.y0), p1 = toScreen(pond.x1, pond.y1);
         boxes.push({ x0: p0[0] - 2, y0: p0[1] - 2, x1: p1[0] + 2, y1: p1[1] + 2 });
@@ -1433,6 +1448,8 @@
         setSelected(k ? k.id : null);
         if (k) {
           pinned = true;
+          if (focusId && focusId !== k.id) focusId = null;   // the newest choice owns the flag
+          if (hoverId && hoverId !== k.id) hoverId = null;
           if (o && o.pan) bringIntoView(k);
         }
         updateFlag();
