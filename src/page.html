@@ -15,6 +15,8 @@
   --yew-wash: rgba(44, 74, 58, .12);
   --gilt: #8a6a2c;         /* ornament only */
   --mark: #7b2a22;         /* rare rubric: uncertainty marks */
+  --mount: #f1ecdf;        /* paper behind plates, light in both themes */
+  --plate-ink: #1d1c18;    /* engraving ink on that paper, dark in both themes */
 
   --f-display: "Abril Fatface", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
   --f-text: "Old Standard TT", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
@@ -29,13 +31,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #151512; --paper-deep: #1e1d19; --ink: #e8e1cf; --ink-soft: #b6ad99; --ink-faint: #6f6a5c;
-    --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f;
+    --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f; --mount: #e6dfcd;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #151512; --paper-deep: #1e1d19; --ink: #e8e1cf; --ink-soft: #b6ad99; --ink-faint: #6f6a5c;
-  --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f;
+  --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f; --mount: #e6dfcd;
   color-scheme: dark;
 }
 
@@ -123,6 +125,53 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .tp-imprint { margin-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
 .tp-imprint span + span::before { content: ""; }
 
+/* ——— Running head and thumb-index tabs ——— */
+.runhead {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem 1.2rem;
+  padding: .4rem 0 .5rem; border-bottom: 3px double var(--ink);
+}
+.rh-title { color: var(--ink); text-decoration: none; display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+.rh-b { font-family: var(--f-display); font-size: 1.6rem; line-height: 1; }
+.rh-n { font-family: var(--f-black); font-size: 1.15rem; line-height: 1; }
+.rh-sec { font-style: italic; color: var(--ink-soft); font-size: .92rem; }
+.thumbs {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6;
+  background: var(--paper);
+  margin: 0 calc(-1 * var(--gutter)) 0; padding: .55rem var(--gutter) 0;
+  border-bottom: 1px solid var(--ink);
+}
+.thumbs-row { display: flex; gap: 3px; overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x proximity; padding-top: 2px; }
+.thumb {
+  flex: 1 0 auto; scroll-snap-align: start;
+  display: grid; justify-items: center; align-content: end; gap: .1rem;
+  min-width: 5.6rem; padding: .45rem .7rem .4rem;
+  background: var(--ink); color: var(--paper); border: 1px solid var(--ink); border-bottom: 0;
+  border-radius: .7rem .7rem 0 0; cursor: pointer; position: relative; top: 1px;
+}
+.thumb .th-num { font-family: var(--f-text); font-size: .72rem; letter-spacing: .08em; color: var(--gilt); font-variant-numeric: lining-nums; }
+.thumb .th-label { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: 1.02rem; line-height: 1; white-space: nowrap; }
+.thumb:hover { background: var(--yew); border-color: var(--yew); }
+.thumb[aria-selected="true"] { background: var(--paper); color: var(--ink); border-color: var(--ink); z-index: 1; }
+.thumb[aria-selected="true"] .th-num { color: var(--gilt); }
+.thumb:focus-visible { outline-offset: -4px; }
+@media (max-width: 720px) { .thumb { min-width: 0; flex: 0 0 auto; padding: .4rem .6rem .35rem; } }
+.tabpanel { padding-top: .5rem; }
+.tabpanel > .chapter:first-child { margin-top: clamp(2rem, 5vw, 3.5rem); }
+#tab-home .titlepage { margin-top: 1.4rem; }
+.toc-help { text-align: center; font-style: italic; color: var(--ink-soft); font-size: .9rem; margin: 1.2rem 0 0; }
+
+/* ——— Turning the page ——— */
+.pager {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem;
+  max-width: 52rem; margin: clamp(3rem, 7vw, 5rem) auto 0; padding-top: 1rem; border-top: 3px double var(--ink);
+}
+.pager a { display: grid; gap: .15rem; text-decoration: none; color: var(--ink); padding: .3rem .2rem; min-width: 0; }
+.pager a:hover .pg-t { text-decoration: underline; text-decoration-color: var(--yew); }
+.pg-next { text-align: right; justify-items: end; }
+.pg-dir { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; font-size: .9rem; color: var(--yew); display: inline-flex; align-items: center; gap: .4rem; }
+.pg-dir svg { width: 1.9em; height: .95em; }
+.pg-t { font-family: var(--f-display); font-size: 1.25rem; line-height: 1.15; text-wrap: balance; }
+
 /* ——— Contents ——— */
 .contents { max-width: var(--measure); margin: 3.5rem auto 0; }
 .contents h2 { text-align: center; font-weight: 400; letter-spacing: .3em; font-size: 1rem; margin: 0 0 1rem; text-transform: uppercase; }
@@ -144,7 +193,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .contents .toc-sub { margin-top: .6rem; }
 
 /* ——— Chapters ——— */
-.chapter { margin-top: clamp(3.5rem, 8vw, 6rem); scroll-margin-top: 1rem; }
+.chapter { margin-top: clamp(3.5rem, 8vw, 6rem); scroll-margin-top: 5.5rem; }
 .ch-head { text-align: center; max-width: 44rem; margin: 0 auto 2rem; }
 .ch-num { letter-spacing: .3em; font-size: .9rem; text-transform: uppercase; margin: 0; color: var(--ink-soft); }
 .ch-title {
@@ -254,7 +303,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 
 .tickets { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem; margin: 2.2rem auto 0; max-width: 60rem; }
 .ticket {
-  position: relative; text-align: center; cursor: pointer; padding: 1rem 1rem .9rem;
+  position: relative; text-align: center; cursor: pointer; padding: 1.6rem 1rem .9rem;
   background: var(--paper-deep); color: var(--ink); border: 1px solid var(--ink);
   box-shadow: inset 0 0 0 4px var(--paper-deep), inset 0 0 0 5px var(--ink);
   font-family: var(--f-text); line-height: 1.25; display: grid; gap: .3rem; width: 100%;
@@ -273,12 +322,12 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .plan-layout { display: grid; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 960px) { .plan-layout { grid-template-columns: minmax(0, 1fr) 22rem; } }
 .plan-stage { position: relative; min-width: 0; border-bottom: 1px solid var(--ink); }
-@media (min-width: 960px) { .plan-stage { border-bottom: 0; border-right: 1px solid var(--ink); } }
-#plan-host { position: relative; width: 100%; aspect-ratio: 4 / 3; max-width: 100%; overflow: hidden; touch-action: none; background: var(--paper); }
+@media (min-width: 960px) { .plan-stage { border-bottom: 0; border-right: 1px solid var(--ink); display: flex; flex-direction: column; } .plan-stage #plan-host { aspect-ratio: auto; flex: 1; min-height: 34rem; } }
+#plan-host { position: relative; width: 100%; aspect-ratio: 4 / 3; max-width: 100%; overflow: hidden; touch-action: pan-x pan-y; background: var(--paper); }
 @media (max-width: 600px) { #plan-host { aspect-ratio: 4 / 5; } }
 .plan-tools { position: absolute; top: .6rem; left: .6rem; display: flex; flex-direction: column; gap: 1px; z-index: 2; background: var(--ink); border: 1px solid var(--ink); }
 .plan-tools button { width: 2.2rem; height: 2.2rem; background: var(--paper); border: 0; cursor: pointer; font-size: 1.15rem; line-height: 1; }
-.plan-tools button:hover { background: var(--yew-wash); }
+.plan-tools button:hover { background: linear-gradient(var(--yew-wash), var(--yew-wash)) var(--paper); }
 .plan-hint { position: absolute; bottom: .5rem; left: .6rem; right: .6rem; font-size: .78rem; font-style: italic; color: var(--ink-soft); pointer-events: none; z-index: 2; }
 .plan-side { display: flex; flex-direction: column; min-width: 0; max-height: none; }
 @media (min-width: 960px) { .plan-side { max-height: 46rem; } }
@@ -363,7 +412,8 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .mon-filter { margin-top: 1.4rem; justify-content: center; }
 
 /* ——— Emblems ——— */
-.emblems { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); gap: 1.8rem 1.4rem; margin: 2rem auto 0; max-width: 64rem; }
+.emblems { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.8rem 1.4rem; margin: 2rem auto 0; max-width: 68rem; }
+@media (min-width: 960px) { .emblems { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 .emblem { text-align: center; min-width: 0; }
 .emblem svg { width: 76px; height: 76px; color: var(--ink); display: block; margin: 0 auto .4rem; }
 .emblem h4 { margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
@@ -414,8 +464,35 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 .conf.medium { color: var(--ink-soft); }
 .conf.low { color: var(--mark); }
 
+/* ——— Plates: engravings drawn in ink through an alpha mask; watercolours on a paper mount ——— */
+.fig { margin: 2.2rem auto; max-width: 46rem; }
+.fig-wide { max-width: 52rem; clear: both; }
+.fig-narrow, .fig-side { max-width: 26rem; clear: both; }
+.plate, .emblems, .monuments, .chrono, .tickets { clear: both; }
+.fig-mount { position: relative; }
+.fig .im { width: 100%; max-width: 100%; }
+.fig-engraving .im {
+  background: var(--plate-ink);
+  -webkit-mask: var(--img) center / contain no-repeat; mask: var(--img) center / contain no-repeat;
+}
+.fig .fig-mount { background: var(--mount); padding: clamp(.4rem, 1.5vw, .9rem); box-shadow: 0 0 0 1px var(--ink-faint); }
+.fig-watercolour .im { background: var(--img) center / contain no-repeat; }
+.fig figcaption { margin-top: .7rem; text-align: center; font-size: .88rem; line-height: 1.45; color: var(--ink-soft); text-wrap: balance; }
+.fig-cap { font-style: italic; color: var(--ink); }
+.fig-credit { display: block; font-size: .78rem; margin-top: .2rem; }
+.fig-credit a { color: inherit; }
+@media (min-width: 1100px) {
+  .prose .fig-side { float: right; clear: right; width: 46%; margin: .3rem -12rem 1rem 1.6rem; }
+  .prose .fig-side figcaption { text-align: left; }
+}
+.card .fig { margin: .4rem auto 1rem; max-width: 22rem; }
+.fig-pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.4rem; max-width: 56rem; margin: 2.2rem auto; align-items: end; clear: both; }
+.fig-pair .fig { margin: 0 auto; max-width: none; width: 100%; }
+@media (min-width: 760px) { .fig-pair { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
+.card .fig figcaption { font-size: .78rem; }
+
 /* ——— Footer ——— */
-.finis { text-align: center; margin-top: 4rem; }
+.finis { text-align: center; margin-top: 3rem; }
 .finis .fin { font-family: var(--f-black); font-size: 2.2rem; margin: 0; }
 .finis p { font-size: .82rem; color: var(--ink-soft); max-width: 36rem; margin: .6rem auto 0; font-style: italic; }
 
@@ -423,9 +500,22 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 </style>
 
 <!--__ORNAMENTS__-->
+<!--__FIGURE_CSS__-->
 
-<div class="book">
+<div class="book" lang="en-GB">
 
+<header class="runhead" id="runhead" hidden>
+  <a class="rh-title" href="#home" data-tab-link="home"><span class="rh-b">Brookwood</span> <span class="rh-n">The London Necropolis</span></a>
+  <span class="rh-sec" id="rh-sec"></span>
+</header>
+
+<nav class="thumbs" id="thumbs" aria-label="Sections of the guide">
+  <div class="thumbs-row" role="tablist" aria-label="Sections of the guide">
+    <!--__TABS__-->
+  </div>
+</nav>
+
+<div class="tabpanel" id="tab-home" role="tabpanel" aria-labelledby="t-home" data-tab="home" data-tab-label="Title Page" data-tab-num="§" data-tab-title="Title and Contents">
 <header class="titlepage" id="top">
   <svg class="corner tl" aria-hidden="true"><use href="#orn-corner"/></svg>
   <svg class="corner tr" aria-hidden="true"><use href="#orn-corner"/></svg>
@@ -445,11 +535,14 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <ol>
     <!--__TOC__-->
   </ol>
+  <p class="toc-help">Choose a chapter, or use the tabs above. Each tab is one part of the guide.</p>
 </nav>
+<!--__PAGER__home-->
+</div>
 
 <!--__CHAPTERS__-->
 
-<footer class="finis">
+<footer class="finis" id="finis">
   <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
   <p class="fin">Finis.</p>
   <p>Compiled October 2026 from published sources listed in Appendix B. Plot numbers and positions on the plan are as given in those sources; please confirm with the cemetery office before visiting a particular grave.</p>

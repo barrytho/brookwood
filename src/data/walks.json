@@ -1,0 +1,72 @@
+[
+ {
+  "id": "ring",
+  "title": "The Ring and the Victorian showpieces",
+  "blurb": "Through the old Anglican cemetery, from the Orthodox shrine by the South station platform to the bronze Pelham-Clinton group, the Cadogan columbarium, Sargent’s stele in the Ring, the Lombardic Drake mausoleum and Onslow Ford’s Freshfield memorial.",
+  "stops": [
+   "south-station",
+   "st-edward-the-martyr-church",
+   "moir-tomb",
+   "pelham-clinton-tomb",
+   "salviati-tomb",
+   "columbarium",
+   "the-ring",
+   "sargent-headstone",
+   "bent-memorial",
+   "boulton-mausoleum",
+   "drake-mausoleum",
+   "vickers-family-grave",
+   "fildes-headstone",
+   "freshfield-grave"
+  ],
+  "distance": "1.4 km"
+ },
+ {
+  "id": "line",
+  "title": "Along the Necropolis line",
+  "blurb": "Follow the trackbed of the funeral railway from the main line at Brookwood, under the Wellingtonias of Railway Avenue, past the site of the Nonconformist North station and across Cemetery Pales to the surviving South station platform.",
+  "stops": [
+   "brookwood-station",
+   "railway-avenue",
+   "wellingtonia-avenues",
+   "north-station-site",
+   "former-parsonage",
+   "cemetery-pales",
+   "south-station",
+   "smirke-anglican-chapel"
+  ],
+  "distance": "1.4 km"
+ },
+ {
+  "id": "faiths",
+  "title": "Faiths of the north side",
+  "blurb": "The unconsecrated northern ground: Leitner, founder of the Shah Jahan Mosque, beside the marble Lady Falkiner; van Laun’s terracotta tomb; the Muslim grounds; and the Zoroastrian ground with the Wadia and Tata mausolea.",
+  "stops": [
+   "van-laun-tomb",
+   "leitner-tomb",
+   "falkiner-tomb",
+   "muslim-grounds",
+   "nicols-mausoleum",
+   "dissenters-chapel",
+   "parsi-ground",
+   "tata-mausolea",
+   "wadia-mausoleum"
+  ],
+  "distance": "900 m"
+ },
+ {
+  "id": "military",
+  "title": "The military cemeteries",
+  "blurb": "From the American cemetery’s oval entrance to its chapel of the missing, then through the Commonwealth war graves to the 1939–1945 Memorial and the Canadian plot.",
+  "stops": [
+   "american-entrance-walls",
+   "american-flagpole",
+   "american-military-chapel",
+   "brookwood-1914-1918-memorial",
+   "brookwood-1939-1945-memorial",
+   "canadian-records-building",
+   "canadian-section"
+  ],
+  "distance": "800 m"
+ }
+]

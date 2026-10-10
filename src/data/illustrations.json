@@ -1,0 +1,289 @@
+[
+ {
+  "id": "seal",
+  "style": "engraving",
+  "size": "narrow",
+  "w": 640,
+  "h": 640,
+  "alt": "The Great Seal of the London Necropolis and National Mausoleum Company: a skull and crossed bones over an hourglass, within a serpent biting its tail",
+  "caption": "The company’s Great Seal of 1852, with its motto Mortuis quies, vivis salus: rest for the dead, health for the living.",
+  "after": "a drawing of the company’s seal",
+  "author": "",
+  "licence": "Public domain",
+  "licence_url": null,
+  "source_url": "https://commons.wikimedia.org/wiki/File:Great_Seal_of_the_London_Necropolis_Company.svg",
+  "commons_title": "File:Great_Seal_of_the_London_Necropolis_Company.svg",
+  "for": []
+ },
+ {
+  "id": "enon",
+  "style": "engraving",
+  "size": "wide",
+  "w": 900,
+  "h": 587,
+  "alt": "Victorian engraving of a crowded dance in a chapel, with coffins and bones piled in the vault beneath the floor",
+  "caption": "Enon Chapel, off the Strand, as The Poor Man’s Guardian showed it in 1847: a dance in the chapel above, coffins heaped in the vault below.",
+  "after": "an engraving by an unknown artist in The Poor Man’s Guardian (1847)",
+  "author": "",
+  "licence": "Public domain",
+  "licence_url": null,
+  "source_url": "https://commons.wikimedia.org/wiki/File:Enon_Chapel_Cemetery,_and_Dancing_Saloon.jpg",
+  "commons_title": "File:Enon_Chapel_Cemetery,_and_Dancing_Saloon.jpg",
+  "for": []
+ },
+ {
+  "id": "disused",
+  "style": "watercolour",
+  "size": "wide",
+  "w": 1000,
+  "h": 749,
+  "alt": "Watercolour of a grassy avenue and track between tall conifers and rhododendrons",
+  "caption": "Railway Avenue, the trackbed of the Necropolis branch, between redwoods and rhododendrons.",
+  "after": "a photograph",
+  "author": "Len Williams",
+  "licence": "CC BY-SA 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Necropolis_Railway_(Disused)_,_Brookwood_Cemetery_-_geograph.org.uk_-_4011231.jpg",
+  "commons_title": "File:Necropolis_Railway_(Disused)_,_Brookwood_Cemetery_-_geograph.org.uk_-_4011231.jpg",
+  "for": [
+   "railway-avenue",
+   "wellingtonia-avenues"
+  ]
+ },
+ {
+  "id": "columbarium",
+  "style": "watercolour",
+  "size": "wide",
+  "w": 1000,
+  "h": 602,
+  "alt": "Watercolour of a domed classical mausoleum with a columned portico among conifers",
+  "caption": "The Columbarium, built as the Earl Cadogan’s mausoleum and sold to the company in 1910. Its dome is in poor repair.",
+  "after": "a photograph",
+  "author": "Jack1956",
+  "licence": "CC0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Columbarium_Brookwood_Cemetery_2016.jpg",
+  "commons_title": "File:Columbarium_Brookwood_Cemetery_2016.jpg",
+  "for": [
+   "columbarium"
+  ]
+ },
+ {
+  "id": "waterloo",
+  "style": "engraving",
+  "size": "wide",
+  "w": 1000,
+  "h": 562,
+  "alt": "Engraving of railway platforms beneath a building lettered London Necropolis Company private station",
+  "caption": "The platforms of the company’s private station at 121 Westminster Bridge Road, opened in 1902.",
+  "after": "an early twentieth-century photograph",
+  "author": "",
+  "licence": "Public domain",
+  "licence_url": null,
+  "source_url": "https://commons.wikimedia.org/wiki/File:Necropolis_waterloo.jpg",
+  "commons_title": "File:Necropolis_waterloo.jpg",
+  "for": []
+ },
+ {
+  "id": "wbr",
+  "style": "watercolour",
+  "size": "side",
+  "w": 700,
+  "h": 1159,
+  "alt": "Watercolour of an ornate red brick and terracotta building front with a large arched entrance",
+  "caption": "The office front of the 1902 terminus as it survives today, once the first-class entrance.",
+  "after": "a photograph",
+  "author": "Davidmpye",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:London_necropolis_terminus.jpg",
+  "commons_title": "File:London_necropolis_terminus.jpg",
+  "for": []
+ },
+ {
+  "id": "bombed",
+  "style": "engraving",
+  "size": "wide",
+  "w": 1000,
+  "h": 788,
+  "alt": "Engraving of a wrecked railway carriage on a tangle of twisted girders and rubble",
+  "caption": "The Westminster Bridge Road terminus after the air raid of 16–17 April 1941, which ended the Necropolis Railway.",
+  "after": "a 1941 official photograph in the US National Archives",
+  "author": "",
+  "licence": "Public domain",
+  "licence_url": null,
+  "source_url": "https://commons.wikimedia.org/wiki/File:The_London_Necropolis_Railway_Station,_privately_owned_station_in_Westminster_Bridge_Road,_after_London's_biggest_night_raid_of_the_war_HD-SN-99-02671.jpg",
+  "commons_title": "File:The_London_Necropolis_Railway_Station,_privately_owned_station_in_Westminster_Bridge_Road,_after_London's_biggest_night_raid_of_the_war_HD-SN-99-02671.jpg",
+  "for": []
+ },
+ {
+  "id": "clinton",
+  "style": "engraving",
+  "size": "paired",
+  "w": 800,
+  "h": 1008,
+  "alt": "Engraving of a bronze sculpture of an angel with outstretched wings above a reclining figure, on a stone base among trees",
+  "caption": "The bronze Pelham-Clinton group, Brookwood’s only Grade II* monument: a dead woman, a kneeling mourner and an angel above.",
+  "after": "a photograph",
+  "author": "Jack1956",
+  "licence": "CC0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Monument_Brookwood_2016.jpg",
+  "commons_title": "File:Clinton_Monument_Brookwood_2016.jpg",
+  "for": [
+   "pelham-clinton-tomb",
+   "lord-edward-pelham-clinton"
+  ]
+ },
+ {
+  "id": "drake",
+  "style": "watercolour",
+  "size": "paired",
+  "w": 1000,
+  "h": 750,
+  "alt": "Watercolour of a small pedimented mausoleum with an arcade of columns, among dark trees",
+  "caption": "The Drake mausoleum, in the Lombardic manner, built for Sir William Drake around 1880–90.",
+  "after": "a photograph",
+  "author": "Irid Escent",
+  "licence": "CC BY-SA 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Brookwood_–_20180219_131357_(38550066550).jpg",
+  "commons_title": "File:Brookwood_–_20180219_131357_(38550066550).jpg",
+  "for": [
+   "drake-mausoleum"
+  ]
+ },
+ {
+  "id": "bent",
+  "style": "engraving",
+  "size": "narrow",
+  "w": 700,
+  "h": 1103,
+  "alt": "Engraving of a tall Gothic shrine with a spire, behind railings",
+  "caption": "The Bent memorial of about 1860, a Gothic shrine with a spirelet, one of the earliest elaborate monuments in the cemetery.",
+  "after": "a photograph",
+  "author": "Tim Sheerman-Chase",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Bent_Family_Memorial_1,_Brookwood_Cemetery.jpg",
+  "commons_title": "File:Bent_Family_Memorial_1,_Brookwood_Cemetery.jpg",
+  "for": [
+   "bent-memorial"
+  ]
+ },
+ {
+  "id": "sargent",
+  "style": "engraving",
+  "size": "side",
+  "w": 760,
+  "h": 971,
+  "alt": "Engraving of an upright inscribed gravestone with a shaped top, among trees",
+  "caption": "John Singer Sargent’s grave, a Portland stone stele that also commemorates his sister Emily.",
+  "after": "a photograph",
+  "author": "Jack1956",
+  "licence": "CC0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_Grave_2016.jpg",
+  "commons_title": "File:John_Singer_Sargent_Grave_2016.jpg",
+  "for": [
+   "sargent-headstone",
+   "john-singer-sargent"
+  ]
+ },
+ {
+  "id": "demorgan",
+  "style": "engraving",
+  "size": "narrow",
+  "w": 760,
+  "h": 932,
+  "alt": "Engraving of a marble stele with a relief of two draped figures beneath a pediment",
+  "caption": "The De Morgans’ stele. An angel reaches towards Death, who turns away holding an inverted torch; Evelyn De Morgan designed the relief.",
+  "after": "a photograph",
+  "author": "Jack1956",
+  "licence": "CC0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:William_De_Morgan_Grave_2016.jpg",
+  "commons_title": "File:William_De_Morgan_Grave_2016.jpg",
+  "for": [
+   "de-morgan-tomb",
+   "william-de-morgan",
+   "evelyn-de-morgan"
+  ]
+ },
+ {
+  "id": "tata",
+  "style": "engraving",
+  "size": "wide",
+  "w": 900,
+  "h": 849,
+  "alt": "Engraving of an Egyptian-style mausoleum with a tall doorway and a winged sun on the frieze",
+  "caption": "The mausoleum of Jamsetji Tata (1904), in the Egyptian manner, in the Zoroastrian ground.",
+  "after": "a photograph",
+  "author": "Jack1956",
+  "licence": "CC0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Jamsetji_Tata_Mausoleum_Brookwood.jpg",
+  "commons_title": "File:Jamsetji_Tata_Mausoleum_Brookwood.jpg",
+  "for": [
+   "tata-mausolea",
+   "jamsetji-tata"
+  ]
+ },
+ {
+  "id": "stedward",
+  "style": "watercolour",
+  "size": "wide",
+  "w": 1000,
+  "h": 619,
+  "alt": "Watercolour of a steep-roofed chapel among trees and hedges",
+  "caption": "The church of St Edward the Martyr, a former Anglican chapel, now the shrine of the saint’s relics.",
+  "after": "a photograph",
+  "author": "Hassocks5489",
+  "licence": "CC0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:St_Edward_the_Martyr_Orthodox_Church,_Brookwood_Cemetery,_Brookwood_(June_2015)_(1).JPG",
+  "commons_title": "File:St_Edward_the_Martyr_Orthodox_Church,_Brookwood_Cemetery,_Brookwood_(June_2015)_(1).JPG",
+  "for": [
+   "st-edward-the-martyr-church",
+   "edward-the-martyr",
+   "st-edward-brotherhood"
+  ]
+ },
+ {
+  "id": "uschapel2",
+  "style": "watercolour",
+  "size": "wide",
+  "w": 1000,
+  "h": 638,
+  "alt": "Watercolour of rows of white crosses on a lawn before a small white classical chapel",
+  "caption": "The American chapel and the white marble crosses of the Brookwood American Cemetery.",
+  "after": "a photograph",
+  "author": "Carcharoth",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Grave_markers_and_memorial_chapel_in_Brookwood_American_Cemetery.jpg",
+  "commons_title": "File:Grave_markers_and_memorial_chapel_in_Brookwood_American_Cemetery.jpg",
+  "for": [
+   "american-military-chapel",
+   "brookwood-american-cemetery"
+  ]
+ },
+ {
+  "id": "memorial",
+  "style": "watercolour",
+  "size": "wide",
+  "w": 1000,
+  "h": 623,
+  "alt": "Watercolour of a circular colonnaded memorial on a lawn, with autumn trees behind",
+  "caption": "The Brookwood 1939–1945 Memorial, a ring of Portland stone panels, unveiled by Queen Elizabeth II in 1958.",
+  "after": "a photograph",
+  "author": "Carcharoth",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Brookwood_1939-1945_Memorial.jpg",
+  "commons_title": "File:Brookwood_1939-1945_Memorial.jpg",
+  "for": [
+   "brookwood-1939-1945-memorial"
+  ]
+ }
+]
