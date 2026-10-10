@@ -15,6 +15,7 @@
   --yew-wash: rgba(44, 74, 58, .12);
   --gilt: #8a6a2c;         /* ornament only */
   --mark: #7b2a22;         /* rare rubric: uncertainty marks */
+  --mount: #f1ecdf;        /* paper behind watercolour plates, light in both themes */
 
   --f-display: "Abril Fatface", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
   --f-text: "Old Standard TT", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
@@ -29,13 +30,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #151512; --paper-deep: #1e1d19; --ink: #e8e1cf; --ink-soft: #b6ad99; --ink-faint: #6f6a5c;
-    --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f;
+    --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f; --mount: #e6dfcd;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #151512; --paper-deep: #1e1d19; --ink: #e8e1cf; --ink-soft: #b6ad99; --ink-faint: #6f6a5c;
-  --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f;
+  --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f; --mount: #e6dfcd;
   color-scheme: dark;
 }
 
@@ -462,6 +463,28 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 .conf.medium { color: var(--ink-soft); }
 .conf.low { color: var(--mark); }
 
+/* ——— Plates: engravings drawn in ink through an alpha mask; watercolours on a paper mount ——— */
+.fig { margin: 2.2rem auto; max-width: 46rem; }
+.fig-wide { max-width: 52rem; }
+.fig-narrow { max-width: 30rem; }
+.fig-mount { position: relative; }
+.fig .im { width: 100%; max-width: 100%; }
+.fig-engraving .im {
+  background: var(--ink);
+  -webkit-mask: var(--img) center / contain no-repeat; mask: var(--img) center / contain no-repeat;
+}
+.fig-watercolour .fig-mount { background: var(--mount); padding: clamp(.4rem, 1.5vw, .9rem); box-shadow: 0 0 0 1px var(--ink-faint); }
+.fig-watercolour .im { background: var(--img) center / contain no-repeat; }
+.fig figcaption { margin-top: .7rem; text-align: center; font-size: .88rem; line-height: 1.45; color: var(--ink-soft); text-wrap: balance; }
+.fig-cap { font-style: italic; color: var(--ink); }
+.fig-credit { display: block; font-size: .78rem; margin-top: .2rem; }
+.fig-credit a { color: inherit; }
+@media (min-width: 1100px) {
+  .prose .fig-side { float: right; clear: right; width: 46%; margin: .3rem -12rem 1rem 1.6rem; }
+}
+.card .fig { margin: .4rem 0 1rem; max-width: none; }
+.card .fig figcaption { font-size: .78rem; }
+
 /* ——— Footer ——— */
 .finis { text-align: center; margin-top: 3rem; }
 .finis .fin { font-family: var(--f-black); font-size: 2.2rem; margin: 0; }
@@ -471,6 +494,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 </style>
 
 <!--__ORNAMENTS__-->
+<!--__FIGURE_CSS__-->
 
 <div class="book" lang="en-GB">
 

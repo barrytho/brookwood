@@ -38,6 +38,15 @@ const residents = new Map();   // place id -> people buried or commemorated ther
 people.forEach(p => { if (p.place) { if (!residents.has(p.place)) residents.set(p.place, []); residents.get(p.place).push(p); } });
 const markerFor = id => { const e = byId.get(id); return e && (e.kind === "place" ? markerById.get(id) : markerById.get(e.item.place)); };
 
+/* ——— Illustrations available for a card (the image data lives once, in CSS) ——— */
+const figFor = id => (DATA.figures || []).find(f => (f.for || []).includes(id));
+function figMarkup(f) {
+  if (!f) return "";
+  const style = f.style === "engraving" ? "engraving" : "watercolour";
+  return `<figure class="fig fig-${style}"><div class="fig-mount"><div class="im im-${esc(f.id)}" role="img" aria-label="${esc(f.alt)}"></div></div>
+    <figcaption><span class="fig-cap">${esc(f.caption)}</span> <span class="fig-credit">After ${esc(f.after)} by ${esc(f.author)}, <a href="${esc(f.source_url)}" target="_blank" rel="noopener">Wikimedia Commons</a>, ${f.licence_url ? `<a href="${esc(f.licence_url)}" target="_blank" rel="noopener">${esc(f.licence)}</a>` : esc(f.licence)}.</span></figcaption></figure>`;
+}
+
 /* ——— Memorial card ——— */
 const dlg = $("#card");
 const cardBody = $("#card-body");
@@ -65,6 +74,7 @@ function openCard(id) {
       ${it.honorifics ? `<p class="c-hon">${esc(it.honorifics)}</p>` : ""}
       ${life ? `<p class="c-life">${life}</p>` : ""}
       <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+      ${figMarkup(figFor(id))}
       <p>${esc(it.summary)}</p>
       ${it.grave ? `<h4>The grave</h4><p>${esc(it.grave)}</p>` : ""}
       ${it.notes ? `<p class="c-notes">${esc(it.notes)}</p>` : ""}
@@ -83,6 +93,7 @@ function openCard(id) {
       <h3 id="card-name">${esc(it.name)}</h3>
       ${it.designer ? `<p class="c-life">${esc(it.designer)}</p>` : ""}
       <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+      ${figMarkup(figFor(id))}
       <p>${esc(it.description)}</p>
       ${here.length ? `<h4>${it.type === "Ground" ? "Among those buried here" : "Buried or commemorated here"}</h4><p>${here.map(r => `<button class="linkbtn" type="button" data-card="${esc(r.id)}">${esc(r.name)}</button>`).join(", ")}</p>` : ""}
       ${it.notes ? `<p class="c-notes">${esc(it.notes)}</p>` : ""}

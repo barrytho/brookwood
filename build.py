@@ -13,6 +13,8 @@ Outputs:
   index.html           a complete standalone document (GitHub Pages or local viewing)
   build/artifact.html  the same page without the document skeleton, for a claude.ai Artifact
 """
+import base64
+import html
 import json
 import pathlib
 import re
@@ -56,6 +58,39 @@ def build_toc(chapters):
     return "\n    ".join(items)
 
 
+def load_figures():
+    """Illustrations: one CSS custom property per image (so a picture can appear in a chapter and a card
+    without being embedded twice) and the <figure> markup for each <!--FIG:id--> slot."""
+    path = SRC / "data" / "illustrations.json"
+    if not path.exists():
+        return "", {}, []
+    figs = json.loads(path.read_text(encoding="utf-8"))
+    css, markup, meta = [], {}, []
+    for f in figs:
+        img = SRC / "img" / f"{f['id']}.webp"
+        if not img.exists():
+            continue
+        b64 = base64.b64encode(img.read_bytes()).decode("ascii")
+        css.append(f'.im-{f["id"]}{{--img:url("data:image/webp;base64,{b64}");aspect-ratio:{f["w"]}/{f["h"]}}}')
+        credit = (
+            f'After {html.escape(f["after"])} by {html.escape(f["author"])}, '
+            f'<a href="{html.escape(f["source_url"])}" target="_blank" rel="noopener">Wikimedia Commons</a>, '
+            + (f'<a href="{html.escape(f["licence_url"])}" target="_blank" rel="noopener">{html.escape(f["licence"])}</a>'
+               if f.get("licence_url") else html.escape(f["licence"]))
+            + "."
+        )
+        style = "engraving" if f["style"] == "engraving" else "watercolour"
+        markup[f["id"]] = (
+            f'<figure class="fig fig-{style} fig-{f.get("size", "wide")}" data-fig="{f["id"]}">'
+            f'<div class="fig-mount"><div class="im im-{f["id"]}" role="img" aria-label="{html.escape(f["alt"])}"></div></div>'
+            f'<figcaption><span class="fig-cap">{html.escape(f["caption"])}</span> '
+            f'<span class="fig-credit">{credit}</span></figcaption></figure>'
+        )
+        meta.append({k: f[k] for k in ("id", "style", "alt", "caption", "after", "author", "licence", "licence_url", "source_url") if k in f}
+                    | {"for": f.get("for", [])})
+    return "<style>" + "".join(css) + "</style>", markup, meta
+
+
 def tab_panels(page):
     """Panels in page order, from each <div class="tabpanel"> and its data-tab-* attributes."""
     panels = []
@@ -95,7 +130,13 @@ def build_pager(panels, i):
 def main():
     page = read("page.html")
     chapters = read("chapters.html", "")
-    data_js = json.dumps(load_data(), ensure_ascii=False, separators=(",", ":"))
+    fig_css, fig_markup, fig_meta = load_figures()
+    for fid, markup in fig_markup.items():
+        chapters = chapters.replace(f"<!--FIG:{fid}-->", markup)
+    chapters = re.sub(r"<!--FIG:[\w-]+-->", "", chapters)   # slots whose image is not rendered yet
+    data = load_data()
+    data["figures"] = fig_meta
+    data_js = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     # Stop a stray "</script>" inside the data from closing the inline script early.
     data_js = data_js.replace("</", "<\\/")
     main_js = read("main.js", "")
@@ -104,6 +145,7 @@ def main():
 
     slots = {
         "<!--__ORNAMENTS__-->": read("ornaments.svg", ""),
+        "<!--__FIGURE_CSS__-->": fig_css,
         "<!--__TOC__-->": build_toc(chapters),
         "<!--__CHAPTERS__-->": chapters,
         "/*__PLAN_JS__*/": read("plan.js", ""),
