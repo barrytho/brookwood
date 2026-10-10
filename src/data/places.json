@@ -1,0 +1,904 @@
+[
+ {
+  "id": "pelham-clinton-tomb",
+  "name": "Tomb of Lord Edward Pelham-Clinton",
+  "type": "Monument",
+  "date": "after 1892",
+  "designer": null,
+  "description": "Widely regarded as the most important memorial at Brookwood, and its only Grade II* structure: a bronze figural group on a Portland stone base, showing a recumbent, semi-draped dead woman mourned by a kneeling weeping figure, with an angel above, arms and wings outstretched. It commemorates Lord Edward Pelham-Clinton (1836–1907), Master of Queen Victoria's Household 1894–1901, and his wife Matilda (d.1892); the prominence of the female figure suggests it was raised first for her. Historic England calls it an exceptionally good Neo-Baroque bronze; the sculptor is unknown and the inscription panels are lost.",
+  "plot": "4",
+  "listed": "Grade II*, list entry 1391044",
+  "lat": 51.29933,
+  "lng": -0.62495,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391044",
+   "https://britishlistedbuildings.co.uk/101391044-tomb-of-lord-edward-pelham-clinton-1836-1907-brookwood-cemetery-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/?p=1486"
+  ],
+  "confidence": "high",
+  "notes": "Plot 4 is from brookwoodcemetery.com (medium confidence)."
+ },
+ {
+  "id": "moir-tomb",
+  "name": "Tomb of Lieutenant Rex Moir and Sir Ernest Moir",
+  "type": "Monument",
+  "date": "after 1915",
+  "designer": "Lilian Wade, sculptor",
+  "description": "A bronze draped figure of Peace holding an olive branch stands on a tapering Ionic-style column bearing a portrait relief in a laurel wreath, on a two-stepped pink granite base set in an evergreen glade. It commemorates Lieutenant Rex Moir of the Royal Engineers, killed in 1915, and his father Sir Ernest William Moir (1862–1933), the civil engineer associated with the Blackwall and Hudson River tunnels and the Forth Bridge.",
+  "plot": "4",
+  "listed": "Grade II, list entry 1391043",
+  "lat": 51.29933,
+  "lng": -0.6272,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391043",
+   "https://britishlistedbuildings.co.uk/101391043-tomb-of-lieutenant-rex-moir-died-1915-and-sir-ernest-william-moir-1862-1933-woking-heathlands-ward",
+   "https://victorianweb.org/sculpture/funerary/128.html",
+   "https://brookwoodcemetery.com/sir-ernest-william-moir-1862-1933/"
+  ],
+  "confidence": "high",
+  "notes": "Victorian Web spells the sculptor 'Lillian M. Wade' and calls Rex a 2nd Lieutenant. Plot 4 is from a Normandy Historians list (medium)."
+ },
+ {
+  "id": "de-morgan-tomb",
+  "name": "Tomb of William and Evelyn De Morgan",
+  "type": "Monument",
+  "date": "c. 1917–19",
+  "designer": "Relief designed by Evelyn De Morgan",
+  "description": "The shared grave of the Arts and Crafts potter and novelist William De Morgan (1839–1917) and his wife, the painter Evelyn De Morgan (née Pickering, 1855–1919). The cemetery describes the headstone sculpture as designed by Evelyn herself, making it a rare funerary work by a Pre-Raphaelite-circle artist.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391033",
+  "lat": 51.2988,
+  "lng": -0.62605,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391033",
+   "https://britishlistedbuildings.co.uk/101391033-tomb-of-william-and-evelyn-de-morgan-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/monument-to-william-de-morgan/",
+   "https://victorianweb.org/sculpture/funerary/121.html"
+  ],
+  "confidence": "high",
+  "notes": "Evelyn as designer rests on brookwoodcemetery.com (medium)."
+ },
+ {
+  "id": "columbarium",
+  "name": "The Columbarium (former Cadogan mausoleum)",
+  "type": "Mausoleum",
+  "date": "1878; columbarium after 1910",
+  "designer": null,
+  "description": "The largest mausoleum in the cemetery: a domed neo-classical building in Portland stone, built for the 5th Earl Cadogan (1840–1915). He sold it to the London Necropolis Company in 1910 for £200, and the company turned it into a columbarium for cinerary urns as cremation grew in popularity. The dome and roof are in poor repair.",
+  "plot": "26",
+  "listed": "Grade II, list entry 1391034",
+  "lat": 51.2986,
+  "lng": -0.62474,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391034",
+   "https://britishlistedbuildings.co.uk/101391034-the-columbarium-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/columbarium/",
+   "http://www.mmtrust.org.uk/mausolea/view/170/Cadogan_Mausoleum",
+   "https://victorianweb.org/art/parks/brookwood/3.html"
+  ],
+  "confidence": "high",
+  "notes": "The listing gives the designer as unknown. Do not confuse it with the 1890 columbarium at Woking Crematorium."
+ },
+ {
+  "id": "vickers-family-grave",
+  "name": "Vickers family grave",
+  "type": "Monument",
+  "date": "c. 1928 and c. 1937",
+  "designer": null,
+  "description": "Two Portland stone memorials in a common stone kerb. The earlier one, to the First World War Royal Flying Corps ace Oliver Vickers, carries an RAF motto above an eagle; the later one, to Douglas Vickers, is a chest tomb in the manner of Lutyens. The family's name is tied to the Vickers aviation works at nearby Weybridge.",
+  "plot": "31",
+  "listed": "Grade II, list entry 1391035",
+  "lat": 51.29821,
+  "lng": -0.62504,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391035",
+   "https://britishlistedbuildings.co.uk/101391035-vickers-family-grave-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/vickers/",
+   "https://brookwoodcemetery.com/?p=688"
+  ],
+  "confidence": "high",
+  "notes": "The Lutyens Trust America catalogue has an entry 'Memorial to the Vickers family' (catalogue.lutyenstrustamerica.com), but an attribution to Lutyens is NOT confirmed; the listing says only 'Lutyens-style'."
+ },
+ {
+  "id": "drake-mausoleum",
+  "name": "Drake family mausoleum",
+  "type": "Mausoleum",
+  "date": "c. 1880–90",
+  "designer": null,
+  "description": "A very unusual late-Victorian mausoleum in the Lombardic manner, built for Sir William Richard Drake (d.1890), whose aesthetic interests it reflects. It is of limestone and sandstone with pink granite shafts and wrought-iron gates, and the frieze once glittered with glass mosaic, said to be by Salviati's firm, of which only traces remain. Most of the copper-clad roof has gone, and the Brookwood Cemetery Society has carried out emergency repairs.",
+  "plot": "31",
+  "listed": "Grade II, list entry 1391036",
+  "lat": 51.29757,
+  "lng": -0.62557,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391036",
+   "https://britishlistedbuildings.co.uk/101391036-drake-family-mausoleum-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/drake-family/",
+   "https://tbcs.org.uk/past_restorations/drake.html",
+   "https://www.john-clarke.co.uk/drake_mausoleum.html",
+   "https://victorianweb.org/art/architecture/cemeteries/20.html"
+  ],
+  "confidence": "high",
+  "notes": "Construction date disputed (1880 vs c.1890). Date disputed: John Clarke gives c. 1890; Victorian Web says it was commissioned in 1880 after Lady Drake’s death."
+ },
+ {
+  "id": "sargent-headstone",
+  "name": "Grave of John Singer Sargent",
+  "type": "Monument",
+  "date": "1925",
+  "designer": null,
+  "description": "The listed headstone of the American-born portrait painter John Singer Sargent (1856–1925), listed chiefly for its historic interest. Victorian Web places Sargent among the burials in the central 'Ring', the most prestigious part of the Anglican cemetery.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391037",
+  "lat": 51.29769,
+  "lng": -0.62462,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391037",
+   "https://britishlistedbuildings.co.uk/101391037-headstone-to-john-singer-sargent-1856-to-1925-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/sargent/",
+   "https://tbcs.org.uk/necropolis_notables/john_singer_sargent.html",
+   "https://victorianweb.org/art/parks/brookwood/history.html"
+  ],
+  "confidence": "high",
+  "notes": "I did not retrieve a physical description of the headstone itself, so describe it as a headstone only."
+ },
+ {
+  "id": "freshfield-grave",
+  "name": "Freshfield family grave",
+  "type": "Monument",
+  "date": "1892",
+  "designer": "Edward Onslow Ford",
+  "description": "One of the most lavish memorials in the cemetery, and an outstanding example of late-Victorian Renaissance Revival design. A sarcophagus stands before a pedimented aedicule framed by yew trees, in Carrara and Siena marble with bronze enrichment (including a relief of Apollo in his chariot) and wrought-iron railings. It was made for Henry Douglas Freshfield, who died in 1891 aged about 14, and also commemorates his parents, the mountaineer and writer Douglas Freshfield (d.1934) and Augusta (d.1911).",
+  "plot": null,
+  "listed": "Grade II, list entry 1391038",
+  "lat": 51.29545,
+  "lng": -0.62248,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391038",
+   "https://britishlistedbuildings.co.uk/101391038-freshfield-family-grave-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/freshfield/",
+   "https://victorianweb.org/sculpture/ford/40.html"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "van-laun-tomb",
+  "name": "Tomb of Henri van Laun",
+  "type": "Monument",
+  "date": "c. 1896",
+  "designer": "Emmeline Halse, sculptor",
+  "description": "A rare terracotta funerary monument, compared in its listing to Georgian Coade stone work, to the Belgian-born writer and critic Henri van Laun (1819–1896). A white-glazed oval portrait relief is set against carved books and scrolls, some titled with his histories of English and French literature, above a square plinth on griffin supports with reliefs naming Taine, La Bruyère, Molière and Lesage.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391039",
+  "lat": 51.30121,
+  "lng": -0.62595,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391039",
+   "https://britishlistedbuildings.co.uk/101391039-tomb-of-henri-van-laun-1819-to-1896-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/laun/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "falkiner-tomb",
+  "name": "Tomb of Lady Elaine Falkiner",
+  "type": "Monument",
+  "date": "c. 1900",
+  "designer": null,
+  "description": "A near-life-size Carrara marble statue of Elaine Maynard Falkiner (née Farmer, 1871–1900) in Grecian dress, by an unknown mason; the listing calls it an unusually vivid portrait for a memorial. South African by birth, she died of an illness caught while running a military hospital in the Boer War.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391040",
+  "lat": 51.30049,
+  "lng": -0.62882,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391040",
+   "https://britishlistedbuildings.co.uk/101391040-tomb-of-elaine-maynard-falkiner-nee-farmer-1871-to-1900-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/elaine-falkiner-grade/",
+   "https://victorianweb.org/sculpture/funerary/123.html"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "leitner-tomb",
+  "name": "Tomb of Dr Gottlieb William Leitner",
+  "type": "Monument",
+  "date": "c. 1899",
+  "designer": null,
+  "description": "The listed tomb of the orientalist Dr Gottlieb William Leitner (1840–1899), whose Oriental Institute at Woking was the setting for the Shah Jahan Mosque, Britain's first purpose-built mosque. It stands just a few metres from the Falkiner statue, on what appears to be the north (formerly Nonconformist) side of Cemetery Pales.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391041",
+  "lat": 51.3005,
+  "lng": -0.6287,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391041",
+   "https://britishlistedbuildings.co.uk/101391041-tomb-of-dr-gottlieb-william-leitner-1840-to-1899-woking-heathlands-ward",
+   "https://victorianweb.org/sculpture/funerary/190.html"
+  ],
+  "confidence": "high",
+  "notes": "The Oriental Institute / Shah Jahan Mosque link is general knowledge and was not re-verified this session (medium). I did not retrieve the tomb's physical description. Which side of Cemetery Pales it is on is inferred from coordinates."
+ },
+ {
+  "id": "salviati-tomb",
+  "name": "Tomb of Giulio Salviati",
+  "type": "Monument",
+  "date": "c. 1898",
+  "designer": null,
+  "description": "A Carrara marble kneeling angel against a pink granite cross, on a tapering granite plinth with mosaic panels: an inscription in a laurel garland, and Neo-Roman floral designs. The mosaics were probably made by the firm of Giulio Salviati (d.1898) himself, who ran the Regent Street branch of the Venetian glass and mosaic company that worked on St Paul's Cathedral.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391042",
+  "lat": 51.29912,
+  "lng": -0.62503,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391042",
+   "https://britishlistedbuildings.co.uk/101391042-tomb-of-guilio-salviati-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/salviati/",
+   "https://victorianweb.org/sculpture/funerary/177.html"
+  ],
+  "confidence": "high",
+  "notes": "The list entry spells the name 'Guilio'."
+ },
+ {
+  "id": "bent-memorial",
+  "name": "Bent family memorial",
+  "type": "Monument",
+  "date": "c. 1860",
+  "designer": null,
+  "description": "A Gothic cruciform shrine to William Bent (d.1859), with an octagonal spirelet over an arcaded, belfry-like middle stage and richly carved canopies with flamboyant tracery. It shows the influence of the Venetian Gothic that Ruskin championed. It has weathered badly and two of its four canopies have collapsed, but it is one of the earliest elaborate monuments in the cemetery.",
+  "plot": "34",
+  "listed": "Grade II, list entry 1391045",
+  "lat": 51.29794,
+  "lng": -0.62412,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391045",
+   "https://britishlistedbuildings.co.uk/101391045-bent-family-memorial-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/bent-family-memorial/",
+   "https://www.john-clarke.co.uk/items_restoration.html"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "fildes-headstone",
+  "name": "Grave of Sir Luke Fildes",
+  "type": "Monument",
+  "date": "c. 1927",
+  "designer": null,
+  "description": "A Portland stone headstone in the form of an Athenian stele, its head enriched with palmette and acanthus: a late example of a Neo-classical memorial. It marks the painter Sir (Samuel) Luke Fildes, best known for 'The Doctor', and his wife Fanny is also commemorated on it.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391046",
+  "lat": 51.29837,
+  "lng": -0.62301,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391046",
+   "https://britishlistedbuildings.co.uk/101391046-headstone-to-sir-samuel-luke-fildes-woking-heathlands-ward/maps",
+   "https://brookwoodcemetery.com/fildes"
+  ],
+  "confidence": "high",
+  "notes": "Birth year is disputed (1843 per Wikipedia and Victorian Web; 1844 per brookwoodcemetery.com); he died in 1927."
+ },
+ {
+  "id": "brookwood-1939-1945-memorial",
+  "name": "Brookwood 1939–1945 Memorial",
+  "type": "Memorial",
+  "date": "1958",
+  "designer": "Ralph Hobday",
+  "description": "The Commonwealth War Graves Commission's memorial to about 3,500 servicemen and women of the Second World War who have no known grave (CWGC gives 3,428), including special agents who died as prisoners or working with resistance movements. It is in Portland stone and stands within the Military Cemetery. Queen Elizabeth II unveiled it on 25 October 1958.",
+  "plot": null,
+  "listed": "Grade II, list entry 1391047",
+  "lat": 51.30027,
+  "lng": -0.64096,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391047",
+   "https://britishlistedbuildings.co.uk/101391047",
+   "https://admin.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/2012400/BROOKWOOD 1939-1945 MEMORIAL/",
+   "https://en.wikipedia.org/wiki/Ralph_Hobday",
+   "https://www.nzwargraves.org.nz/node/31805"
+  ],
+  "confidence": "high",
+  "notes": "Designer DISPUTED: CWGC credits Ralph Hobday; the list entry suggests Maufe. Designer disputed: the CWGC credits Ralph Hobday; the Historic England list entry suggests Sir Edward Maufe."
+ },
+ {
+  "id": "american-military-chapel",
+  "name": "American Military Chapel",
+  "type": "Building",
+  "date": "1929",
+  "designer": "Egerton Swartwout, with H. B. Creswell",
+  "description": "The small Greek Revival chapel of the Brookwood American Cemetery, with a Doric portico. Inside, the walls bear the names of 564 (some sources say 563) American service personnel of the First World War with no known grave, mostly Navy and Coast Guard dead lost at sea, and there are bronze rolls of honour. The register describes it as the cemetery's most notable building.",
+  "plot": null,
+  "listed": "Grade II, list entry 1044711",
+  "lat": 51.30174,
+  "lng": -0.64007,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1044711",
+   "https://britishlistedbuildings.co.uk/101044711-american-military-chapel-woking-heathlands-ward",
+   "https://www.parksandgardens.org/places/brookwood-cemetery",
+   "https://en.wikipedia.org/wiki/Brookwood_American_Cemetery_and_Memorial",
+   "https://www.abmc.gov/history/discover-the-history-of-brookwood-american-cemetery"
+  ],
+  "confidence": "high",
+  "notes": "Date DISPUTED (1925 vs 1929). Spelling: Egerton (sometimes 'Edgerton') Swartwout; Creswell is sometimes spelt 'Cresswell'. Date disputed: most sources give 1929; the list description says 1925."
+ },
+ {
+  "id": "american-flagpole",
+  "name": "Flagpole, American Cemetery",
+  "type": "Monument",
+  "date": "c. 1929–30",
+  "designer": null,
+  "description": "The listed flagpole about 60 yards south-east of the American chapel, the focal point around which the cemetery's four plots of headstones are grouped.",
+  "plot": null,
+  "listed": "Grade II, list entry 1044712",
+  "lat": 51.3014,
+  "lng": -0.6397,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1044712",
+   "https://britishlistedbuildings.co.uk/101044712",
+   "https://www.abmc.gov/history/discover-the-history-of-brookwood-american-cemetery"
+  ],
+  "confidence": "high",
+  "notes": "The date is an assumption (low confidence). Date not confirmed; probably laid out with the cemetery."
+ },
+ {
+  "id": "american-entrance-walls",
+  "name": "Entrance walls, American Cemetery",
+  "type": "Monument",
+  "date": "c. 1930",
+  "designer": null,
+  "description": "Low stone walls about 2½ feet high on an oval plan, with the main path running through the middle. They are topped with urns and eagle motifs and include three low stone seats. They form the formal southern approach to the American Cemetery, about 160 yards south of the chapel, and are listed for their group value with it.",
+  "plot": null,
+  "listed": "Grade II, list entry 1044713",
+  "lat": 51.30061,
+  "lng": -0.63894,
+  "coord_quality": "exact",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1044713",
+   "https://britishlistedbuildings.co.uk/101044713-entrance-walls-160-yards-south-of-american-military-chapel-woking-pirbright-ward"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "brookwood-american-cemetery",
+  "name": "Brookwood American Cemetery and Memorial",
+  "type": "Ground",
+  "date": "set aside 1917; dedicated 1937",
+  "designer": "Egerton Swartwout and H. B. Creswell",
+  "description": "The only American First World War cemetery in Britain, run by the American Battle Monuments Commission. Its 4.5 acres hold 468 American military dead, in four plots of white marble headstones grouped around the flagpole, with the chapel at the head and the oval entrance walls to the south.",
+  "plot": null,
+  "listed": "Within the Grade I registered landscape",
+  "coord_quality": "approximate",
+  "sources": [
+   "https://www.abmc.gov/history/discover-the-history-of-brookwood-american-cemetery",
+   "https://en.wikipedia.org/wiki/Brookwood_American_Cemetery_and_Memorial",
+   "https://www.ww2cemeteries.com/uk-sur-brookwood-american-cemetery.html",
+   "https://abmc.gov/news-events/news/five-things-you-may-not-know-about-brookwood-american-cemetery"
+  ],
+  "confidence": "high",
+  "notes": "The American Battle Monuments Commission gives a dedication date of 1937, 468 burials (41 of them unknown) and 564 missing; some sources give 563 missing.",
+  "lat": 51.30119,
+  "lng": -0.63955
+ },
+ {
+  "id": "brookwood-military-cemetery",
+  "name": "Brookwood Military Cemetery",
+  "type": "Ground",
+  "date": "from 1917",
+  "designer": null,
+  "description": "About 37 acres (15 ha) at the western end of the cemetery, north of Cemetery Pales, and the largest Commonwealth war cemetery in the United Kingdom. It holds 1,601 Commonwealth burials of the First World War and 3,476 of the Second, plus 786 war graves of other nationalities. It is laid out as national plots: Canadian, French, Polish, Czechoslovak, Belgian, Italian and German sections, and a Chelsea Pensioners section. The American Cemetery within it is run separately by the ABMC.",
+  "plot": null,
+  "listed": "Within the Grade I registered landscape",
+  "coord_quality": "approximate",
+  "sources": [
+   "https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/44400/brookwood-military-cemetery/",
+   "https://surreymuseums.org.uk/museum/commonwealth-war-graves-commission-brookwood-military-cemetery/",
+   "https://www.tbcs.org.uk/military_cemeteries.html",
+   "https://thebignote.com/2012/12/03/brookwood-military-cemetery-a-tour-of-the-commonwealth-section/",
+   "https://www.parksandgardens.org/places/brookwood-cemetery"
+  ],
+  "confidence": "high",
+  "notes": "The German and Chelsea Pensioners sections are mentioned in Geograph photo captions (SU9456 square), medium confidence.",
+  "lat": 51.30027,
+  "lng": -0.64087
+ },
+ {
+  "id": "canadian-section",
+  "name": "Canadian Second World War plot",
+  "type": "Ground",
+  "date": "1939–1945",
+  "designer": null,
+  "description": "A plot in the west corner of the Military Cemetery holding about 2,400 Canadian Second World War graves, among them 43 men who died of wounds after the Dieppe Raid of August 1942.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://surreymuseums.org.uk/museum/commonwealth-war-graves-commission-brookwood-military-cemetery/",
+   "https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/44400/brookwood-military-cemetery/"
+  ],
+  "confidence": "high",
+  "notes": "The facts are high confidence; the position is a guess.",
+  "lat": 51.30085,
+  "lng": -0.64444
+ },
+ {
+  "id": "canadian-records-building",
+  "name": "Canadian Records Building",
+  "type": "Building",
+  "date": "1946",
+  "designer": null,
+  "description": "A building given by the Canadian Government and built by Canadian Royal Engineers. It houses a reception room for visitors and offices for the Military Cemetery.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://thebignote.com/2012/12/03/brookwood-military-cemetery-a-tour-of-the-commonwealth-section/",
+   "https://www.tbcs.org.uk/military_cemeteries.html"
+  ],
+  "confidence": "medium",
+  "notes": "The Maufe attribution and the 1946 date each rest on one source (low). The position is unknown. Sir Edward Maufe is named as architect by a single source, unconfirmed.",
+  "lat": 51.30155,
+  "lng": -0.64299
+ },
+ {
+  "id": "brookwood-1914-1918-memorial",
+  "name": "Brookwood 1914–1918 Memorial",
+  "type": "Memorial",
+  "date": "2015; rebuilt 2026",
+  "designer": "Studio Wignall & Moore; landscape by Tom Stuart-Smith (2026)",
+  "description": "A CWGC memorial to First World War service personnel who died in the UK and Ireland and whose graves could not be found. The first version (2015) carried more than 200 names. The new memorial, inaugurated by the Princess Royal on 9 June 2026, has 31 stelae commemorating about 400 people, with space for 800 more.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://admin.cwgc.org/our-work/brookwood-1914-1918-memorial/",
+   "https://www.surreylieutenancy.org/unveiling-of-1914-1918-memorial-at-brookwood-military-cemetery/",
+   "https://www.stonewest.co.uk/brookwood-1914-1918-memorial-a-new-space-for-commemoration/"
+  ],
+  "confidence": "medium",
+  "notes": "Very recent (2026). The search attributed the 2026 design to Studio Wignall & Moore; the designer of the 2015 version was not found (a Richard Kindersley link was not supported).",
+  "lat": 51.29954,
+  "lng": -0.64018
+ },
+ {
+  "id": "parsi-ground",
+  "name": "Parsi (Zoroastrian) burial ground",
+  "type": "Ground",
+  "date": "1862",
+  "designer": null,
+  "description": "Britain's Zoroastrian burial ground, tucked into the north-west corner of the cemetery, where the Parsi community obtained burial rights in the early 1860s; it is often described as the only one of its kind in Europe. It contains some of Brookwood's most exotic architecture, notably the stepped Wadia mausoleum and the three Egyptian-style Tata mausolea.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://llewelynmorgan.com/tag/parsi/",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/",
+   "https://victorianweb.org/sculpture/funerary/218.html",
+   "https://soas-repository.worktribe.com/OutputFile/440116"
+  ],
+  "confidence": "medium",
+  "notes": "Date DISPUTED: 1862 (visitor account) vs 1863 (Palsetia, quoted by Victorian Web). 'Only one in Europe' is a claim made in one source. Sources give 1862 or 1863 for the grant of burial rights.",
+  "lat": 51.30164,
+  "lng": -0.63509
+ },
+ {
+  "id": "wadia-mausoleum",
+  "name": "Wadia mausoleum",
+  "type": "Mausoleum",
+  "date": "after 1899",
+  "designer": "Thomas Collcutt (attributed)",
+  "description": "A Zoroastrian mausoleum in seven stepped stages, representing the 'heavenly mountain' and modelled on the tomb of Cyrus the Great at Pasargadae. It stands at the centre of the Parsi ground. Lady Jerbai Wadia commissioned it, through Sir George Birdwood, for her husband Nowrosjee Nusserwanji Wadia (1849–1899); their sons Sir Cusrow and Sir Ness Wadia, and Sir Ness's wife, also lie here.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "http://www.mmtrust.org.uk/mausolea/view/155/Wadia_Mausoleum",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/",
+   "https://llewelynmorgan.com/tag/wadia/"
+  ],
+  "confidence": "medium",
+  "notes": "The architect attribution comes from one source.",
+  "lat": 51.30182,
+  "lng": -0.63509
+ },
+ {
+  "id": "tata-mausolea",
+  "name": "Tata family mausolea",
+  "type": "Mausoleum",
+  "date": "from 1904",
+  "designer": null,
+  "description": "Three mausolea in a row on a raised terrace in the Parsi ground, for members of the family that founded the House of Tata. That of Jamsetji Nusserwanji Tata (built 1904) stands in the centre. The buildings are Egyptian in character, with rosettes, a winged sun on the frieze and bronze gates.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://mmtrust.org.uk/mausoleum/tata-jamsetji-nusserwanji",
+   "https://llewelynmorgan.com/tag/parsee/"
+  ],
+  "confidence": "medium",
+  "notes": "I could not confirm which family members occupy the two side mausolea (sources mention Sir Ratan J. Tata, 1871–1918).",
+  "lat": 51.30146,
+  "lng": -0.63553
+ },
+ {
+  "id": "muslim-grounds",
+  "name": "Muslim burial grounds",
+  "type": "Ground",
+  "date": "from 1884",
+  "designer": null,
+  "description": "Brookwood has long served Britain's Muslims, a legacy of the nearby Shah Jahan Mosque at Woking, and several communities have their own grounds within the cemetery. These include the 'New Muslim ground' on the north side near the Nicols mausoleum and the Dawoodi Bohra ground (Najmee/Najmi Baag), which had 434 headstones by the end of 2021.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://www.john-clarke.co.uk/items_restoration.html",
+   "https://soas-repository.worktribe.com/OutputFile/440116",
+   "https://www.exploringsurreyspast.org.uk/wp-content/uploads/2022/11/Booklet-final-1407Edit.pdf"
+  ],
+  "confidence": "medium",
+  "notes": "NOT VERIFIED this session: the Muslim military plot (remains moved from the Horsell Common Muslim Burial Ground in 1968), and the graves of Marmaduke Pickthall, Abdullah Yusuf Ali and Lord Headley. These are well-known claims but need checking before use.",
+  "lat": 51.30139,
+  "lng": -0.62979
+ },
+ {
+  "id": "nonconformist-north-side",
+  "name": "North Cemetery (originally Nonconformist ground)",
+  "type": "Ground",
+  "date": "1854",
+  "designer": "Sydney Smirke, W. B. Thomas and Robert Donald",
+  "description": "The land north of Cemetery Pales was the unconsecrated ground for Dissenters, served by the North Station and the Nonconformist chapel. Over time it took in grounds for many faiths and communities, including the Parsi, Muslim and Bohra grounds, and at its western end the Military Cemetery was laid out from 1917.",
+  "plot": null,
+  "listed": "Within the Grade I registered landscape",
+  "coord_quality": "approximate",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://www.parksandgardens.org/places/brookwood-cemetery",
+   "https://brookwoodcemetery.com/history/"
+  ],
+  "confidence": "high",
+  "lat": 51.3023,
+  "lng": -0.63005
+ },
+ {
+  "id": "anglican-south-side",
+  "name": "South Cemetery (originally Anglican ground)",
+  "type": "Ground",
+  "date": "1854",
+  "designer": "Sydney Smirke, W. B. Thomas and Robert Donald",
+  "description": "The consecrated Anglican half of the cemetery, south of Cemetery Pales, was served by the South Station and Smirke's Anglican chapel. It holds the Victorian showpieces around 'The Ring' and the 1950 Glades of Remembrance. Much of its southern part was never formally laid out and remains heathland, sparsely scattered with gravestones.",
+  "plot": null,
+  "listed": "Within the Grade I registered landscape",
+  "coord_quality": "approximate",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://www.parksandgardens.org/places/brookwood-cemetery"
+  ],
+  "confidence": "high",
+  "lat": 51.29512,
+  "lng": -0.6317
+ },
+ {
+  "id": "st-edward-the-martyr-church",
+  "name": "Church of St Edward the Martyr",
+  "type": "Building",
+  "date": "1909; Orthodox since 1984",
+  "designer": "Cyril Tubbs and Arthur Messer",
+  "description": "The larger of two former Anglican chapels near the old South Station, completed c.1909, which the St Edward Brotherhood restored for Orthodox worship. On 16 September 1984 it received the relics of St Edward the Martyr, the Anglo-Saxon king murdered in 978/979, whose bones were found at Shaftesbury Abbey in 1931; it is now a shrine and place of pilgrimage.",
+  "plot": null,
+  "listed": null,
+  "lat": 51.29944,
+  "lng": -0.62417,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Church_of_St_Edward_the_Martyr,_Brookwood",
+   "https://orthodoxwiki.org/St._Edward_the_Martyr_Orthodox_Brotherhood_(Surrey,_England)",
+   "https://victorianweb.org/art/parks/brookwood/5.html",
+   "https://roca.org/oa/volume-x/issue-93/from-st-edwards/"
+  ],
+  "confidence": "high",
+  "notes": "I found no listing for this building. The king's death date (978/979) and the 1931 discovery are general knowledge, partly confirmed by search."
+ },
+ {
+  "id": "st-edward-brotherhood",
+  "name": "St Edward Brotherhood monastery",
+  "type": "Building",
+  "date": "1982",
+  "designer": null,
+  "description": "A small Orthodox monastic community set up at Brookwood in 1982 to care for the relics of St Edward the Martyr. It owns about five acres, two former Anglican chapels and the surviving South Station platform. A new purpose-built monastic house was ready around 2007, and Smirke's old chapel became a parish hall and guest quarters. Its jurisdiction has changed: it was part of the Russian Orthodox Church Outside Russia until 2007, and has since been under Greek Old Calendarist synods.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://orthodoxwiki.org/St._Edward_the_Martyr_Orthodox_Brotherhood_(Surrey,_England)",
+   "https://en.wikipedia.org/wiki/Church_of_St_Edward_the_Martyr,_Brookwood",
+   "https://victorianweb.org/art/parks/brookwood/5.html",
+   "https://www.getsurrey.co.uk/news/local-news/new-home-for-monks-4832327"
+  ],
+  "confidence": "high",
+  "notes": "Current jurisdiction DISPUTED between sources.",
+  "lat": 51.29971,
+  "lng": -0.62439
+ },
+ {
+  "id": "smirke-anglican-chapel",
+  "name": "Smirke's Anglican chapel (1854)",
+  "type": "Building",
+  "date": "1854",
+  "designer": "Sydney Smirke",
+  "description": "The cemetery's original Anglican mortuary chapel, built for the 1854 opening beside the South Station. It is the smaller of the two chapels now owned by the St Edward Brotherhood, which first housed the monks and was later adapted as a parish hall and living quarters.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://orthodoxwiki.org/St._Edward_the_Martyr_Orthodox_Brotherhood_(Surrey,_England)",
+   "https://victorianweb.org/art/parks/brookwood/5.html",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+  ],
+  "confidence": "medium",
+  "notes": "A Surrey Live article gives the date as 1850, which is impossible since the cemetery opened in 1854.",
+  "lat": 51.2999,
+  "lng": -0.62467
+ },
+ {
+  "id": "south-station",
+  "name": "South Station platform",
+  "type": "Building",
+  "date": "1854; burnt 1972",
+  "designer": "Sydney Smirke",
+  "description": "The terminus of the Necropolis branch, serving the Anglican side. After the trains stopped, the station building survived as the 'South Bar', serving refreshments until about 1967, and was destroyed by fire in September 1972. Its platform survives behind the church of St Edward the Martyr, on the path called Railway Avenue, and belongs to the St Edward Brotherhood.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://brookwoodcemetery.com/history/",
+   "https://www.tbcs.org.uk/cemetery_railway.html",
+   "https://en.wikipedia.org/wiki/London_Necropolis_railway_station",
+   "https://www.discoveringbritain.org/activities/greater-london/trails/brookwood-cemetery.html"
+  ],
+  "confidence": "high",
+  "notes": "The facts are high confidence; the position is approximate.",
+  "lat": 51.30008,
+  "lng": -0.62495
+ },
+ {
+  "id": "north-station-site",
+  "name": "Site of North Station",
+  "type": "Building",
+  "date": "1854; demolished",
+  "designer": "Sydney Smirke",
+  "description": "The Nonconformist station on the Necropolis branch, north of Cemetery Pales. The station building was demolished in the 1960s because of dry rot. A low brick platform wall survives beside Railway Avenue, facing a gold-domed mausoleum.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://brookwoodcemetery.com/history/",
+   "https://www.tbcs.org.uk/cemetery_railway.html",
+   "https://www.discoveringbritain.org/activities/greater-london/trails/brookwood-cemetery.html"
+  ],
+  "confidence": "high",
+  "notes": "The facts are high confidence; the position is a guess.",
+  "lat": 51.30122,
+  "lng": -0.63008
+ },
+ {
+  "id": "dissenters-chapel",
+  "name": "Nonconformist (Dissenters') chapel",
+  "type": "Building",
+  "date": "1854",
+  "designer": "Sydney Smirke",
+  "description": "Smirke's chapel for the Nonconformist side, near the North Station. Its status is DISPUTED. Historic England's register entry says the Nonconformist chapel has been lost, while Victorian Web reports that it still stands, minus all but the square base of its tower, and is used by the Najmi Baag (Dawoodi Bohra) community.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://victorianweb.org/art/parks/brookwood/3.html",
+   "https://victorianweb.org/art/parks/brookwood/5.html"
+  ],
+  "confidence": "low",
+  "lat": 51.30195,
+  "lng": -0.63078
+ },
+ {
+  "id": "former-parsonage",
+  "name": "Former parsonage / superintendent's office (north entrance)",
+  "type": "Building",
+  "date": "1854",
+  "designer": "Sydney Smirke",
+  "description": "A two-storey house on the east side of the semicircular lay-by at the North Cemetery entrance, built by Smirke as a parsonage in 1854. It served as the cemetery superintendent's office from about 1885 and was sold as a private house after 1976.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://www.parksandgardens.org/places/brookwood-cemetery"
+  ],
+  "confidence": "medium",
+  "lat": 51.3009,
+  "lng": -0.62579
+ },
+ {
+  "id": "brookwood-station",
+  "name": "Brookwood railway station",
+  "type": "Building",
+  "date": "1864",
+  "designer": null,
+  "description": "The station on the London–Southampton main line at the cemetery's north-west edge, alongside the Military Cemetery. Necropolis trains from London passed through it before entering the cemetery branch, which left the main line just to the west.",
+  "plot": null,
+  "listed": null,
+  "lat": 51.30389,
+  "lng": -0.63611,
+  "coord_quality": "exact",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Brookwood_railway_station"
+  ],
+  "confidence": "medium",
+  "notes": "The 1864 opening date and the junction position west of the station are from general knowledge, not re-verified (medium)."
+ },
+ {
+  "id": "boulton-mausoleum",
+  "name": "Boulton mausoleum",
+  "type": "Mausoleum",
+  "date": "c. 1919–20",
+  "designer": null,
+  "description": "A large Neoclassical mausoleum in the form of a chapel, built in white marble, standing in plot 34 near the Bent memorial.",
+  "plot": "34",
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "http://www.mmtrust.org.uk/mausolea/view/171",
+   "https://www.john-clarke.co.uk/items_restoration.html"
+  ],
+  "confidence": "medium",
+  "notes": "A conservation page reportedly said it was 'Listed Grade II (2004)', but it is NOT among the NHLE entries found (1391033–1391047), so treat it as unlisted.",
+  "lat": 51.29773,
+  "lng": -0.62388
+ },
+ {
+  "id": "nicols-mausoleum",
+  "name": "Nicols mausoleum",
+  "type": "Mausoleum",
+  "date": null,
+  "designer": null,
+  "description": "The mausoleum of Daniel Nicols and his family, in the north part of the cemetery near the New Muslim ground. It was on the Brookwood Cemetery Society's list of memorials needing restoration.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://www.john-clarke.co.uk/items_restoration.html"
+  ],
+  "confidence": "medium",
+  "notes": "Daniel Nicols is usually identified as the founder of the Café Royal, London (general knowledge; not verified this session).",
+  "lat": 51.30175,
+  "lng": -0.62935
+ },
+ {
+  "id": "cemetery-pales",
+  "name": "Cemetery Pales",
+  "type": "Landscape",
+  "date": "1854",
+  "designer": null,
+  "description": "The public road through the cemetery, originally the Knaphill–Pirbright track that crossed the site from north-east to south-west. The company kept it, straightened it and walled it on both sides. It divides the North (Nonconformist) and South (Anglican) cemeteries, and the main vehicle entrances to both halves face each other where the railway once crossed it, about 400 m south-west of its junction with Bagshot Road (A322).",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://brookwoodcemetery.com/history/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://www.parksandgardens.org/places/brookwood-cemetery",
+   "https://www.geograph.org.uk/photo/49636"
+  ],
+  "confidence": "high",
+  "lat": 51.30046,
+  "lng": -0.62652
+ },
+ {
+  "id": "railway-avenue",
+  "name": "Railway Avenue (Necropolis branch trackbed)",
+  "type": "Landscape",
+  "date": "1854–1941",
+  "designer": null,
+  "description": "The course of the London Necropolis Company's private branch line survives as an open path. In the north it is lined by an avenue of Wellingtonias and in the south by Redwoods. Funeral trains ran on it from the company's London terminus near Waterloo to the North and South Stations, whose platforms survive alongside it.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://historicengland.org.uk/images-books/publications/list-of-registered-cemeteries/registered-cemeteries-list-jan18/",
+   "https://www.tbcs.org.uk/cemetery_railway.html",
+   "https://en.wikipedia.org/wiki/London_Necropolis_railway_station",
+   "https://www.geograph.org.uk/photo/49636"
+  ],
+  "confidence": "high",
+  "notes": "The 1941 date comes from general knowledge; sources say only that service ended 'in the 1940s' after the Luftwaffe bombed the terminus.",
+  "lat": 51.3016,
+  "lng": -0.63223
+ },
+ {
+  "id": "wellingtonia-avenues",
+  "name": "Wellingtonia avenues",
+  "type": "Landscape",
+  "date": "from 1854",
+  "designer": "Planted by Robert Donald",
+  "description": "Historic England judges Brookwood's 19th-century giant sequoias to be perhaps the most extensive group of Wellingtonias in the country. They were planted in lines and in single and double avenues as part of a Loudon-inspired scheme of evergreen planting, and they still structure the cemetery's avenues and the railway route.",
+  "plot": null,
+  "listed": "Within the Grade I registered landscape",
+  "coord_quality": "approximate",
+  "sources": [
+   "https://historicengland.org.uk/images-books/publications/list-of-registered-cemeteries/registered-cemeteries-list-jan18/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+  ],
+  "confidence": "high",
+  "lat": 51.30199,
+  "lng": -0.63437
+ },
+ {
+  "id": "the-ring",
+  "name": "The Ring",
+  "type": "Landscape",
+  "date": "from 1854",
+  "designer": null,
+  "description": "The circular heart of the Anglican South Cemetery and its most prestigious burial ground, from which several avenues radiate, including St Mark's Avenue. Many of the finest Victorian and Edwardian monuments are in or near it.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "approximate",
+  "sources": [
+   "https://victorianweb.org/art/parks/brookwood/history.html",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://brookwoodcemetery.com/category/news/"
+  ],
+  "confidence": "medium",
+  "lat": 51.29783,
+  "lng": -0.62481
+ },
+ {
+  "id": "st-marks-avenue",
+  "name": "St Mark's Avenue",
+  "type": "Landscape",
+  "date": "from 1854",
+  "designer": null,
+  "description": "One of the avenues radiating from The Ring. It runs south-west, roughly parallel to Cemetery Pales, and splits the southern section into two roughly equal parts.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+  ],
+  "confidence": "medium",
+  "lat": 51.29556,
+  "lng": -0.63025
+ },
+ {
+  "id": "glades-of-remembrance",
+  "name": "Glades of Remembrance",
+  "type": "Ground",
+  "date": "1950",
+  "designer": null,
+  "description": "An area of the South Cemetery opened in 1950 for burying cremated remains. Wooded glades surround an ornamental lake, trees with name plates serve as memorials, and an open meadow beside the lake is used for scattering ashes. It has its own mid-20th-century semicircular entrance off Cemetery Pales.",
+  "plot": null,
+  "listed": null,
+  "coord_quality": "estimated",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://brookwoodcemetery.com/price-guides",
+   "https://brookwoodcemetery.com/wp-content/uploads/2026/05/Price-guide-Cremated-Remains-May-2026.pdf",
+   "https://www.john-clarke.co.uk/glades.html"
+  ],
+  "confidence": "high",
+  "notes": "The facts are high confidence; the position is a guess.",
+  "lat": 51.2974,
+  "lng": -0.63378
+ }
+]

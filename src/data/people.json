@@ -1,0 +1,1251 @@
+[
+ {
+  "id": "john-singer-sargent",
+  "name": "John Singer Sargent",
+  "honorifics": "RA",
+  "born": "12 January 1856",
+  "died": "14 April 1925",
+  "category": "Arts & Letters",
+  "tags": [
+   "painter",
+   "portraitist",
+   "American",
+   "listed monument"
+  ],
+  "summary": "Florence-born American painter who made London his base and became the pre-eminent society portraitist of the Edwardian age. In later life he turned increasingly to watercolour and to mural schemes, but it is his portraits that defined an era's image of itself.",
+  "grave": "An upright Portland stone grave-marker modelled on an Attic stele, which also commemorates his sister Emily. The foot reads 'HE GIVETH HIS BELOVED SLEEP'; the motto at the top is recorded differently by the cemetery ('LABORARE EST ORARE') and by the Historic England listing ('LABORARE EST HONORARE').",
+  "plot": "Plot 35",
+  "area": "The 'Ring' (per the Brookwood Cemetery Society)",
+  "listed": "Grade II, list entry 1391037",
+  "notes": "Plot number disputed: the Brookwood Cemetery Society gives Plot 35 (the 'Ring'), but the cemetery's own listed-monuments page gives Plot 27; Find a Grave says 'Central circle'. The grave lies roughly 50 yards from the Vickers monument. Inscription wording also differs between sources (see grave).",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/john_singer_sargent.html",
+   "https://brookwoodcemetery.com/sargent/",
+   "https://brookwoodcemetery.com/listed-monuments/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391037",
+   "https://britishlistedbuildings.co.uk/101391037-headstone-to-john-singer-sargent-1856-to-1925-woking-heathlands-ward"
+  ],
+  "confidence": "high",
+  "place": "sargent-headstone",
+  "calling": "Portrait painter"
+ },
+ {
+  "id": "rebecca-west",
+  "name": "Dame Rebecca West",
+  "honorifics": "DBE",
+  "born": "21 December 1892",
+  "died": "15 March 1983",
+  "category": "Arts & Letters",
+  "tags": [
+   "novelist",
+   "journalist",
+   "critic",
+   "feminist"
+  ],
+  "summary": "Born Cicily Isabel Fairfield, she took her pen-name from an Ibsen heroine and became one of the most formidable novelists, critics and reporters of the twentieth century. Her work ranged from suffrage journalism to her monumental Yugoslav travelogue Black Lamb and Grey Falcon and her reports on the Nuremberg trials.",
+  "grave": "A simple headstone that records her three names, according to the Brookwood Cemetery Society.",
+  "plot": "Plot 81",
+  "area": null,
+  "listed": null,
+  "notes": "Sources differ slightly on her birth name: the cemetery gives Cicily Fairfield, the Society Cicily Isabel Fairfield.",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/dame_rebecca_west.html",
+   "https://brookwoodcemetery.com/2021/dame-rebecca-west/",
+   "https://en.wikipedia.org/wiki/List_of_people_buried_in_Brookwood_Cemetery"
+  ],
+  "confidence": "high",
+  "calling": "Novelist and critic"
+ },
+ {
+  "id": "dennis-wheatley",
+  "name": "Dennis Wheatley",
+  "honorifics": null,
+  "born": "8 January 1897",
+  "died": "10 November 1977",
+  "category": "Arts & Letters",
+  "tags": [
+   "novelist",
+   "thrillers",
+   "occult fiction"
+  ],
+  "summary": "Best-selling author of thrillers and occult novels, above all The Devil Rides Out, whose books sold in vast numbers from the 1930s to the 1970s. During the Second World War he served with the Joint Planning Staff of the War Cabinet, working on strategic deception.",
+  "grave": "His ashes are interred at Brookwood following cremation at Tooting; no description of the memorial was found.",
+  "plot": null,
+  "area": null,
+  "listed": null,
+  "notes": "He is also commemorated on the Baker/Yeats family monument at West Norwood Cemetery. No plot number found. His first name is sometimes misspelt 'Denis' in cemetery publicity.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dennis_Wheatley",
+   "https://prabook.com/web/dennis.wheatley/722777",
+   "https://woking.gov.uk/node/24297",
+   "https://celebratewoking.info/placestovisit/cemetery"
+  ],
+  "confidence": "high",
+  "calling": "Novelist"
+ },
+ {
+  "id": "william-de-morgan",
+  "name": "William De Morgan",
+  "honorifics": null,
+  "born": "16 November 1839",
+  "died": "15 January 1917",
+  "category": "Arts & Letters",
+  "tags": [
+   "potter",
+   "tile designer",
+   "Arts and Crafts",
+   "novelist",
+   "inventor",
+   "listed monument"
+  ],
+  "summary": "Potter and designer, a friend of William Morris, whose lustreware and tiles are among the finest achievements of the Arts and Crafts movement. Late in life he reinvented himself as a best-selling novelist.",
+  "grave": "A tall neo-Grec Carrara marble stele shared with his wife Evelyn; the relief, designed by Evelyn, shows an angel reaching towards a figure of Death with an inverted torch who turns away, beneath a pediment with a pair of hearts. The inscription describes him as artist, potter, inventor and novelist.",
+  "plot": "Plot 24",
+  "area": null,
+  "listed": "Grade II, list entry 1391033",
+  "notes": "The listing gives the epitaph as 'Sorrow is only of the earth'; Wikipedia gives 'Sorrow is only of the flesh'. Wikipedia says the relief was carved by Sir George Frampton.",
+  "sources": [
+   "https://brookwoodcemetery.com/2026/de-morgan-love-story/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391033",
+   "https://britishlistedbuildings.co.uk/101391033-tomb-of-william-and-evelyn-de-morgan-woking-heathlands-ward",
+   "https://en.wikipedia.org/wiki/Evelyn_De_Morgan",
+   "https://victorianweb.org/sculpture/funerary/121.html"
+  ],
+  "confidence": "high",
+  "place": "de-morgan-tomb",
+  "calling": "Potter, designer and novelist"
+ },
+ {
+  "id": "evelyn-de-morgan",
+  "name": "Evelyn De Morgan",
+  "honorifics": null,
+  "born": "30 August 1855",
+  "died": "2 May 1919",
+  "category": "Arts & Letters",
+  "tags": [
+   "painter",
+   "Pre-Raphaelite",
+   "Symbolist",
+   "spiritualism",
+   "listed monument"
+  ],
+  "summary": "Born Evelyn Pickering, she was one of the most accomplished painters of the later Pre-Raphaelite circle, producing richly coloured allegorical and Symbolist canvases. She died two years after her husband William and was buried in the same grave.",
+  "grave": "She designed the relief on the couple's Carrara marble stele herself: an angel reaching towards Death, who turns away with an inverted torch.",
+  "plot": "Plot 24",
+  "area": null,
+  "listed": "Grade II, list entry 1391033",
+  "notes": "Shares the grave of William De Morgan (d. 1917). Epitaph recorded as 'Sorrow is only of the earth' (listing) or 'of the flesh' (Wikipedia).",
+  "sources": [
+   "https://brookwoodcemetery.com/2026/de-morgan-love-story/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391033",
+   "https://en.wikipedia.org/wiki/Evelyn_De_Morgan"
+  ],
+  "confidence": "high",
+  "place": "de-morgan-tomb",
+  "calling": "Painter"
+ },
+ {
+  "id": "luke-fildes",
+  "name": "Sir Luke Fildes",
+  "honorifics": "RA, KCVO",
+  "born": "3 October 1843",
+  "died": "27 February 1927",
+  "category": "Arts & Letters",
+  "tags": [
+   "painter",
+   "illustrator",
+   "social realism",
+   "listed monument"
+  ],
+  "summary": "Sir Samuel Luke Fildes began as a social-realist illustrator and painter of the London poor and became one of the most successful painters of his generation. His painting The Doctor (1891) became one of the best-loved images of Victorian art.",
+  "grave": "A Portland stone headstone in the form of an Athenian stele, with an elaborate palmette and acanthus-enriched head; his wife Fanny is also commemorated. It is listed as a late example of a Neo-classical memorial.",
+  "plot": "Plot 36",
+  "area": null,
+  "listed": "Grade II, list entry 1391046",
+  "notes": "Birth year varies: most sources give 1843, but The Times obituary gave 3 October 1844 'or according to some 1843'.",
+  "sources": [
+   "https://brookwoodcemetery.com/fildes/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391046",
+   "https://britishlistedbuildings.co.uk/101391046-headstone-to-sir-samuel-luke-fildes-woking-heathlands-ward",
+   "https://victorianweb.org/painting/fildes/obituary.html"
+  ],
+  "confidence": "high",
+  "place": "fildes-headstone",
+  "calling": "Painter"
+ },
+ {
+  "id": "henri-van-laun",
+  "name": "Henri van Laun",
+  "honorifics": null,
+  "born": "1819",
+  "died": "1896",
+  "category": "Arts & Letters",
+  "tags": [
+   "translator",
+   "French literature",
+   "teacher",
+   "terracotta",
+   "listed monument"
+  ],
+  "summary": "Writer, teacher and translator who did much to bring French literature to English readers, translating Molière, Lesage and La Bruyère and Hippolyte Taine's History of English Literature. He was a friend of Taine.",
+  "grave": "An unusual terracotta monument by the sculptor Emmeline Halse: a white-glazed oval portrait relief set against books and scrolls on a square plinth with griffin monopods at the corners. Garlands on the plinth carry the names of Molière, Lesage, Taine and La Bruyère.",
+  "plot": "Plot 80",
+  "area": null,
+  "listed": "Grade II, list entry 1391039",
+  "notes": "Birth year given as 1819 by Historic England and the cemetery, 1820 by Wikipedia. Wikipedia calls him Dutch-born; the listing calls him a Belgian writer and critic. The cemetery suggests a link to the terracotta works at nearby Compton.",
+  "sources": [
+   "https://brookwoodcemetery.com/laun/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391039",
+   "https://britishlistedbuildings.co.uk/101391039-tomb-of-henri-van-laun-1819-to-1896-woking-heathlands-ward",
+   "https://en.wikipedia.org/wiki/Henri_van_Laun"
+  ],
+  "confidence": "high",
+  "place": "van-laun-tomb",
+  "calling": "Translator and critic"
+ },
+ {
+  "id": "arthur-melville",
+  "name": "Arthur Melville",
+  "honorifics": null,
+  "born": "10 April 1855",
+  "died": "28 August 1904",
+  "category": "Arts & Letters",
+  "tags": [
+   "painter",
+   "watercolourist",
+   "Glasgow Boys",
+   "Scottish",
+   "restored grave"
+  ],
+  "summary": "Scottish painter associated with the Glasgow Boys, admired for his bold, luminous watercolours of Spain, North Africa and the Middle East. He influenced a generation of watercolourists.",
+  "grave": "His ashes were first buried at his former home; in 1909 his widow had them moved to Brookwood Heath, just beyond the cemetery's formal boundary. The upright headstone was smashed in the 1970s and discarded; stonemasons repaired it in 2022 for the Brookwood Cemetery Society and it was re-dedicated on 24 September 2023.",
+  "plot": null,
+  "area": "Brookwood Heath, just outside the cemetery boundary",
+  "listed": null,
+  "notes": "Strictly the grave lies outside the cemetery, on Brookwood Heath (an SSSI). Wikipedia dates the restoration to 2023; the Society's documents show the repair completed in 2022 and the re-dedication in 2023. The restoration project's inscription note gives his birth year as 1858, against 1855 in most references.",
+  "sources": [
+   "https://tbcs.org.uk/restoration/arthur_melville.html",
+   "https://flemingcollection.com/scottish_art_news/news-press/arthur-melvilles-grave-restored",
+   "https://wokingnewsandmail.co.uk/news/a-fitting-final-resting-place-for-art-legend-645460",
+   "https://en.wikipedia.org/wiki/Arthur_Melville"
+  ],
+  "confidence": "high",
+  "calling": "Watercolourist"
+ },
+ {
+  "id": "zaha-hadid",
+  "name": "Dame Zaha Hadid",
+  "honorifics": "DBE, RA",
+  "born": "31 October 1950",
+  "died": "31 March 2016",
+  "category": "Arts & Letters",
+  "tags": [
+   "architect",
+   "Iraqi-British",
+   "Pritzker Prize",
+   "Muslim ground"
+  ],
+  "summary": "Baghdad-born British architect whose fluid, parametric buildings, from the London Aquatics Centre to the MAXXI in Rome, made her one of the most celebrated designers of her time. In 2004 she became the first woman to win the Pritzker Architecture Prize.",
+  "grave": "She lies between her father and her brother under one of the cemetery's great pines; at her funeral their graves were covered in white roses.",
+  "plot": null,
+  "area": "New Muslim High Ground",
+  "listed": null,
+  "notes": "She died in Miami. No numbered plot given in sources.",
+  "sources": [
+   "https://brookwoodcemetery.com/2019/zaha-mohammad-hadid-dbe-ra-31-october-1950-31-march-2016/",
+   "https://architecturalrecord.com/articles/11611-funeral-services-held-for-zaha-hadid-in-london",
+   "https://www.middleeasteye.net/discover/britain-london-brookwood-cemetery-middle-east-poets-politicians"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Architect"
+ },
+ {
+  "id": "naji-al-ali",
+  "name": "Naji al-Ali",
+  "honorifics": null,
+  "born": "c. 1938",
+  "died": "29 August 1987",
+  "category": "Arts & Letters",
+  "tags": [
+   "cartoonist",
+   "Palestinian",
+   "Handala",
+   "unsolved murder",
+   "Muslim ground"
+  ],
+  "summary": "Palestinian political cartoonist, creator of Handala, the barefoot refugee child seen from behind who became a symbol of Palestinian identity. He was shot outside the London offices of the Kuwaiti newspaper al-Qabas on 22 July 1987 and died five weeks later without regaining consciousness; the killing remains unsolved.",
+  "grave": "A black marble tombstone, described as draped with a Palestinian flag and with a small Handala notebook left on it.",
+  "plot": null,
+  "area": "Muslim ground",
+  "listed": null,
+  "notes": "He is generally said to have wished to be buried beside his father at Ain al-Hilweh in Lebanon, which proved impossible; one source says he left no will. The Metropolitan Police reopened the investigation in 2017. Birth year is uncertain.",
+  "sources": [
+   "https://www.middleeasteye.net/discover/britain-london-brookwood-cemetery-middle-east-poets-politicians",
+   "https://www.newarab.com/analysis/who-killed-naji-al-ali-palestines-most-beloved-artist",
+   "https://en.wikipedia.org/wiki/Naji_al-Ali"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Cartoonist"
+ },
+ {
+  "id": "douglas-freshfield",
+  "name": "Douglas Freshfield",
+  "honorifics": null,
+  "born": "27 April 1845",
+  "died": "9 February 1934",
+  "category": "Arts & Letters",
+  "tags": [
+   "mountaineer",
+   "explorer",
+   "travel writer",
+   "barrister",
+   "listed monument"
+  ],
+  "summary": "Barrister, mountaineer and travel writer, a leading figure of the golden age of alpinism whose explorations extended to the Caucasus and the Himalaya.",
+  "grave": "Commemorated, with his wife Augusta (d. 1911), on the memorial to their son Henry Douglas Freshfield (1877–1891), sculpted by Edward Onslow Ford in 1892 in marble with bronze detailing and wrought-iron railings; the cemetery calls it one of the most lavish in Brookwood.",
+  "plot": "Plot 44",
+  "area": null,
+  "listed": "Grade II, list entry 1391038",
+  "notes": "Sources confirm he is commemorated on the family memorial, but none found states explicitly that his remains lie there.",
+  "sources": [
+   "https://brookwoodcemetery.com/freshfield/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391038",
+   "https://britishlistedbuildings.co.uk/101391038-freshfield-family-grave-woking-heathlands-ward",
+   "https://en.wikipedia.org/wiki/Douglas_Freshfield"
+  ],
+  "confidence": "medium",
+  "place": "freshfield-grave",
+  "calling": "Mountaineer and travel writer"
+ },
+ {
+  "id": "robert-knox",
+  "name": "Dr Robert Knox",
+  "honorifics": null,
+  "born": "4 September 1791",
+  "died": "20 December 1862",
+  "category": "Science & Medicine",
+  "tags": [
+   "anatomist",
+   "Burke and Hare",
+   "Edinburgh",
+   "body-snatching"
+  ],
+  "summary": "Brilliant and popular Edinburgh anatomy lecturer whose career was ruined in 1828 when it emerged that the bodies William Burke and William Hare sold to his school were those of their murder victims. He ended his days in London as a pathological anatomist, dying in Hackney.",
+  "grave": "The original memorial is a flat ledger stone; a small granite block inscribed 'Robert Knox – Anatomist 1791–1862' was placed on it in 1966 by the Royal College of Surgeons of Edinburgh.",
+  "plot": "Plot 100",
+  "area": null,
+  "listed": null,
+  "notes": "The grave lay neglected and forgotten until Professor Eric Mekie rediscovered it in 1966.",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/dr_robert_knox.html",
+   "https://archiveandlibrary.rcsed.ac.uk/surgeon/3770389-robert-knox",
+   "https://brookwoodcemetery.com/2018/robert-knox-1791-1862/"
+  ],
+  "confidence": "high",
+  "calling": "Anatomist"
+ },
+ {
+  "id": "daniel-solander",
+  "name": "Daniel Solander",
+  "honorifics": "FRS",
+  "born": "19 February 1733",
+  "died": "13 May 1782",
+  "category": "Science & Medicine",
+  "tags": [
+   "botanist",
+   "Linnaeus",
+   "Captain Cook",
+   "HMS Endeavour",
+   "reburial",
+   "Swedish ground"
+  ],
+  "summary": "Swedish botanist and pupil of Linnaeus who sailed with Joseph Banks on Cook's first voyage in HMS Endeavour, collecting and describing hundreds of new plants. He died at Banks's London home.",
+  "grave": "Reburied in the Swedish Church ground at Brookwood; no description of a memorial was found.",
+  "plot": "Plot 122",
+  "area": "Swedish Church ground",
+  "listed": null,
+  "notes": "Originally buried at the Swedish Church in Prince's Square, Wapping, London; his coffin was moved to Brookwood when the church was demolished, in 1913 according to a record quoted by the Captain Cook Society (the NHM says only 'early 1900s').",
+  "sources": [
+   "https://brookwoodcemetery.com/2024/solander/",
+   "https://www.captaincooksociety.com/home/detail/nature-s-argonaut-daniel-solander-1733-1782-duyker-edward-1998",
+   "https://nhm.ac.uk/discover/daniel-solander-a-linnaean-disciple-on-hms-endeavour.html"
+  ],
+  "confidence": "high",
+  "calling": "Botanist"
+ },
+ {
+  "id": "arthur-schuster",
+  "name": "Sir Arthur Schuster",
+  "honorifics": "FRS",
+  "born": "12 September 1851",
+  "died": "14 October 1934",
+  "category": "Science & Medicine",
+  "tags": [
+   "physicist",
+   "spectroscopy",
+   "Manchester"
+  ],
+  "summary": "German-born British mathematical physicist whose work spanned spectroscopy, electrochemistry, optics, X-radiography and the application of harmonic analysis to physics. He was knighted in 1920.",
+  "grave": "No description found.",
+  "plot": "Plot 56",
+  "area": null,
+  "listed": null,
+  "notes": null,
+  "sources": [
+   "https://brookwoodcemetery.com/2021/professor-sir-arthur-schuster-frs-1851-1934-plot-56/",
+   "https://en.wikipedia.org/wiki/Arthur_Schuster"
+  ],
+  "confidence": "high",
+  "calling": "Physicist"
+ },
+ {
+  "id": "charles-bradlaugh",
+  "name": "Charles Bradlaugh",
+  "honorifics": "MP",
+  "born": "26 September 1833",
+  "died": "30 January 1891",
+  "category": "Politics & Reform",
+  "tags": [
+   "secularism",
+   "atheism",
+   "National Secular Society",
+   "Parliament",
+   "free speech"
+  ],
+  "summary": "Radical, republican and founder of the National Secular Society, he was elected MP for Northampton in 1880 but excluded for years over his refusal to take the religious oath, becoming the first avowed atheist to sit in the Commons. His long fight helped bring about the Oaths Act of 1888.",
+  "grave": "A large family grave whose 1893 monument carried a bronze bust by the Belgian sculptor Francis Verheyden; the bust and a bronze wreath were later stolen. The National Secular Society and the Brookwood Cemetery Society restored the grave in 2021, unveiling a new bust.",
+  "plot": "Plot 108",
+  "area": "Former Nonconformist (northern) section",
+  "listed": null,
+  "notes": "Date of the bust's theft varies: the cemetery says about 1938, other accounts cite thefts or vandalism in 1938 and 1968. Despite his wish for the plainest burial without speeches, his funeral on 3 February 1891 drew several thousand mourners on special trains from Waterloo – perhaps the largest event in the cemetery's history.",
+  "sources": [
+   "https://www.tbcs.org.uk/necropolis_notables/charles_bradlaugh.html",
+   "https://brookwoodcemetery.com/?p=457",
+   "https://secularism.org.uk/news/2021/10/secularists-celebrate-restoration-of-charles-bradlaughs-grave",
+   "https://www.historyworkshop.org.uk/radical-object-bust-of-charles-bradlaugh"
+  ],
+  "confidence": "high",
+  "calling": "Radical MP and secularist"
+ },
+ {
+  "id": "shapurji-saklatvala",
+  "name": "Shapurji Saklatvala",
+  "honorifics": "MP",
+  "born": "28 March 1874",
+  "died": "16 January 1936",
+  "category": "Politics & Reform",
+  "tags": [
+   "Communist",
+   "Battersea",
+   "Parsi",
+   "Indian independence",
+   "Zoroastrian ground"
+  ],
+  "summary": "Bombay-born Parsi who became Communist MP for Battersea North in the 1920s, one of the first Indian-born members of the House of Commons, and a fierce campaigner against British rule in India. He was connected by his mother to the Tata family.",
+  "grave": "He was cremated at Golders Green and his remains were buried in the Parsi burial ground at Brookwood; one account says in his mother's tomb, another beside his parents and near J. N. Tata.",
+  "plot": null,
+  "area": "Parsi (Zoroastrian) ground",
+  "listed": null,
+  "notes": "Accounts differ on whether his ashes went into his mother's tomb or beside both parents. One article reports that the Zoroastrian association allowed him and his children, but not his non-Parsi wife, to be buried there.",
+  "sources": [
+   "https://university.open.ac.uk/research-projects/making-britain/content/Shapurji-saklatvala",
+   "https://mainstreamweekly.net/article11131.html",
+   "https://soas-repository.worktribe.com/OutputFile/440116"
+  ],
+  "confidence": "high",
+  "place": "parsi-ground",
+  "calling": "MP for Battersea North"
+ },
+ {
+  "id": "mancherjee-bhownaggree",
+  "name": "Sir Mancherjee Bhownaggree",
+  "honorifics": "KCIE, MP",
+  "born": "1851",
+  "died": "14 November 1933",
+  "category": "Politics & Reform",
+  "tags": [
+   "Conservative",
+   "Bethnal Green",
+   "Parsi",
+   "Zoroastrian ground"
+  ],
+  "summary": "Bombay Parsi lawyer who sat as Conservative MP for Bethnal Green North East from 1895 to 1906, only the second Indian to be elected to the House of Commons.",
+  "grave": "Buried in the Parsi section; a photograph of the grave is reproduced in Wikipedia-derived sources, but no description was found.",
+  "plot": null,
+  "area": "Parsi (Zoroastrian) ground",
+  "listed": null,
+  "notes": "Burial confirmed by Wikipedia (and mirrors) and SOAS work on the Zoroastrian burial ground; no cemetery record checked.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mancherjee_Bhownaggree",
+   "https://library.soas.ac.uk/Record/eprints-31689"
+  ],
+  "confidence": "medium",
+  "place": "parsi-ground",
+  "calling": "MP for Bethnal Green North East"
+ },
+ {
+  "id": "lord-edward-pelham-clinton",
+  "name": "Lord Edward Pelham-Clinton",
+  "honorifics": null,
+  "born": "11 August 1836",
+  "died": "9 July 1907",
+  "category": "Politics & Reform",
+  "tags": [
+   "courtier",
+   "Master of the Household",
+   "Queen Victoria",
+   "Liberal",
+   "bronze",
+   "listed monument"
+  ],
+  "summary": "Second son of the 5th Duke of Newcastle, briefly Liberal MP for North Nottinghamshire (1865–68), and later Groom-in-Waiting and then Master of the Household to Queen Victoria from 1894 until her death in 1901.",
+  "grave": "An exceptional Neo-Baroque bronze group on a Portland stone base, commemorating him and his wife Matilda (d. 1892): a reclining, semi-draped woman, a kneeling mourner and an angel above. The sculptor is unknown and the inscription panels have been lost.",
+  "plot": "Plot 4",
+  "area": null,
+  "listed": "Grade II*, list entry 1391044",
+  "notes": "The History of Parliament gives his birth year as 1837; most sources give 1836. Often styled Lord Edward Clinton.",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391044",
+   "https://en.wikipedia.org/wiki/Lord_Edward_Clinton",
+   "https://victorianweb.org/sculpture/funerary/178.html",
+   "https://brookwoodcemetery.com/listed-monuments/"
+  ],
+  "confidence": "high",
+  "place": "pelham-clinton-tomb",
+  "calling": "Master of the Household to Queen Victoria"
+ },
+ {
+  "id": "john-lynch-fenian",
+  "name": "John Lynch",
+  "honorifics": null,
+  "born": "c. 1832",
+  "died": "1866",
+  "category": "Politics & Reform",
+  "tags": [
+   "Fenian",
+   "Irish republicanism",
+   "prisoner",
+   "Catholic ground",
+   "unmarked grave"
+  ],
+  "summary": "Cork Fenian imprisoned for his part in the Irish republican movement, who died in Woking Prison in 1866.",
+  "grave": "Buried in the Roman Catholic pauper section; the exact position of the grave is unknown.",
+  "plot": null,
+  "area": "Roman Catholic ground (pauper section)",
+  "listed": null,
+  "notes": "Grave location unknown.",
+  "sources": [
+   "https://www.tbcs.org.uk/necropolis_notables/john_lynch.html"
+  ],
+  "confidence": "high",
+  "calling": "Fenian prisoner"
+ },
+ {
+  "id": "edward-the-martyr",
+  "name": "St Edward the Martyr",
+  "honorifics": "King of England",
+  "born": "c. 962",
+  "died": "18 March 978",
+  "category": "Faith",
+  "tags": [
+   "Anglo-Saxon",
+   "king",
+   "saint",
+   "relics",
+   "Russian Orthodox",
+   "St Edward Brotherhood"
+  ],
+  "summary": "Anglo-Saxon King of England, murdered at Corfe in 978 and soon venerated as a saint. Relics identified as his were rediscovered at Shaftesbury Abbey in 1931 and, after decades of negotiation, given to the Russian Orthodox Church Outside Russia, which enshrined them at Brookwood in September 1984.",
+  "grave": "The relics are kept in a shrine served by the St Edward Brotherhood, an Orthodox monastic community within the cemetery.",
+  "plot": null,
+  "area": "St Edward Brotherhood",
+  "listed": null,
+  "notes": "The Brookwood Cemetery Society gives his dates as c. 959–978/9. The rediscoverer, John Wilson-Claridge (1905–1993), donated the relics; their ownership was contested (the Crown at one point claimed them), the enshrinement was permitted by court order on a temporary basis, and the case was dismissed in spring 1995. A Shaftesbury campaign has sought their return.",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/st_edward_the_martyr.html",
+   "https://roca.org/oa/volume-vi/issue-57/bones-of-contention-st-edward-the-martyr/",
+   "https://john-clarke.co.uk/saint-edward.html"
+  ],
+  "confidence": "high",
+  "place": "st-edward-the-martyr-church",
+  "calling": "King of England and saint"
+ },
+ {
+  "id": "gottlieb-wilhelm-leitner",
+  "name": "Dr Gottlieb Wilhelm Leitner",
+  "honorifics": null,
+  "born": "14 October 1840",
+  "died": "22 March 1899",
+  "category": "Faith",
+  "tags": [
+   "orientalist",
+   "linguist",
+   "Shah Jahan Mosque",
+   "Oriental Institute",
+   "Woking",
+   "listed monument"
+  ],
+  "summary": "Pest-born orientalist, linguist and educationist who worked in Lahore before founding the Oriental Institute at Woking, where he built the Shah Jahan Mosque, Britain's first purpose-built mosque. Cemetery sources credit him with securing Brookwood's first Muslim burial ground.",
+  "grave": "A Carrara marble bust within a pink granite surround, inscribed 'THE LEARNED ARE HONOURED IN THEIR WORK'.",
+  "plot": "Plot 2",
+  "area": "South Cemetery",
+  "listed": "Grade II, list entry 1391041",
+  "notes": "He died in Bonn. Note that he lies in the main (South) cemetery, not the Muslim ground. His name is sometimes given as 'Gottleib' or 'William'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gottlieb_Wilhelm_Leitner",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391041",
+   "https://britishlistedbuildings.co.uk/101391041-tomb-of-dr-gottlieb-william-leitner-1840-to-1899-woking-heathlands-ward",
+   "https://brookwoodcemetery.com/2020/hrh-the-earl-of-wessex-visits-brookwood-cemetery/",
+   "https://www.arabnews.com/node/1532276"
+  ],
+  "confidence": "high",
+  "place": "leitner-tomb",
+  "calling": "Orientalist and educationist"
+ },
+ {
+  "id": "lord-headley",
+  "name": "Lord Headley (Rowland Allanson-Winn, 5th Baron Headley)",
+  "honorifics": null,
+  "born": "19 January 1855",
+  "died": "22 June 1935",
+  "category": "Faith",
+  "tags": [
+   "convert to Islam",
+   "Irish peer",
+   "Woking Muslim Mission",
+   "Muslim ground"
+  ],
+  "summary": "Irish peer who converted to Islam, taking the name Shaikh Rahmatullah al-Farooq, and became a leading figure of the Woking Muslim Mission and first President of the British Muslim Society. He is reported to have been offered, and declined, the throne of Albania in 1925.",
+  "grave": "Buried in the Muslim section, a few yards from Marmaduke Pickthall and Abdullah Yusuf Ali; no description of the memorial was found.",
+  "plot": null,
+  "area": "Muslim ground",
+  "listed": null,
+  "notes": "Place of death disputed: Wikipedia gives Codford, Wiltshire; Obituaries Australia gives London. BACSA calls him the first peer to perform the Hajj.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rowland_Allanson-Winn,_5th_Baron_Headley",
+   "https://www.patrickcomerford.com/2019/11/woking-mosque-and-irish-peer-who-almost.html",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Peer and Muslim convert"
+ },
+ {
+  "id": "marmaduke-pickthall",
+  "name": "Marmaduke Pickthall",
+  "honorifics": null,
+  "born": "7 April 1875",
+  "died": "19 May 1936",
+  "category": "Faith",
+  "tags": [
+   "novelist",
+   "Qur'an translation",
+   "convert to Islam",
+   "Muslim ground"
+  ],
+  "summary": "Novelist of Near Eastern life who converted to Islam in 1917 and produced The Meaning of the Glorious Koran (1930), one of the most influential English translations of the Qur'an by a Muslim.",
+  "grave": "Buried in the Muslim section; his funeral was led by the imam of the Woking mosque. No description of the memorial was found.",
+  "plot": null,
+  "area": "Muslim ground",
+  "listed": null,
+  "notes": "He died at the Porthminster Hotel, St Ives, Cornwall. Birthplace given as Cambridge Terrace, London (Wikipedia) or Harrow (other sources).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Marmaduke_Pickthall",
+   "https://wokingmuslim.org/pers/pickthall/obituary.htm",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/",
+   "https://rabbitholemag.com/the-translators-marmaduke-pickthall-yusuf-ali-and-the-quran/"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Novelist; translator of the Qur’an"
+ },
+ {
+  "id": "abdullah-yusuf-ali",
+  "name": "Abdullah Yusuf Ali",
+  "honorifics": "CBE",
+  "born": "14 April 1872",
+  "died": "10 December 1953",
+  "category": "Faith",
+  "tags": [
+   "Qur'an translation",
+   "scholar",
+   "barrister",
+   "Indian Civil Service",
+   "Muslim ground"
+  ],
+  "summary": "Indian-born barrister, civil servant and scholar whose English translation and commentary of the Qur'an, first published in the 1930s, remains one of the most widely read. He spent his last days in a London County Council home for the elderly.",
+  "grave": "Buried in the Muslim section, not far from Marmaduke Pickthall; his funeral was arranged by the Pakistan High Commission.",
+  "plot": null,
+  "area": "Muslim ground",
+  "listed": null,
+  "notes": "Birth date given as 14 April or 4 April 1872. He was taken from a London County Council home for the elderly in Chelsea to St Stephen's Hospital, Fulham, where he died.",
+  "sources": [
+   "https://monthly-renaissance.com/articles/a-biography-of-abdullah-yusaf-ali",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/",
+   "https://rabbitholemag.com/the-translators-marmaduke-pickthall-yusuf-ali-and-the-quran/",
+   "https://www.bl.uk/stories/blogs/posts/william-henry-quilliam-the-victorian-solicitor-who-established-britains-first-mosque"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Scholar; translator of the Qur’an"
+ },
+ {
+  "id": "abdullah-quilliam",
+  "name": "Abdullah Quilliam",
+  "honorifics": null,
+  "born": "10 April 1856",
+  "died": "23 April 1932",
+  "category": "Faith",
+  "tags": [
+   "convert to Islam",
+   "Liverpool Muslim Institute",
+   "solicitor",
+   "unmarked grave",
+   "Muslim ground"
+  ],
+  "summary": "Liverpool solicitor William Henry Quilliam converted to Islam and founded the Liverpool Muslim Institute, often called Britain's first mosque. He later left Liverpool and lived for years under the name Henri Marcel Leon (also styled Henri de Léon).",
+  "grave": "An unmarked grave in the Muslim section, not far from the grave of Abdullah Yusuf Ali.",
+  "plot": null,
+  "area": "Muslim ground ('Muhammadan Plot')",
+  "listed": null,
+  "notes": "The grave is unmarked. A 1932 Surrey Advertiser report describes his funeral at the Muslim burial ground a few days after his death; the Woking Muslim Mission notes some doubt about aspects of the account.",
+  "sources": [
+   "https://www.bl.uk/stories/blogs/posts/william-henry-quilliam-the-victorian-solicitor-who-established-britains-first-mosque",
+   "https://brookwoodcemetery.com/notable-graves-at-brookwood-cemetery/page/6",
+   "https://www.wokingmuslim.org/pers/quilliam/",
+   "https://en.wikipedia.org/wiki/Abdullah_Quilliam"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Solicitor; founder of the Liverpool Muslim Institute"
+ },
+ {
+  "id": "ross-lowis-mangles",
+  "name": "Ross Lowis Mangles",
+  "honorifics": "VC",
+  "born": "14 April 1833",
+  "died": "28 February 1905",
+  "category": "Military",
+  "tags": [
+   "Victoria Cross",
+   "Indian Mutiny",
+   "civilian VC",
+   "Arrah",
+   "Bengal Civil Service"
+  ],
+  "summary": "Bengal civil servant who joined the force sent to relieve Arrah in 1857; when it was ambushed, he carried a wounded soldier of the 37th Regiment for several miles during the retreat on 30 July, despite being wounded himself. He is one of the very few civilians ever awarded the Victoria Cross, presented by Queen Victoria at Windsor in 1860.",
+  "grave": "The Brookwood Cemetery Society restored the grave in 2006, when it was in danger of toppling over.",
+  "plot": "Plot 31",
+  "area": "South Cemetery, facing St George's Avenue",
+  "listed": null,
+  "notes": "Sources say one of four or one of five civilian VCs. He died at Pirbright.",
+  "sources": [
+   "https://brookwoodcemetery.com/ross-lowis-mangles/",
+   "https://en.wikipedia.org/wiki/Ross_Mangles",
+   "https://john-clarke.co.uk/mangles_vc.html",
+   "https://victoriacrosstrust.org/brookwood-cemetery/"
+  ],
+  "confidence": "high",
+  "calling": "Bengal civil servant"
+ },
+ {
+  "id": "john-sherwood-kelly",
+  "name": "John Sherwood-Kelly",
+  "honorifics": "VC, CMG, DSO",
+  "born": "13 January 1880",
+  "died": "18 August 1931",
+  "category": "Military",
+  "tags": [
+   "Victoria Cross",
+   "First World War",
+   "Cambrai",
+   "South African"
+  ],
+  "summary": "South African-born officer who won the Victoria Cross at Marcoing on 20 November 1917, during the Battle of Cambrai, while commanding the 1st Battalion, Royal Inniskilling Fusiliers. His medal is in the National Museum of Military History in Johannesburg.",
+  "grave": "The headstone was cleaned and restored by the Victoria Cross Trust in 2015.",
+  "plot": "Plot 81",
+  "area": null,
+  "listed": null,
+  "notes": "Grave reference disputed: the cemetery gives Plot 81, while Memorials to Valour gives Block 86, grave 196296. Birthplace given variously as Lady Frere or Queenstown, Cape Colony. The Royal Irish Regiment site gives his death as 13 August 1931.",
+  "sources": [
+   "https://brookwoodcemetery.com/?p=2441",
+   "https://en.wikipedia.org/wiki/John_Sherwood-Kelly",
+   "https://memorialstovalour.co.uk/vc919.html",
+   "https://victoriacrosstrust.org/brookwood-cemetery/"
+  ],
+  "confidence": "high",
+  "calling": "Soldier"
+ },
+ {
+  "id": "william-addison-vc",
+  "name": "Rev. William Addison",
+  "honorifics": "VC",
+  "born": "16 September 1883",
+  "died": "7 January 1962",
+  "category": "Military",
+  "tags": [
+   "Victoria Cross",
+   "army chaplain",
+   "Mesopotamia",
+   "First World War"
+  ],
+  "summary": "Anglican army chaplain awarded the Victoria Cross for rescuing and tending wounded men under fire at Sannaiyat, Mesopotamia, in April 1916. He remained an army chaplain after the war, serving as far afield as Khartoum, Malta and Shanghai, and was later rector of Coltishall with Great Hautbois in Norfolk.",
+  "grave": "The Brookwood Cemetery Society restored his badly weathered headstone in autumn 2007.",
+  "plot": "Plot 22",
+  "area": null,
+  "listed": null,
+  "notes": "Wikipedia gives birth 16 September 1883 at North Warnborough, Hampshire; another source gives 18 September 1883 at Cranbrook, Kent. The VC action is usually dated 9 April 1916 (one source: 6 April). He died at St Leonards-on-Sea and was buried at Brookwood the same day as his funeral at Bexhill.",
+  "sources": [
+   "https://brookwoodcemetery.com/?p=2207",
+   "https://en.wikipedia.org/wiki/William_Addison_(VC)",
+   "https://john-clarke.co.uk/addison_vc.html"
+  ],
+  "confidence": "high",
+  "calling": "Army chaplain"
+ },
+ {
+  "id": "william-reynolds-vc",
+  "name": "William Reynolds",
+  "honorifics": "VC",
+  "born": "1827",
+  "died": "1869",
+  "category": "Military",
+  "tags": [
+   "Victoria Cross",
+   "Crimean War",
+   "Alma",
+   "Scots Fusilier Guards"
+  ],
+  "summary": "Guardsman awarded one of the first Victoria Crosses for gallantry at the Battle of the Alma in 1854. He is the only Crimean War VC holder buried at Brookwood.",
+  "grave": "His grave was among those cleaned in the Victoria Cross Trust's Brookwood restoration project.",
+  "plot": "Plot 119",
+  "area": null,
+  "listed": null,
+  "notes": "Death year disputed: 1869 (allatsea.co.za) versus 1867 (John Clarke's list).",
+  "sources": [
+   "https://brookwoodcemetery.com/2021/reynolds/",
+   "https://brookwoodcemetery.com/vc/",
+   "https://www.john-clarke.co.uk/vcs.html",
+   "http://allatsea.co.za/musings/the-victoria-cross/victoria-cross-graves-elsewhere/brookwood-cemetery-vc-graves/",
+   "https://victoriacrosstrust.org/brookwood-cemetery/"
+  ],
+  "confidence": "medium",
+  "calling": "Guardsman"
+ },
+ {
+  "id": "carroll-gibbons",
+  "name": "Carroll Gibbons",
+  "honorifics": null,
+  "born": "4 January 1903",
+  "died": "10 May 1954",
+  "category": "Stage & Music",
+  "tags": [
+   "bandleader",
+   "pianist",
+   "composer",
+   "Savoy Orpheans",
+   "dance band"
+  ],
+  "summary": "American-born pianist and bandleader who led the Savoy Hotel Orpheans, jointly from 1931 and alone from 1932, becoming the voice of the Savoy's dance music through the 1930s and 1940s. He was the hotel's Director of Entertainments from 1950 until his sudden death.",
+  "grave": "Buried near the chapel; no description of the memorial found.",
+  "plot": "Plot 124",
+  "area": null,
+  "listed": null,
+  "notes": null,
+  "sources": [
+   "https://brookwoodcemetery.com/?p=427",
+   "https://en.wikipedia.org/wiki/Carroll_Gibbons"
+  ],
+  "confidence": "high",
+  "calling": "Bandleader"
+ },
+ {
+  "id": "thomas-beecham",
+  "name": "Sir Thomas Beecham",
+  "honorifics": "Bt, CH",
+  "born": "29 April 1879",
+  "died": "8 March 1961",
+  "category": "Stage & Music",
+  "tags": [
+   "conductor",
+   "opera",
+   "Delius",
+   "reburial"
+  ],
+  "summary": "Flamboyant conductor and impresario, founder of the London Philharmonic and Royal Philharmonic orchestras and the great champion of Delius. His wit was as celebrated as his music-making.",
+  "grave": "No longer at Brookwood: he was buried here in 1961, but in 1991 his remains were moved to St Peter's churchyard, Limpsfield, Surrey, near Delius.",
+  "plot": null,
+  "area": null,
+  "listed": null,
+  "notes": "Former burial only. The 1991 date of the transfer rests on a limited number of sources.",
+  "sources": [
+   "https://www.vle.lt/straipsnis/thomas-beecham/",
+   "https://en.wikipedia.org/wiki/Church_of_St_Peter,_Limpsfield",
+   "https://familypedia.fandom.com/wiki/Brookwood_Cemetery"
+  ],
+  "confidence": "medium",
+  "calling": "Conductor"
+ },
+ {
+  "id": "christopher-hewett",
+  "name": "Christopher Hewett",
+  "honorifics": null,
+  "born": "5 April 1922",
+  "died": "3 August 2001",
+  "category": "Stage & Music",
+  "tags": [
+   "actor",
+   "television",
+   "Broadway",
+   "Mr. Belvedere"
+  ],
+  "summary": "English-born stage and screen actor who made his career largely in America, best known for the title role of the butler in the television sitcom Mr. Belvedere.",
+  "grave": "He was cremated in Hollywood and his urn was taken to England by relatives and buried at Brookwood.",
+  "plot": null,
+  "area": null,
+  "listed": null,
+  "notes": "Burial attested by Wikipedia, IMDb and Find a Grave; not found in cemetery publications.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Christopher_Hewett",
+   "https://m.imdb.com/name/nm0381973/bio",
+   "https://www.findagrave.com/memorial/5860419"
+  ],
+  "confidence": "medium",
+  "calling": "Actor"
+ },
+ {
+  "id": "edith-thompson",
+  "name": "Edith Thompson",
+  "honorifics": null,
+  "born": "25 December 1893",
+  "died": "9 January 1923",
+  "category": "Crime & Scandal",
+  "tags": [
+   "execution",
+   "Holloway",
+   "miscarriage of justice",
+   "reburial",
+   "Thompson and Bywaters"
+  ],
+  "summary": "Hanged at Holloway with her lover Frederick Bywaters for the murder of her husband Percy, although the case against her rested largely on her romantic letters. Her execution became a lasting cause célèbre in the campaign against capital punishment.",
+  "grave": "Reburied at Brookwood in 1971 in an unmarked grave in Plot 117, shared with Styllou Christofi, Amelia Sach and Annie Walters; on 13 November 1993 a grey granite memorial to the four women was dedicated there.",
+  "plot": "Plot 117",
+  "area": null,
+  "listed": null,
+  "notes": "Remains moved twice: exhumed from Holloway during its rebuilding in 1971 and taken to Brookwood without her family's knowledge; exhumed again on 20 November 2018 and reburied in her parents' grave at the City of London Cemetery on 22 November 2018. She is therefore no longer at Brookwood.",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/edith_thompson.html",
+   "https://brookwoodcemetery.com/?p=462",
+   "https://john-clarke.co.uk/edith_thompson2.html",
+   "https://www.caitlindavies.co.uk/edith-thompson-reburial/"
+  ],
+  "confidence": "high",
+  "calling": "Hanged at Holloway, 1923"
+ },
+ {
+  "id": "margaret-duchess-of-argyll",
+  "name": "Margaret, Duchess of Argyll",
+  "honorifics": null,
+  "born": "1 December 1912",
+  "died": "25 July 1993",
+  "category": "Crime & Scandal",
+  "tags": [
+   "society",
+   "debutante",
+   "divorce",
+   "scandal"
+  ],
+  "summary": "Born Margaret Whigham, she was one of the most celebrated debutantes and beauties of the 1930s. Her 1963 divorce from the 11th Duke of Argyll, with its notorious explicit photographs, was one of the great scandals of post-war Britain.",
+  "grave": "She was interred beside her first husband, Charles Sweeny, who had died in March 1993; no description of the memorial was found.",
+  "plot": null,
+  "area": null,
+  "listed": null,
+  "notes": "Her requiem mass was held at the Church of the Immaculate Conception, Farm Street, Mayfair; one source gives the burial date as 3 August 1993. She died in Pimlico, London.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Margaret_Campbell,_Duchess_of_Argyll",
+   "https://en.wikipedia.org/wiki/Charles_Francis_Sweeny",
+   "https://woking.gov.uk/node/24297"
+  ],
+  "confidence": "high",
+  "calling": "Society beauty"
+ },
+ {
+  "id": "cosmo-duff-gordon",
+  "name": "Sir Cosmo Duff Gordon",
+  "honorifics": "Bt",
+  "born": "22 July 1862",
+  "died": "20 April 1931",
+  "category": "Crime & Scandal",
+  "tags": [
+   "Titanic",
+   "Lifeboat No. 1",
+   "scandal"
+  ],
+  "summary": "Scottish baronet who survived the sinking of the Titanic in 1912 in Lifeboat No. 1, which left the ship far from full. Allegations that he had paid its crew not to row back for survivors dogged him for the rest of his life, even though the British inquiry cleared him.",
+  "grave": "He and his wife Lucy lie together in Plot 25; no description of the memorial was found.",
+  "plot": "Plot 25",
+  "area": null,
+  "listed": null,
+  "notes": "Plot number from the Brookwood Cemetery Society only.",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/sir_cosmo_duff_gordon.html",
+   "https://www.encyclopedia-titanica.org/noted-stylist-dies-london.html"
+  ],
+  "confidence": "high",
+  "calling": "Baronet; Titanic survivor"
+ },
+ {
+  "id": "lucy-duff-gordon",
+  "name": "Lucy, Lady Duff Gordon ('Lucile')",
+  "honorifics": null,
+  "born": "13 June 1863",
+  "died": "20 April 1935",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "fashion designer",
+   "Lucile",
+   "couture",
+   "Titanic"
+  ],
+  "summary": "Leading couturier who founded the fashion house Lucile, with branches in London, Paris, New York and Chicago, and pioneered the staged fashion parade with professional mannequins. She survived the Titanic with her husband Sir Cosmo.",
+  "grave": "Buried with her husband in Plot 25.",
+  "plot": "Plot 25",
+  "area": null,
+  "listed": null,
+  "notes": "She died in a Putney nursing home, estranged from her husband, who had predeceased her.",
+  "sources": [
+   "https://tbcs.org.uk/necropolis_notables/sir_cosmo_duff_gordon.html",
+   "https://www.encyclopedia-titanica.org/noted-stylist-dies-london.html"
+  ],
+  "confidence": "high",
+  "calling": "Fashion designer (“Lucile”)"
+ },
+ {
+  "id": "jamsetji-tata",
+  "name": "Jamsetji Nusserwanji Tata",
+  "honorifics": null,
+  "born": "3 March 1839",
+  "died": "19 May 1904",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "industrialist",
+   "Tata Group",
+   "Parsi",
+   "mausoleum",
+   "Zoroastrian ground"
+  ],
+  "summary": "Founder of the Tata Group and often called the father of Indian industry, whose plans for steel, hydro-electric power and scientific education shaped modern India. He died at Bad Nauheim in Germany.",
+  "grave": "An Egyptian Revival mausoleum of 1904, the first and central one of three Tata family mausolea standing in a row on a raised terrace.",
+  "plot": null,
+  "area": "Parsi (Zoroastrian) ground",
+  "listed": null,
+  "notes": null,
+  "sources": [
+   "https://mmtrust.org.uk/mausoleum/tata-jamsetji-nusserwanji",
+   "https://en.wikipedia.org/wiki/Jamsetji_Tata",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/"
+  ],
+  "confidence": "high",
+  "place": "tata-mausolea",
+  "calling": "Industrialist"
+ },
+ {
+  "id": "ratanji-tata",
+  "name": "Sir Ratanji Tata",
+  "honorifics": null,
+  "born": "1871",
+  "died": "5 September 1918",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "financier",
+   "philanthropist",
+   "Tata Group",
+   "Parsi",
+   "mausoleum",
+   "Zoroastrian ground"
+  ],
+  "summary": "Younger son of Jamsetji Tata, financier and philanthropist. He died at St Ives, Cornwall, and was buried beside his father.",
+  "grave": "One of the three Tata mausolea in the Parsi ground.",
+  "plot": null,
+  "area": "Parsi (Zoroastrian) ground",
+  "listed": null,
+  "notes": "Date of death given as 5 or 6 September 1918.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ratanji_Tata",
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/"
+  ],
+  "confidence": "high",
+  "place": "tata-mausolea",
+  "calling": "Financier and philanthropist"
+ },
+ {
+  "id": "dorabji-tata",
+  "name": "Sir Dorabji Tata",
+  "honorifics": null,
+  "born": "1859",
+  "died": "1932",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "industrialist",
+   "Tata Group",
+   "Parsi",
+   "mausoleum",
+   "Gilbert Bayes",
+   "Zoroastrian ground"
+  ],
+  "summary": "Elder son of Jamsetji Tata, who as chairman of the Tata group carried through his father's plans for steel and hydro-electric power.",
+  "grave": "A Portland stone mausoleum, shared with Lady Meherbai Tata, designed by Gilbert Bayes, with brick-glazed Persian-style friezes of Median and Persian guards and a roof of glazed terracotta tiles.",
+  "plot": null,
+  "area": "Parsi (Zoroastrian) ground",
+  "listed": null,
+  "notes": "Burial attested by BACSA and SOAS accounts of the Tata mausolea; no cemetery record checked.",
+  "sources": [
+   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/",
+   "https://soas-repository.worktribe.com/OutputFile/440116"
+  ],
+  "confidence": "medium",
+  "place": "tata-mausolea",
+  "calling": "Industrialist"
+ },
+ {
+  "id": "ernest-william-moir",
+  "name": "Sir Ernest William Moir",
+  "honorifics": "Bt",
+  "born": "1862",
+  "died": "1933",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "civil engineer",
+   "tunnelling",
+   "listed monument"
+  ],
+  "summary": "Civil engineer who worked on the Forth Bridge and on the Hudson River tunnel in New York, where he introduced a medical air lock to treat men suffering from compressed-air sickness.",
+  "grave": "A family tomb commemorating him and Lieutenant Rex Moir, who died in 1915.",
+  "plot": "Plot 4",
+  "area": null,
+  "listed": "Grade II, list entry 1391043",
+  "notes": "The listing (first listed 23 July 2004) confirms the tomb; the biographical summary is not drawn from cemetery sources.",
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391043",
+   "https://brookwoodcemetery.com/listed-monuments/"
+  ],
+  "confidence": "medium",
+  "place": "moir-tomb",
+  "calling": "Civil engineer"
+ },
+ {
+  "id": "douglas-vickers",
+  "name": "Douglas Vickers",
+  "honorifics": "MP",
+  "born": "24 July 1861",
+  "died": "23 November 1937",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "industrialist",
+   "Vickers",
+   "armaments",
+   "aircraft",
+   "listed monument"
+  ],
+  "summary": "Sheffield industrialist and chairman of Vickers, the armaments, shipbuilding and aircraft company, who also sat as Conservative MP for Sheffield Hallam from 1918 to 1922.",
+  "grave": "A pair of Portland stone memorials within a kerb: his own, of about 1937, is a chest tomb in the manner of Lutyens with heraldic cartouches, beside the c. 1928 memorial to Oliver Vickers, an early Royal Flying Corps ace, which bears an eagle and the RAF motto.",
+  "plot": "Plot 31",
+  "area": "Former Anglican section",
+  "listed": "Grade II, list entry 1391035 (Vickers family grave)",
+  "notes": null,
+  "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391035",
+   "https://britishlistedbuildings.co.uk/101391035-vickers-family-grave-woking-heathlands-ward",
+   "https://en.wikipedia.org/wiki/Douglas_Vickers",
+   "https://brookwoodcemetery.com/listed-monuments/",
+   "https://www.getsurrey.co.uk/news/local-news/treasured-monuments-can-be-saved-4848903"
+  ],
+  "confidence": "high",
+  "place": "vickers-family-grave",
+  "calling": "Industrialist and MP"
+ },
+ {
+  "id": "dugald-drummond",
+  "name": "Dugald Drummond",
+  "honorifics": null,
+  "born": "1 January 1840",
+  "died": "8 November 1912",
+  "category": "Commerce & Engineering",
+  "tags": [
+   "locomotive engineer",
+   "railways",
+   "LSWR",
+   "Scottish"
+  ],
+  "summary": "Scottish locomotive engineer who designed engines for the North British and Caledonian railways before becoming locomotive superintendent of the London and South Western Railway in 1895, whose main line runs beside the cemetery.",
+  "grave": "A family grave close to the former terminus of the London Necropolis Railway; the gravestone was refurbished in 1995, the centenary of his LSWR appointment, at the suggestion of Southern railway enthusiasts.",
+  "plot": null,
+  "area": null,
+  "listed": null,
+  "notes": "Accounts of his death differ: he died at home in Surbiton after scalds, gangrene and amputation; the popular story of a scalding on the footplate is described as a myth.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dugald_Drummond",
+   "https://www.gracesguide.co.uk/Brookwood_Cemetery",
+   "https://chrisrobinson.co.uk/place-names/drummond-close/"
+  ],
+  "confidence": "high",
+  "calling": "Locomotive engineer"
+ },
+ {
+  "id": "ramadan-guney",
+  "name": "Ramadan Güney",
+  "honorifics": null,
+  "born": "18 February 1932",
+  "died": "2006",
+  "category": "Cemetery Lore",
+  "tags": [
+   "cemetery owner",
+   "Turkish Cypriot",
+   "Muslim community",
+   "Muslim ground"
+  ],
+  "summary": "Paphos-born Turkish Cypriot businessman who helped found London's first Turkish Cypriot mosque and, after acquiring burial rights for his community, bought Brookwood Cemetery itself in 1985. His family continued to run the cemetery after his death.",
+  "grave": "Buried in one of the Muslim plots he helped to establish; no description of the memorial found.",
+  "plot": "Plot M3",
+  "area": "Muslim ground",
+  "listed": null,
+  "notes": "The cemetery gives Plot M3; a Muslim heritage trail leaflet lists him under Plot M4. As chairman of Masjid Ramadan he bought burial rights over 19 acres in 1983 before acquiring the whole cemetery. He died in Cyprus.",
+  "sources": [
+   "https://brookwoodcemetery.com/author/mike/page/15/",
+   "https://en.wikipedia.org/wiki/Ramadan_G%C3%BCney",
+   "https://john-clarke.co.uk/ramadan_guney.html",
+   "https://www.everydaymuslim.org/wp-content/uploads/2019/07/02Trail-EM-WMHT-MuhCemWalk.pdf"
+  ],
+  "confidence": "high",
+  "place": "muslim-grounds",
+  "calling": "Owner of the cemetery"
+ },
+ {
+  "id": "dodi-fayed",
+  "name": "Dodi Fayed",
+  "honorifics": null,
+  "born": "15 April 1955",
+  "died": "31 August 1997",
+  "category": "Cemetery Lore",
+  "tags": [
+   "film producer",
+   "Diana, Princess of Wales",
+   "temporary burial",
+   "reburial"
+  ],
+  "summary": "Film producer and son of Mohamed Al-Fayed, killed in the Paris car crash that also killed Diana, Princess of Wales. He was buried at Brookwood shortly after his death.",
+  "grave": "No longer at Brookwood: in October 1997 he was re-interred on the grounds of Barrow Green Court, the Fayed family estate at Oxted, Surrey.",
+  "plot": null,
+  "area": null,
+  "listed": null,
+  "notes": "Temporary burial only. Claims that the exhumation needed special Home Office permission, and descriptions of the Oxted memorial, come from low-quality sources and are not included.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dodi_Fayed",
+   "https://www.upi.com/topic/Dodi_Fayed/news/1/"
+  ],
+  "confidence": "high",
+  "calling": "Film producer"
+ }
+]

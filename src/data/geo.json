@@ -1,0 +1,359 @@
+{
+ "note": "Schematic. Listed monuments are placed from Historic England grid references; the boundary, roads, railway and grounds are estimated from published descriptions and may be out by 150–400 m.",
+ "boundary": [
+  [
+   51.30197,
+   -0.64555
+  ],
+  [
+   51.30354,
+   -0.63647
+  ],
+  [
+   51.30553,
+   -0.62709
+  ],
+  [
+   51.30677,
+   -0.62059
+  ],
+  [
+   51.3022,
+   -0.62145
+  ],
+  [
+   51.29813,
+   -0.62014
+  ],
+  [
+   51.295,
+   -0.62095
+  ],
+  [
+   51.29309,
+   -0.62674
+  ],
+  [
+   51.29292,
+   -0.63535
+  ],
+  [
+   51.29416,
+   -0.64177
+  ],
+  [
+   51.29619,
+   -0.6463
+  ],
+  [
+   51.29934,
+   -0.64635
+  ]
+ ],
+ "railway_branch": [
+  [
+   51.30233,
+   -0.64368
+  ],
+  [
+   51.30233,
+   -0.64081
+  ],
+  [
+   51.30201,
+   -0.63652
+  ],
+  [
+   51.30161,
+   -0.63294
+  ],
+  [
+   51.30122,
+   -0.63008
+  ],
+  [
+   51.30046,
+   -0.62652
+  ],
+  [
+   51.2999,
+   -0.62496
+  ]
+ ],
+ "railway_labels": {
+  "junction": [
+   51.30233,
+   -0.64368
+  ],
+  "north_station_site": [
+   51.30122,
+   -0.63008
+  ],
+  "level_crossing_cemetery_pales": [
+   51.30046,
+   -0.62652
+  ],
+  "south_station": [
+   51.2999,
+   -0.62496
+  ]
+ },
+ "main_line": [
+  [
+   51.30136,
+   -0.64873
+  ],
+  [
+   51.30389,
+   -0.63611
+  ],
+  [
+   51.30802,
+   -0.6141
+  ]
+ ],
+ "roads": [
+  {
+   "name": "Cemetery Pales",
+   "points": [
+    [
+     51.3022,
+     -0.62145
+    ],
+    [
+     51.30046,
+     -0.62652
+    ],
+    [
+     51.29923,
+     -0.63301
+    ],
+    [
+     51.29792,
+     -0.64022
+    ],
+    [
+     51.29664,
+     -0.64629
+    ]
+   ]
+  },
+  {
+   "name": "Bagshot Road (A322), east edge",
+   "points": [
+    [
+     51.30677,
+     -0.62059
+    ],
+    [
+     51.3022,
+     -0.62145
+    ],
+    [
+     51.29813,
+     -0.62014
+    ],
+    [
+     51.295,
+     -0.62095
+    ]
+   ]
+  },
+  {
+   "name": "Railway Avenue (old trackbed)",
+   "points": [
+    [
+     51.30233,
+     -0.64081
+    ],
+    [
+     51.30201,
+     -0.63652
+    ],
+    [
+     51.30122,
+     -0.63008
+    ],
+    [
+     51.30046,
+     -0.62652
+    ],
+    [
+     51.2999,
+     -0.62496
+    ]
+   ]
+  },
+  {
+   "name": "St Mark's Avenue",
+   "points": [
+    [
+     51.29783,
+     -0.62481
+    ],
+    [
+     51.296,
+     -0.63024
+    ],
+    [
+     51.29445,
+     -0.63602
+    ]
+   ]
+  }
+ ],
+ "gates": [
+  {
+   "name": "North Cemetery main entrance (semicircular lay-by, former parsonage on its east side)",
+   "point": [
+    51.30081,
+    -0.62608
+   ]
+  },
+  {
+   "name": "South Cemetery main entrance (former stonemasons' yard c.1905 to its east)",
+   "point": [
+    51.30019,
+    -0.62653
+   ]
+  },
+  {
+   "name": "Glades of Remembrance entrance / Glades House (office)",
+   "point": [
+    51.299,
+    -0.6323
+   ]
+  },
+  {
+   "name": "American Cemetery entrance walls (oval)",
+   "point": [
+    51.30061,
+    -0.63894
+   ]
+  },
+  {
+   "name": "Military Cemetery approach from Brookwood station",
+   "point": [
+    51.3031,
+    -0.6372
+   ]
+  }
+ ],
+ "zones": [
+  {
+   "name": "Military Cemetery (CWGC)",
+   "centre": [
+    51.30027,
+    -0.64087
+   ],
+   "extent": [
+    [
+     51.30203,
+     -0.64555
+    ],
+    [
+     51.30354,
+     -0.63647
+    ],
+    [
+     51.3002,
+     -0.63514
+    ],
+    [
+     51.29818,
+     -0.6395
+    ],
+    [
+     51.29906,
+     -0.64593
+    ]
+   ]
+  },
+  {
+   "name": "American Cemetery (ABMC)",
+   "centre": [
+    51.30119,
+    -0.63955
+   ],
+   "extent": [
+    [
+     51.30192,
+     -0.64054
+    ],
+    [
+     51.3019,
+     -0.63853
+    ],
+    [
+     51.30051,
+     -0.63843
+    ],
+    [
+     51.30053,
+     -0.64058
+    ]
+   ]
+  },
+  {
+   "name": "Canadian plot",
+   "centre": [
+    51.30085,
+    -0.64444
+   ]
+  },
+  {
+   "name": "Muslim grounds (incl. New Muslim ground, Bohra ground)",
+   "centre": [
+    51.30139,
+    -0.62979
+   ],
+   "radius_m": 120
+  },
+  {
+   "name": "Parsi (Zoroastrian) ground",
+   "centre": [
+    51.30164,
+    -0.63509
+   ],
+   "radius_m": 70
+  },
+  {
+   "name": "St Edward Brotherhood (c.5 acres)",
+   "centre": [
+    51.2998,
+    -0.62453
+   ],
+   "radius_m": 80
+  },
+  {
+   "name": "The Ring (Anglican showpiece area)",
+   "centre": [
+    51.29783,
+    -0.62481
+   ],
+   "radius_m": 90
+  },
+  {
+   "name": "Glades of Remembrance (with ornamental lake)",
+   "centre": [
+    51.2974,
+    -0.63378
+   ],
+   "radius_m": 150
+  },
+  {
+   "name": "North Cemetery (originally Nonconformist)",
+   "centre": [
+    51.3023,
+    -0.63005
+   ]
+  },
+  {
+   "name": "South Cemetery (originally Anglican)",
+   "centre": [
+    51.29512,
+    -0.6317
+   ]
+  }
+ ]
+}
