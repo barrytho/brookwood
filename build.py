@@ -56,6 +56,42 @@ def build_toc(chapters):
     return "\n    ".join(items)
 
 
+def tab_panels(page):
+    """Panels in page order, from each <div class="tabpanel"> and its data-tab-* attributes."""
+    panels = []
+    for m in re.finditer(r'<div class="tabpanel"([^>]*)>', page):
+        attrs = dict(re.findall(r'([\w-]+)="([^"]*)"', m.group(1)))
+        panels.append({k: attrs.get("data-tab-" + k, "") for k in ("label", "num", "title")} | {"key": attrs["data-tab"]})
+    return panels
+
+
+def build_tabs(panels):
+    return "\n    ".join(
+        f'<button class="thumb" type="button" role="tab" id="t-{p["key"]}" aria-controls="tab-{p["key"]}" '
+        f'aria-selected="false" tabindex="-1" data-tab-btn="{p["key"]}">'
+        f'<span class="th-num">{p["num"]}</span><span class="th-label">{p["label"]}</span></button>'
+        for p in panels
+    )
+
+
+def build_pager(panels, i):
+    prev_p = panels[i - 1] if i > 0 else None
+    next_p = panels[i + 1] if i + 1 < len(panels) else None
+    out = '<nav class="pager" aria-label="Turn the page">'
+    out += (
+        f'<a class="pg-prev" href="#{prev_p["key"]}" data-tab-link="{prev_p["key"]}">'
+        f'<span class="pg-dir">‹ Previous</span><span class="pg-t">{prev_p["label"]}</span></a>'
+        if prev_p else "<span></span>"
+    )
+    out += (
+        f'<a class="pg-next" href="#{next_p["key"]}" data-tab-link="{next_p["key"]}">'
+        f'<span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span>'
+        f'<span class="pg-t">{next_p["title"]}</span></a>'
+        if next_p else "<span></span>"
+    )
+    return out + "</nav>"
+
+
 def main():
     page = read("page.html")
     chapters = read("chapters.html", "")
@@ -77,6 +113,11 @@ def main():
         if slot not in page:
             raise SystemExit(f"slot {slot!r} missing from src/page.html")
         page = page.replace(slot, value)
+
+    panels = tab_panels(page)
+    page = page.replace("<!--__TABS__-->", build_tabs(panels))
+    for i, panel in enumerate(panels):
+        page = page.replace(f"<!--__PAGER__{panel['key']}-->", build_pager(panels, i))
 
     (ROOT / "build").mkdir(exist_ok=True)
     (ROOT / "build" / "artifact.html").write_text(page, encoding="utf-8")

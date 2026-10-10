@@ -126,6 +126,7 @@ let planGroup = "all";
 let activeWalk = null;
 
 function locate(id) {
+  showTab("plan", { push: true });
   const plate = $("#plan .plate");
   if (plate) plate.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   selectMarker(id, true);
@@ -206,7 +207,9 @@ if (walkPick && DATA.walks) {
   });
 }
 
-if (planHost && window.BrookwoodPlan) {
+// The plan is drawn the first time its tab is shown, when its host has a size to measure.
+function ensurePlan() {
+  if (plan || !planHost || !window.BrookwoodPlan) return;
   try {
     plan = window.BrookwoodPlan.mount(planHost, {
       geo: DATA.geo,
@@ -214,6 +217,8 @@ if (planHost && window.BrookwoodPlan) {
       onSelect: id => selectMarker(id, false),
       onOpen: id => openCard(id),
     });
+    plan.setFilter(visibleMarker);
+    if (activeWalk) plan.showWalk(activeWalk.stops.filter(s => markerById.has(s)));
   } catch (err) {
     planHost.innerHTML = `<p class="register-empty">The plan could not be drawn in this browser. The reference list beside it still works.</p>`;
     console.error(err);
@@ -343,7 +348,8 @@ if (ticketHost && ticketNote) {
 const lineSvg = $("#line-svg");
 const departBtn = $("#depart");
 const lineStatus = $("#line-status");
-if (lineSvg && departBtn) {
+function initJourney() {
+  if (!lineSvg || !departBtn) return;
   const track = $("#line-track", lineSvg);
   const train = $("#line-train", lineSvg);
   const stops = $$("[data-at]", lineSvg).map(el => ({ at: +el.dataset.at, msg: el.dataset.msg }));
@@ -376,4 +382,86 @@ if (lineSvg && departBtn) {
   };
   departBtn.addEventListener("click", run);
 }
+
+/* ——— Thumb-index tabs ——— */
+const panels = $$(".tabpanel");
+const tabBtns = $$("[data-tab-btn]");
+const thumbs = $("#thumbs");
+const thumbRow = $(".thumbs-row");
+const runhead = $("#runhead");
+const rhSec = $("#rh-sec");
+const finis = $("#finis");
+const onShow = { plan: ensurePlan, railway: initJourney };
+const keys = panels.map(p => p.dataset.tab);
+let current = null;
+
+function showTab(key, { scrollTo = null, push = true, focus = false } = {}) {
+  const panel = $(`#tab-${key}`);
+  if (!panel) return;
+  if (current !== key) {
+    panels.forEach(pn => { pn.hidden = pn !== panel; });
+    tabBtns.forEach(b => {
+      const on = b.dataset.tabBtn === key;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
+    if (runhead) runhead.hidden = key === "home";
+    if (rhSec) rhSec.textContent = key === "home" ? "" : panel.dataset.tabTitle || "";
+    if (finis) finis.hidden = key !== keys[keys.length - 1];
+    current = key;
+    const once = onShow[key];
+    if (once) { delete onShow[key]; once(); }
+    const btn = $(`#t-${key}`);
+    if (btn && thumbRow) {   // keep the chosen tab in view on a narrow strip, without moving the page
+      const r = thumbRow.getBoundingClientRect(), b = btn.getBoundingClientRect();
+      if (b.left < r.left || b.right > r.right) thumbRow.scrollLeft += b.left - r.left - (r.width - b.width) / 2;
+    }
+  }
+  if (push) { try { history.replaceState(null, "", "#" + (scrollTo || key)); } catch { /* ignore */ } }
+  const target = scrollTo && document.getElementById(scrollTo);
+  // Jump rather than glide: the old scroll position belongs to a different tab.
+  if (target && target !== panel) target.scrollIntoView({ block: "start", behavior: "instant" });
+  else if (key === "home") window.scrollTo({ top: 0, behavior: "instant" });
+  else if (thumbs && window.scrollY > thumbs.offsetTop) window.scrollTo({ top: thumbs.offsetTop, behavior: "instant" });
+  if (focus) $(`#t-${key}`)?.focus();
+}
+window.__showTab = showTab;
+
+function route(id, push) {
+  if (!id) return showTab("home", { push: false });
+  if (keys.includes(id)) return showTab(id, { push });
+  const el = document.getElementById(id);
+  const panel = el && el.closest(".tabpanel");
+  if (panel) return showTab(panel.dataset.tab, { scrollTo: id, push });
+  showTab("home", { push: false });
+}
+
+if (thumbRow) {
+  thumbRow.addEventListener("click", e => {
+    const b = e.target.closest("[data-tab-btn]");
+    if (b) showTab(b.dataset.tabBtn);
+  });
+  thumbRow.addEventListener("keydown", e => {
+    const i = keys.indexOf(current);
+    let j = null;
+    if (e.key === "ArrowRight") j = (i + 1) % keys.length;
+    else if (e.key === "ArrowLeft") j = (i - 1 + keys.length) % keys.length;
+    else if (e.key === "Home") j = 0;
+    else if (e.key === "End") j = keys.length - 1;
+    if (j === null) return;
+    e.preventDefault();
+    showTab(keys[j], { focus: true });
+  });
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || a.hasAttribute("data-card")) return;
+  const id = a.getAttribute("href").slice(1);
+  if (!id) return;
+  if (!keys.includes(id) && !document.getElementById(id)) return;
+  e.preventDefault();
+  route(id, true);
+});
+window.addEventListener("hashchange", () => route(location.hash.slice(1), false));
+route(location.hash.slice(1), false);
 })();
