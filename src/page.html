@@ -363,7 +363,8 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .mon-filter { margin-top: 1.4rem; justify-content: center; }
 
 /* ——— Emblems ——— */
-.emblems { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); gap: 1.8rem 1.4rem; margin: 2rem auto 0; max-width: 64rem; }
+.emblems { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.8rem 1.4rem; margin: 2rem auto 0; max-width: 68rem; }
+@media (min-width: 960px) { .emblems { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 .emblem { text-align: center; min-width: 0; }
 .emblem svg { width: 76px; height: 76px; color: var(--ink); display: block; margin: 0 auto .4rem; }
 .emblem h4 { margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
