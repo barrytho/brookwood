@@ -1,0 +1,472 @@
+<title>Brookwood: The London Necropolis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=League+Gothic&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+<style>
+/* Layout: a bound Victorian octavo — a justified text block with shoulder-notes in the outer margin;
+   the Plan and the Register break out as full-width folding plates. Mourning-card double rules frame it. */
+:root {
+  --paper: #ebe6d8;        /* laid paper, slightly grey-green rather than cream */
+  --paper-deep: #e0d9c6;   /* plate grounds, ledger header */
+  --ink: #1d1c18;          /* letterpress black */
+  --ink-soft: #4b473d;     /* shoulder-notes, captions */
+  --ink-faint: #8a8473;    /* ledger ruling, hatch */
+  --yew: #2c4a3a;          /* evergreen accent: links, pins, selection */
+  --yew-wash: rgba(44, 74, 58, .12);
+  --gilt: #8a6a2c;         /* ornament only */
+  --mark: #7b2a22;         /* rare rubric: uncertainty marks */
+
+  --f-display: "Abril Fatface", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
+  --f-text: "Old Standard TT", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-black: "UnifrakturMaguntia", "Old English Text MT", "Times New Roman", serif;
+  --f-label: "League Gothic", "Arial Narrow", "Helvetica Neue Condensed", Impact, sans-serif;
+
+  --measure: 38rem;
+  --gutter: clamp(16px, 4vw, 48px);
+  --shoulder: 11.5rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #151512; --paper-deep: #1e1d19; --ink: #e8e1cf; --ink-soft: #b6ad99; --ink-faint: #6f6a5c;
+    --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #151512; --paper-deep: #1e1d19; --ink: #e8e1cf; --ink-soft: #b6ad99; --ink-faint: #6f6a5c;
+  --yew: #93bba2; --yew-wash: rgba(147, 187, 162, .14); --gilt: #c9a760; --mark: #e0907f;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-text);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 720px) { body { font-size: 1.125rem; } }
+a { color: var(--yew); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--yew); outline-offset: 3px; }
+button { font: inherit; color: inherit; }
+svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12em; }
+
+.book {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  padding-block: clamp(16px, 3vw, 40px) 64px;
+}
+
+/* ——— Labels and rules ——— */
+.label {
+  font-family: var(--f-label);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .95rem;
+  line-height: 1.1;
+}
+.smallcaps { font-variant: small-caps; letter-spacing: .04em; }
+.rule-double { border: 0; height: 6px; margin: 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.rule-thin { border: 0; border-top: 1px solid var(--ink); margin: 0; }
+.fleuron { display: block; width: 120px; height: 24px; margin: 2.2rem auto; color: var(--gilt); }
+
+/* ——— Title page ——— */
+.titlepage {
+  position: relative;
+  border: 3px solid var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: 5px;
+  margin: 8px 8px 0;
+  padding: clamp(28px, 6vw, 72px) clamp(16px, 5vw, 64px) clamp(24px, 4vw, 48px);
+  text-align: center;
+}
+.titlepage .corner { position: absolute; width: clamp(36px, 6vw, 60px); height: clamp(36px, 6vw, 60px); color: var(--gilt); }
+.titlepage .corner.tl { top: 6px; left: 6px; }
+.titlepage .corner.tr { top: 6px; right: 6px; transform: scaleX(-1); }
+.titlepage .corner.bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+.titlepage .corner.br { bottom: 6px; right: 6px; transform: scale(-1, -1); }
+.tp-kicker { letter-spacing: .32em; font-size: .85rem; text-transform: uppercase; margin: 0; }
+.tp-title {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 13vw, 8.5rem);
+  line-height: .92;
+  letter-spacing: .01em;
+  margin: .25em 0 .1em;
+  text-wrap: balance;
+}
+.tp-sub {
+  font-family: var(--f-black);
+  font-size: clamp(1.9rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  margin: 0;
+}
+.tp-sub .the { font-family: var(--f-text); font-style: italic; font-size: .5em; vertical-align: .35em; margin-right: .2em; }
+.tp-desc {
+  font-style: italic;
+  max-width: 34rem;
+  margin: 1.4rem auto 0;
+  font-size: 1.05rem;
+  text-wrap: balance;
+}
+.tp-with { margin: 1.1rem auto 0; max-width: 34rem; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; line-height: 1.7; }
+.tp-vignette { display: block; width: min(100%, 460px); height: auto; aspect-ratio: 480 / 260; margin: 1.6rem auto 0; color: var(--ink); }
+.tp-imprint { margin-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+.tp-imprint span + span::before { content: ""; }
+
+/* ——— Contents ——— */
+.contents { max-width: var(--measure); margin: 3.5rem auto 0; }
+.contents h2 { text-align: center; font-weight: 400; letter-spacing: .3em; font-size: 1rem; margin: 0 0 1rem; text-transform: uppercase; }
+.contents ol { list-style: none; padding: 0; margin: 0; display: grid; gap: .15rem; }
+.contents a {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, auto) 1fr auto;
+  align-items: baseline;
+  gap: .4rem;
+  color: var(--ink);
+  text-decoration: none;
+  padding: .2rem 0;
+}
+.contents a:hover .toc-title { text-decoration: underline; text-decoration-color: var(--yew); }
+.toc-num { font-variant-numeric: lining-nums; text-align: right; color: var(--ink-soft); }
+.toc-title { min-width: 0; }
+.toc-leader { border-bottom: 1px dotted var(--ink-faint); transform: translateY(-.3em); min-width: 1rem; }
+.toc-note { font-style: italic; color: var(--ink-soft); font-size: .92em; font-variant-numeric: oldstyle-nums; }
+.contents .toc-sub { margin-top: .6rem; }
+
+/* ——— Chapters ——— */
+.chapter { margin-top: clamp(3.5rem, 8vw, 6rem); scroll-margin-top: 1rem; }
+.ch-head { text-align: center; max-width: 44rem; margin: 0 auto 2rem; }
+.ch-num { letter-spacing: .3em; font-size: .9rem; text-transform: uppercase; margin: 0; color: var(--ink-soft); }
+.ch-title {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  line-height: 1.05;
+  margin: .3rem 0 .6rem;
+  text-wrap: balance;
+}
+.ch-dates { font-style: italic; margin: 0; color: var(--ink-soft); }
+.ch-head .rule-double { width: 7rem; margin: 1rem auto 0; }
+
+.prose { max-width: var(--measure); margin: 0 auto; position: relative; }
+.prose p { margin: 0 0 1em; hyphens: auto; -webkit-hyphens: auto; }
+.prose p + p { text-indent: 1.4em; margin-top: -1em; }
+.prose p.flush, .prose .shoulder + p { text-indent: 0; }
+@media (min-width: 600px) { .prose p { text-align: justify; } }
+.prose h3 {
+  font-family: var(--f-text);
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2.2rem 0 1rem;
+}
+.prose blockquote {
+  margin: 1.4rem 0 1.6rem;
+  padding: 0 1.6rem;
+  font-size: .95em;
+}
+.prose blockquote p { text-align: left; text-indent: 0 !important; margin: 0 0 .4rem !important; }
+.prose blockquote cite { display: block; font-style: normal; font-size: .85em; color: var(--ink-soft); text-align: right; }
+.prose blockquote cite::before { content: "— "; }
+.dropcap::first-letter {
+  font-family: var(--f-display);
+  float: left;
+  font-size: 4.1em;
+  line-height: .8;
+  padding: .06em .1em 0 0;
+  margin-top: .05em;
+  color: var(--ink);
+}
+.prose p.dropcap { text-indent: 0; }
+
+/* Shoulder-notes: marginal summaries, as in Victorian histories */
+.shoulder {
+  display: block;
+  font-size: .82rem;
+  line-height: 1.35;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 .35rem;
+  text-indent: 0;
+}
+@media (min-width: 1100px) {
+  .shoulder {
+    float: left;
+    clear: left;
+    width: var(--shoulder);
+    margin-left: calc(-1 * var(--shoulder) - 2rem);
+    margin-top: .3rem;
+    text-align: right;
+    border-right: 1px solid var(--ink-faint);
+    padding-right: .7rem;
+  }
+}
+@media (max-width: 1099px) {
+  .shoulder { font-style: normal; font-variant: small-caps; letter-spacing: .05em; font-size: .85rem; color: var(--yew); }
+}
+
+.facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2.6rem; margin: 2rem auto 2.4rem; max-width: 52rem; }
+.fact { text-align: center; min-width: 8rem; }
+.fact b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 2.1rem; line-height: 1; font-variant-numeric: lining-nums; }
+.fact span { display: block; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .35rem; color: var(--ink-soft); }
+.fact small { display: block; font-style: italic; font-size: .78rem; color: var(--ink-soft); }
+
+.uncertain { color: var(--mark); font-size: .8em; vertical-align: super; line-height: 0; cursor: help; text-decoration: none; }
+
+/* ——— Plates (full-width figures) ——— */
+.plate { margin: 2rem 0 0; border: 3px solid var(--ink); outline: 1px solid var(--ink); outline-offset: 4px; background: var(--paper); }
+.plate-cap {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem;
+  padding: .7rem 1rem; border-bottom: 1px solid var(--ink);
+}
+.plate-cap .plate-no { letter-spacing: .25em; font-size: .85rem; text-transform: uppercase; }
+.plate-cap .plate-title { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.1; }
+.plate-cap .plate-scale { font-style: italic; font-size: .85rem; color: var(--ink-soft); }
+
+/* ——— Railway ——— */
+.line-diagram { margin: 2rem auto 0; max-width: 60rem; }
+.line-wrap { overflow-x: auto; padding: 0 0 .5rem; }
+.line-svg { display: block; width: 100%; min-width: 560px; height: auto; color: var(--ink); }
+.line-svg .stn-label { font-family: var(--f-text); font-size: 13px; fill: currentColor; }
+.line-svg .stn-sub { font-family: var(--f-text); font-style: italic; font-size: 11px; fill: var(--ink-soft); }
+.line-ctl { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .6rem 1.2rem; margin-top: .8rem; }
+.btn {
+  font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; font-size: 1rem;
+  background: var(--ink); color: var(--paper); border: 0; padding: .55rem 1.1rem .45rem; cursor: pointer;
+  border-radius: 0;
+}
+.btn:hover { background: var(--yew); }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.btn.ghost:hover { background: var(--yew-wash); }
+.line-status { font-style: italic; color: var(--ink-soft); font-size: .92rem; min-height: 1.5em; text-align: center; margin: .3rem 0 0; }
+
+.tickets { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem; margin: 2.2rem auto 0; max-width: 60rem; }
+.ticket {
+  position: relative; text-align: center; cursor: pointer; padding: 1rem 1rem .9rem;
+  background: var(--paper-deep); color: var(--ink); border: 1px solid var(--ink);
+  box-shadow: inset 0 0 0 4px var(--paper-deep), inset 0 0 0 5px var(--ink);
+  font-family: var(--f-text); line-height: 1.25; display: grid; gap: .3rem; width: 100%;
+}
+.ticket[aria-pressed="true"] { background: var(--yew-wash); box-shadow: inset 0 0 0 4px var(--paper), inset 0 0 0 5px var(--yew); border-color: var(--yew); }
+.ticket .t-co { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
+.ticket .t-class { font-family: var(--f-label); font-size: 2.1rem; letter-spacing: .06em; text-transform: uppercase; line-height: 1; }
+.ticket .t-route { font-style: italic; font-size: .85rem; }
+.ticket .t-fare { font-family: var(--f-display); font-size: 1.5rem; font-variant-numeric: lining-nums; }
+.ticket .t-no { position: absolute; top: .5rem; right: .7rem; font-size: .7rem; font-variant-numeric: lining-nums tabular-nums; color: var(--ink-soft); }
+.ticket-note { max-width: var(--measure); margin: 1.2rem auto 0; padding: 1rem 1.2rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); min-height: 6.5rem; }
+.ticket-note h4 { margin: 0 0 .3rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .9rem; }
+.ticket-note p { margin: 0; }
+
+/* ——— Plan ——— */
+.plan-layout { display: grid; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .plan-layout { grid-template-columns: minmax(0, 1fr) 22rem; } }
+.plan-stage { position: relative; min-width: 0; border-bottom: 1px solid var(--ink); }
+@media (min-width: 960px) { .plan-stage { border-bottom: 0; border-right: 1px solid var(--ink); } }
+#plan-host { position: relative; width: 100%; aspect-ratio: 4 / 3; max-width: 100%; overflow: hidden; touch-action: none; background: var(--paper); }
+@media (max-width: 600px) { #plan-host { aspect-ratio: 4 / 5; } }
+.plan-tools { position: absolute; top: .6rem; left: .6rem; display: flex; flex-direction: column; gap: 1px; z-index: 2; background: var(--ink); border: 1px solid var(--ink); }
+.plan-tools button { width: 2.2rem; height: 2.2rem; background: var(--paper); border: 0; cursor: pointer; font-size: 1.15rem; line-height: 1; }
+.plan-tools button:hover { background: var(--yew-wash); }
+.plan-hint { position: absolute; bottom: .5rem; left: .6rem; right: .6rem; font-size: .78rem; font-style: italic; color: var(--ink-soft); pointer-events: none; z-index: 2; }
+.plan-side { display: flex; flex-direction: column; min-width: 0; max-height: none; }
+@media (min-width: 960px) { .plan-side { max-height: 46rem; } }
+.plan-side-sec { padding: .9rem 1rem; border-bottom: 1px solid var(--ink); }
+.plan-side-sec:last-child { border-bottom: 0; }
+.plan-side h3 { margin: 0 0 .5rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; font-size: .82rem; }
+.walk-pick { display: grid; gap: .35rem; }
+.walk-pick button {
+  text-align: left; background: none; border: 0; padding: .3rem .4rem; cursor: pointer; display: grid; grid-template-columns: 1.4rem 1fr; gap: .4rem; align-items: baseline;
+}
+.walk-pick button:hover { background: var(--yew-wash); }
+.walk-pick button[aria-pressed="true"] { background: var(--yew-wash); box-shadow: inset 2px 0 0 var(--yew); }
+.walk-pick .wk-n { font-family: var(--f-label); font-size: 1.05rem; color: var(--yew); }
+.walk-pick .wk-t { font-size: .95rem; line-height: 1.25; }
+.walk-pick .wk-d { display: block; font-style: italic; font-size: .8rem; color: var(--ink-soft); }
+.walk-desc { font-size: .9rem; margin: .6rem 0 0; }
+.ref-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex: 1; min-height: 8rem; max-height: 26rem; }
+@media (min-width: 960px) { .ref-list { max-height: none; } }
+.ref-list li button {
+  width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px dotted var(--ink-faint);
+  padding: .4rem 1rem; display: grid; grid-template-columns: 2rem 1fr; gap: .5rem; cursor: pointer; align-items: baseline;
+}
+.ref-list li button:hover, .ref-list li button[aria-current="true"] { background: var(--yew-wash); }
+.ref-list .r-n { font-family: var(--f-label); font-size: 1rem; color: var(--yew); text-align: right; font-variant-numeric: tabular-nums lining-nums; }
+.ref-list .r-t { font-size: .93rem; line-height: 1.25; min-width: 0; }
+.ref-list .r-k { display: block; font-size: .75rem; font-style: italic; color: var(--ink-soft); }
+.ref-list .r-walk-stop { font-family: var(--f-label); color: var(--paper); background: var(--yew); padding: 0 .3rem; margin-right: .3rem; font-size: .8rem; }
+
+/* ——— Filters ——— */
+.filters { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.chip {
+  font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: .92rem; line-height: 1;
+  background: transparent; border: 1px solid var(--ink); padding: .38rem .6rem .3rem; cursor: pointer; color: var(--ink);
+}
+.chip:hover { background: var(--yew-wash); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.chip .ct { font-family: var(--f-text); text-transform: none; letter-spacing: 0; font-size: .78rem; margin-left: .3rem; opacity: .8; font-variant-numeric: lining-nums; }
+.seek { display: flex; align-items: baseline; gap: .5rem; flex: 1 1 14rem; min-width: 0; }
+.seek label { font-style: italic; font-size: .92rem; white-space: nowrap; }
+.seek input {
+  flex: 1; min-width: 0; font: inherit; font-size: 1rem; color: var(--ink); background: transparent;
+  border: 0; border-bottom: 1px solid var(--ink); padding: .2rem .1rem; border-radius: 0;
+}
+.seek input:focus { outline: none; border-bottom: 2px solid var(--yew); }
+
+/* ——— Register (burial ledger) ——— */
+.register-bar { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; padding: .9rem 1rem; border-bottom: 1px solid var(--ink); }
+.register-wrap { overflow-x: auto; }
+table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.ledger th {
+  font-weight: 400; text-align: left; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+  background: var(--paper-deep); padding: .55rem .7rem; border-bottom: 3px double var(--ink); white-space: nowrap;
+}
+.ledger td { padding: .55rem .7rem; border-bottom: 1px solid var(--ink-faint); vertical-align: baseline; }
+.ledger td + td, .ledger th + th { border-left: 1px solid var(--ink-faint); }
+.ledger tbody tr { cursor: pointer; }
+.ledger tbody tr:hover, .ledger tbody tr:focus-visible { background: var(--yew-wash); outline: none; }
+.ledger .c-no { width: 3rem; text-align: right; font-variant-numeric: lining-nums tabular-nums; color: var(--ink-soft); }
+.ledger .c-name b { font-weight: 700; }
+.ledger .c-name .hon { font-size: .8em; color: var(--ink-soft); margin-left: .25em; }
+.ledger .c-dates { white-space: nowrap; font-variant-numeric: lining-nums tabular-nums; }
+.ledger .c-cat { font-style: italic; color: var(--ink-soft); }
+.ledger .c-plot { white-space: nowrap; font-variant-numeric: lining-nums; }
+.ledger .c-name .line2 { display: block; font-size: .85em; color: var(--ink-soft); font-style: italic; }
+@media (max-width: 720px) { .ledger .c-cat, .ledger th.c-cat { display: none; } }
+@media (max-width: 520px) { .ledger .c-plot, .ledger th.c-plot { display: none; } .ledger .c-no { width: 2rem; } }
+.register-empty { padding: 2rem 1rem; text-align: center; font-style: italic; }
+.register-foot { padding: .6rem 1rem; font-size: .82rem; color: var(--ink-soft); font-style: italic; border-top: 1px solid var(--ink); }
+
+/* ——— Monuments ——— */
+.monuments { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr)); gap: 0; margin-top: 2rem; border-top: 3px double var(--ink); }
+.mon { padding: 1.1rem 1.2rem 1.2rem; border-bottom: 1px solid var(--ink-faint); min-width: 0; display: flex; flex-direction: column; gap: .35rem; }
+@media (min-width: 720px) { .mon:nth-child(odd) { border-right: 1px solid var(--ink-faint); } }
+@media (min-width: 1140px) { .mon:nth-child(odd) { border-right: 0; } .mon:not(:nth-child(3n)) { border-right: 1px solid var(--ink-faint); } }
+.mon .m-type { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; font-size: .85rem; color: var(--yew); }
+.mon h4 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; line-height: 1.15; text-wrap: balance; }
+.mon .m-meta { font-size: .82rem; font-style: italic; color: var(--ink-soft); }
+.mon p { margin: 0; font-size: .95rem; }
+.mon .m-act { margin-top: auto; padding-top: .4rem; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--yew); cursor: pointer; font-size: .9rem; display: inline-flex; align-items: center; gap: .4rem; text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+.linkbtn svg { width: 1.6em; height: .8em; }
+.mon-filter { margin-top: 1.4rem; justify-content: center; }
+
+/* ——— Emblems ——— */
+.emblems { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); gap: 1.8rem 1.4rem; margin: 2rem auto 0; max-width: 64rem; }
+.emblem { text-align: center; min-width: 0; }
+.emblem svg { width: 76px; height: 76px; color: var(--ink); display: block; margin: 0 auto .4rem; }
+.emblem h4 { margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
+.emblem p { margin: .3rem 0 0; font-size: .9rem; line-height: 1.45; color: var(--ink-soft); }
+
+/* ——— Chronology ——— */
+.chrono { max-width: 50rem; margin: 2rem auto 0; list-style: none; padding: 0; }
+.chrono li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1.2rem; padding: .9rem 0; border-bottom: 1px solid var(--ink-faint); }
+.chrono .yr { font-family: var(--f-display); font-size: 1.7rem; line-height: 1; text-align: right; font-variant-numeric: lining-nums; }
+.chrono .dt { display: block; font-size: .78rem; font-style: italic; color: var(--ink-soft); margin-top: .3rem; text-align: right; }
+.chrono h4 { margin: 0 0 .2rem; font-weight: 700; font-size: 1rem; }
+.chrono p { margin: 0; font-size: .95rem; }
+@media (max-width: 520px) { .chrono li { grid-template-columns: 4rem minmax(0, 1fr); gap: .8rem; } .chrono .yr { font-size: 1.35rem; } }
+
+/* ——— Sources ——— */
+.sources { max-width: var(--measure); margin: 0 auto; font-size: .92rem; }
+.sources ol { padding-left: 1.4rem; }
+.sources li { margin-bottom: .45rem; overflow-wrap: anywhere; }
+.conf-key { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; font-size: .88rem; margin: .8rem 0 1.2rem; }
+
+/* ——— Memorial card (dialog) ——— */
+dialog.card {
+  width: min(36rem, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0; border: 0; background: var(--paper); color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink), 0 18px 60px rgba(0, 0, 0, .35);
+}
+dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
+.card-inner { border: 6px solid var(--ink); margin: 6px; padding: 1.4rem clamp(1rem, 4vw, 2rem) 1.3rem; position: relative; }
+.card-inner::before { content: ""; position: absolute; inset: 4px; border: 1px solid var(--ink); pointer-events: none; }
+.card-close { position: absolute; top: .5rem; right: .6rem; background: none; border: 0; font-size: 1.6rem; line-height: 1; cursor: pointer; padding: .2rem .4rem; z-index: 1; }
+.card-cat { text-align: center; letter-spacing: .25em; text-transform: uppercase; font-size: .78rem; color: var(--ink-soft); margin: .2rem 0 0; }
+.card h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.7rem, 6vw, 2.3rem); line-height: 1.05; text-align: center; margin: .4rem 0 .2rem; text-wrap: balance; }
+.card .c-hon { text-align: center; font-size: .9rem; margin: 0; letter-spacing: .08em; }
+.card .c-life { text-align: center; font-style: italic; margin: .3rem 0 0; font-variant-numeric: lining-nums; }
+.card .fleuron { margin: 1rem auto; }
+.card p { margin: 0 0 .8rem; }
+.card h4 { margin: 1rem 0 .3rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; font-size: .8rem; }
+.card dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: .6rem 0 0; font-size: .92rem; }
+.card dt { font-variant: small-caps; letter-spacing: .05em; color: var(--ink-soft); }
+.card dd { margin: 0; }
+.card .c-notes { font-size: .9rem; font-style: italic; border-left: 2px solid var(--mark); padding-left: .7rem; }
+.card .c-src { font-size: .82rem; padding-left: 1.2rem; margin: 0; }
+.card .c-src li { overflow-wrap: anywhere; }
+.card-actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-top: 1.2rem; }
+.conf { display: inline-block; font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; font-size: .85rem; padding: .1rem .4rem 0; border: 1px solid currentColor; }
+.conf.high { color: var(--yew); }
+.conf.medium { color: var(--ink-soft); }
+.conf.low { color: var(--mark); }
+
+/* ——— Footer ——— */
+.finis { text-align: center; margin-top: 4rem; }
+.finis .fin { font-family: var(--f-black); font-size: 2.2rem; margin: 0; }
+.finis p { font-size: .82rem; color: var(--ink-soft); max-width: 36rem; margin: .6rem auto 0; font-style: italic; }
+
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+
+<!--__ORNAMENTS__-->
+
+<div class="book">
+
+<header class="titlepage" id="top">
+  <svg class="corner tl" aria-hidden="true"><use href="#orn-corner"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#orn-corner"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#orn-corner"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#orn-corner"/></svg>
+  <p class="tp-kicker">A Visitor’s Guide to</p>
+  <h1 class="tp-title">Brookwood</h1>
+  <p class="tp-sub"><span class="the">The</span>London Necropolis</p>
+  <p class="tp-desc">Being an account of its foundation, its funeral railway, its grounds of many faiths and nations, and of the illustrious and the notorious dead who lie there.</p>
+  <svg class="tp-vignette" viewBox="0 0 480 260" role="img" aria-label="Engraving of an avenue of Wellingtonia trees among gravestones"><use href="#vig-avenue"/></svg>
+  <p class="tp-with">With a plan of the cemetery, a register of notable interments, and an explanation of the emblems on the stones</p>
+  <div class="tp-imprint"><span>Brookwood, near Woking, Surrey</span><span>Consecrated 7 November 1854</span></div>
+</header>
+
+<nav class="contents" aria-labelledby="toc-h">
+  <h2 id="toc-h">Contents</h2>
+  <ol>
+    <!--__TOC__-->
+  </ol>
+</nav>
+
+<!--__CHAPTERS__-->
+
+<footer class="finis">
+  <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+  <p class="fin">Finis.</p>
+  <p>Compiled October 2026 from published sources listed in Appendix B. Plot numbers and positions on the plan are as given in those sources; please confirm with the cemetery office before visiting a particular grave.</p>
+</footer>
+
+</div>
+
+<dialog class="card" id="card" aria-labelledby="card-name">
+  <div class="card-inner">
+    <button class="card-close" type="button" aria-label="Close" data-close>×</button>
+    <div id="card-body"></div>
+  </div>
+</dialog>
+
+<script>
+/*__PLAN_JS__*/
+</script>
+<script>
+/*__MAIN_JS__*/
+</script>
