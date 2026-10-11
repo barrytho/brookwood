@@ -671,7 +671,7 @@ def _save_webp(rgba_u8, out, quality, max_kb, alpha_qualities):
     return aq
 
 
-def save_engraving(cov, out, preview=None, quality=80, max_kb=180):
+def save_engraving(cov, out, preview=None, quality=80, max_kb=None):
     H, W = cov.shape
     rgba = np.empty((H, W, 4), np.uint8)
     rgba[..., :3] = INK_RGB
@@ -744,8 +744,12 @@ def oriented_streaks(theta, rng, sc, length=14.0, fine=1.6, bins=8):
     return (out - out.mean()) / (out.std() + 1e-6)
 
 
-def watercolour(rgb, seed=0, palette="victorian", return_parts=False):
-    """Return float32 RGBA (HxWx4, [0,1]) watercolour vignette."""
+def watercolour(rgb, seed=0, palette="victorian", return_parts=False, crisp=1.0):
+    """Return float32 RGBA (HxWx4, [0,1]) watercolour vignette.
+
+    crisp (0..1) trades the loose, wet look for definition: washes are simplified at full
+    resolution, edges wander less, fine tonal detail is carried into the pigment, and the pen
+    underdrawing is firmer, in the manner of a Victorian pen-and-wash topographical drawing."""
     rng = np.random.default_rng(seed)
     H, W = rgb.shape[:2]
     sc = W / 1000.0
@@ -762,13 +766,18 @@ def watercolour(rgb, seed=0, palette="victorian", return_parts=False):
     sky = sky_mask(rgb, L0)
 
     # ---- simplify into washes --------------------------------------------
-    small = cv2.resize(u8, (W // 2, H // 2), interpolation=cv2.INTER_AREA)
-    ms = cv2.pyrMeanShiftFiltering(small, sp=7, sr=22, maxLevel=1)
-    ms = cv2.bilateralFilter(ms, 0, 20, 4)
-    ms = cv2.medianBlur(ms, 5)
-    abst = cv2.resize(ms, (W, H), interpolation=cv2.INTER_CUBIC)
+    if crisp > 0:
+        ms = cv2.pyrMeanShiftFiltering(u8, sp=max(4, int(round(5 * sc))), sr=int(22 - 6 * crisp), maxLevel=1)
+        ms = cv2.bilateralFilter(ms, 0, 16, 2.5 * sc)
+        abst = cv2.medianBlur(ms, 3)
+    else:
+        small = cv2.resize(u8, (W // 2, H // 2), interpolation=cv2.INTER_AREA)
+        ms = cv2.pyrMeanShiftFiltering(small, sp=7, sr=22, maxLevel=1)
+        ms = cv2.bilateralFilter(ms, 0, 20, 4)
+        ms = cv2.medianBlur(ms, 5)
+        abst = cv2.resize(ms, (W, H), interpolation=cv2.INTER_CUBIC)
     absf = abst.astype(np.float32) / 255
-    absw = warp(absf, 2.2 * sc, 14 * sc)          # hand-laid, wandering edges
+    absw = warp(absf, (2.2 - 1.3 * crisp) * sc, 14 * sc)          # hand-laid, wandering edges
 
     # restrain colour: lighten, compress chroma, warm slightly
     lab = cv2.cvtColor(absw, cv2.COLOR_RGB2Lab)
@@ -796,6 +805,10 @@ def watercolour(rgb, seed=0, palette="victorian", return_parts=False):
     else:
         skyf = np.ones((H, W), np.float32)
     conc *= (hl * skyf)[None]
+    if crisp > 0:
+        # carry fine tonal detail (stonework, foliage, mouldings) into the washes
+        hp = L0 - blur(L0, 1.6 * sc)
+        conc *= (1 + 0.9 * crisp * np.clip(-hp * 7, 0, 1.6) * (1 - sky))[None]
 
     # ---- the vignette: a ragged wash edge, crisp in places, soft in others -
     vd = irregular_vignette(H, W, rng, margin=0.07, ragged=1.25, power=2.6)
@@ -834,11 +847,12 @@ def watercolour(rgb, seed=0, palette="victorian", return_parts=False):
         if c.max() < 0.02:
             continue
         gran = PIGMENTS[name][1]
-        c = warp(c, 1.4 * sc, 22 * sc)                          # misregistered washes
+        c = warp(c, (1.4 - 0.7 * crisp) * sc, 22 * sc)          # misregistered washes
         c = c * (1 + 0.20 * noise((H, W), 50 * sc, rng)
                  + 0.10 * noise((H, W), 16 * sc, rng))          # uneven, puddled wash
         c = c * (1 + 0.13 * oriented_streaks(theta, rng, sc))    # brush drag
-        c = c * (1 - bleed) + blur(c, 5 * sc) * bleed            # wet-in-wet, lost edges
+        b = bleed * (1 - 0.65 * crisp)
+        c = c * (1 - b) + blur(c, (5 - 2 * crisp) * sc) * b      # wet-in-wet, lost edges
         c = c * (1 - 0.35 * bloom)
         hp = c - blur(c, 2.4 * sc)
         wet = 0.8 + 0.6 * smoothstep(-1, 1, noise((H, W), 25 * sc, rng))
@@ -850,21 +864,26 @@ def watercolour(rgb, seed=0, palette="victorian", return_parts=False):
 
     # ---- underdrawing in sepia ink, wandering off the washes ---------------
     S = 2
-    e = canny_edges(abst, 45, 110)
-    chains = edge_chains(e, min_len=int(18 * sc))
+    if crisp > 0:
+        pen_src = cv2.bilateralFilter(u8, 0, 22, 2 * sc)
+        e = canny_edges(pen_src, int(55 - 15 * crisp), int(120 - 25 * crisp))
+        chains = edge_chains(e, min_len=int((18 - 6 * crisp) * sc))
+    else:
+        e = canny_edges(abst, 45, 110)
+        chains = edge_chains(e, min_len=int(18 * sc))
     Vd = smoothstep(-30 * sc, 6 * sc, vd) * smoothstep(12 * sc, 40 * sc, border)
     jx = noise((H, W), 35 * sc, rng) * 1.0 * sc
     jy = noise((H, W), 35 * sc, rng) * 1.0 * sc
     strokes = []
     for ch in chains:
-        w = 0.75 * sc * sample(Vd, ch) * rng.uniform(0.8, 1.2)
+        w = (0.75 - 0.2 * crisp) * sc * sample(Vd, ch) * rng.uniform(0.8, 1.2)
         off = np.stack([sample(jx, ch), sample(jy, ch)], 1)
         strokes.append((ch + off, w))
     segs = Segs()
     segs.add_strokes(strokes, wmin=0.2 * sc, taper=8 * sc)
     dline = segs.render(H, W, S)
     dline *= 0.45 + 0.55 * smoothstep(0.2, 0.65, g01)           # the pen skips the valleys
-    sepia = np.array([0.42, 0.30, 0.21], np.float32)
+    sepia = np.array([0.42, 0.30, 0.21], np.float32) * (1 - 0.25 * crisp)
 
     # ---- composite ----------------------------------------------------------
     paper = np.array(PAGE_PAPER, np.float32) / 255
@@ -872,7 +891,7 @@ def watercolour(rgb, seed=0, palette="victorian", return_parts=False):
     shade = 1 + 0.014 * np.clip((gx - gy) / (np.std(gx) + 1e-6) * 0.5, -2, 2)
     col = paper[None, None] * shade[..., None]
     col = col * np.exp(-out_od)
-    col = col * (1 - 0.60 * dline[..., None] * (1 - sepia)[None, None])
+    col = col * (1 - (0.60 + 0.2 * crisp) * dline[..., None] * (1 - sepia)[None, None])
 
     outer = vd + soft * 0.5
     alpha = smoothstep(-20 * sc, 0, outer) * smoothstep(3 * sc, 25 * sc, border)
@@ -918,15 +937,18 @@ def main(argv=None):
     pw = sub.add_parser("watercolour", aliases=["watercolor"], help="watercolour vignette")
     common(pw)
     pw.add_argument("--palette", default="victorian", choices=sorted(PALETTES))
+    pw.add_argument("--crisp", type=float, default=1.0,
+                    help="0 = loose and wet, 1 = defined pen-and-wash (default 1.0)")
+    pe.add_argument("--max-kb", type=int, default=None, help="cap the file size by lowering alpha quality")
 
     a = ap.parse_args(argv)
     t0 = time.time()
     img = load_image(a.input, a.width)
     if a.style == "engraving":
         cov = engrave(img, seed=a.seed, density=a.density, vignette=not a.no_vignette)
-        save_engraving(cov, a.output, a.preview, a.quality)
+        save_engraving(cov, a.output, a.preview, a.quality, a.max_kb)
     else:
-        rgba = watercolour(img, seed=a.seed, palette=a.palette)
+        rgba = watercolour(img, seed=a.seed, palette=a.palette, crisp=a.crisp)
         save_watercolour(rgba, a.output, a.preview, a.quality)
     kb = Path(a.output).stat().st_size / 1024
     print(f"{a.output}: {img.shape[1]}x{img.shape[0]}, {kb:.0f} KB, {time.time() - t0:.1f} s")

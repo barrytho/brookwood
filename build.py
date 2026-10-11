@@ -10,10 +10,12 @@ Inputs (all under src/):
   data/*.json     people, places, timeline, walks, geo
 
 Outputs:
-  index.html           a complete standalone document (GitHub Pages or local viewing)
+  index.html           the complete page (GitHub Pages); it loads its illustrations from src/img/
   build/artifact.html  the same page without the document skeleton, for a claude.ai Artifact
+
+The engravings are drawn through CSS masks, which browsers refuse to load from file:// pages, so preview
+locally over HTTP: python3 -m http.server, then open http://localhost:8000/.
 """
-import base64
 import html
 import json
 import pathlib
@@ -59,8 +61,9 @@ def build_toc(chapters):
 
 
 def load_figures():
-    """Illustrations: one CSS custom property per image (so a picture can appear in a chapter and a card
-    without being embedded twice) and the <figure> markup for each <!--FIG:id--> slot."""
+    """Illustrations: one CSS custom property per image, so a picture can appear in a chapter and a card,
+    and the <figure> markup for each <!--FIG:id--> slot. Images stay as separate files under src/img/, so a
+    browser fetches only those in the tab being read (hidden tabs are display:none and load nothing)."""
     path = SRC / "data" / "illustrations.json"
     if not path.exists():
         return "", {}, []
@@ -70,8 +73,7 @@ def load_figures():
         img = SRC / "img" / f"{f['id']}.webp"
         if not img.exists():
             continue
-        b64 = base64.b64encode(img.read_bytes()).decode("ascii")
-        css.append(f'.im-{f["id"]}{{--img:url("data:image/webp;base64,{b64}");aspect-ratio:{f["w"]}/{f["h"]}}}')
+        css.append(f'.im-{f["id"]}{{--img:url("src/img/{f["id"]}.webp");aspect-ratio:{f["w"]}/{f["h"]}}}')
         credit = (
             f'After {html.escape(f["after"])}' + (f' by {html.escape(f["author"])}' if f.get("author") else "") + ', '
             f'<a href="{html.escape(f["source_url"])}" target="_blank" rel="noopener">Wikimedia Commons</a>, '
