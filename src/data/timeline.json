@@ -1,14 +1,15 @@
 [
  {
-  "date": "1838",
+  "date": "21 May 1838",
   "year": 1838,
   "title": "The railway reaches Woking",
-  "text": "The London and South Western Railway reaches Woking Common. Its fast main line out of London later makes a distant 'necropolis' practical: a train could carry the dead more quickly and cheaply than the horse-drawn hearses serving the existing cemeteries.",
+  "text": "The London and Southampton Railway, renamed the London and South Western the following year, opens its first section, from Nine Elms to Woking Common, on 21 May 1838. Its main line later makes a distant 'necropolis' practical: a train could carry the dead more quickly and cheaply than the horse-drawn hearses serving the existing cemeteries.",
   "sources": [
-   "https://en.wikipedia.org/wiki/London_Necropolis_Railway",
+   "https://en.wikipedia.org/wiki/London_and_South_Western_Railway",
+   "https://en.wikipedia.org/wiki/History_of_Woking",
    "https://en.wikipedia.org/wiki/London_Necropolis_railway_station"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "date": "1848–1849",
@@ -19,71 +20,78 @@
    "https://en.wikipedia.org/wiki/London_Necropolis_Company",
    "https://victorianweb.org/art/parks/brookwood/history.html"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
-  "date": "1849",
+  "date": "1849–1850",
   "year": 1849,
   "title": "Broun and Sprye's great idea",
-  "text": "Sir Richard Broun and Richard Sprye propose one vast cemetery on heathland at Brookwood, near Woking, served by its own trains from London. The site is about 23 miles from the capital, chosen because land there is cheap and the railway already runs past it.",
-  "sources": [
-   "https://en.wikipedia.org/wiki/London_Necropolis_railway_station",
-   "https://en.wikipedia.org/wiki/London_Necropolis_Company"
-  ],
-  "confidence": "medium"
- },
- {
-  "date": "05 August 1850",
-  "year": 1850,
-  "title": "Metropolitan Interments Act",
-  "text": "Following the General Board of Health's report on extramural sepulture, the Metropolitan Interments Act creates a single Metropolitan Burial District under the Board, with power to close London's burial grounds and provide state cemeteries. The scheme proves too costly and is never effectively carried out.",
-  "sources": [
-   "https://vlex.co.uk/vid/861230710",
-   "https://wokinghistory.org/onewebmedia/150102.pdf"
-  ],
-  "confidence": "medium"
- },
- {
-  "date": "April 1851",
-  "year": 1851,
-  "title": "The founders are bought out",
-  "text": "Trustees led by William Voules buy the rights to the Brookwood scheme from Broun and Sprye for £20,000. They then form the company without regard to the original promoters, and Broun campaigns publicly against them.",
+  "text": "Sir Richard Broun and Richard Sprye propose one vast cemetery on heathland at Brookwood, near Woking, served by its own trains from London. The site, about 23 miles from the capital, is chosen because its poor gravel soil makes land cheap and the railway already runs past it. The cemetery's own history dates the conception to 1849; the Brookwood Cemetery Society says the idea was promoted in 1850.",
   "sources": [
    "https://en.wikipedia.org/wiki/London_Necropolis_Company",
-   "https://liquisearch.com/london_necropolis_company/formation_of_the_london_necropolis_company"
+   "https://en.wikipedia.org/wiki/London_Necropolis_railway_station",
+   "https://brookwoodcemetery.com/history/",
+   "https://tbcs.org.uk/about_the_cemetery.html"
   ],
   "confidence": "medium"
+ },
+ {
+  "date": "5 August 1850",
+  "year": 1850,
+  "title": "Metropolitan Interments Act",
+  "text": "On Edwin Chadwick's recommendations, the Metropolitan Interments Act creates a single Metropolitan Burial District under the General Board of Health, with power to buy land and cemeteries and to recommend the closure of existing burial grounds. Only one cemetery, now Brompton, is ever bought under it, and the Act is repealed in 1852.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Metropolitan_Interments_Act_1850",
+   "https://wokinghistory.org/onewebmedia/150102.pdf",
+   "https://www.john-clarke.co.uk/burial_acts.html"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "date": "1 April 1851",
+  "year": 1851,
+  "title": "The founders are bought out",
+  "text": "Trustees led by William Voules buy the rights to the Brookwood scheme from Broun and Sprye for £20,000. Once the Act is passed they form the company without regard to their agreement with the original promoters, and Broun campaigns publicly against them.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://wokinghistory.org/onewebmedia/150102.pdf"
+  ],
+  "confidence": "high"
  },
  {
   "date": "30 June 1852",
   "year": 1852,
   "title": "The London Necropolis Act",
-  "text": "The Act 'to incorporate the London Necropolis and National Mausoleum Company' (15 & 16 Vict. c. cxlix) receives Royal Assent, authorising a cemetery in the parish of Woking. Amending Acts follow in 1854, 1855 and 1864.",
+  "text": "The Act 'to incorporate the London Necropolis and National Mausoleum Company' (15 & 16 Vict. c. cxlix) receives Royal Assent, authorising a cemetery in the parish of Woking. Further Acts follow in 1854 (the Woking Commoners Act, on compensation for the common), 1855, 1864 and 1869.",
   "sources": [
    "https://john-clarke.co.uk/acts.html",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
    "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
   ],
   "confidence": "high"
  },
  {
-  "date": "01 July 1852",
+  "date": "1 July 1852",
   "year": 1852,
   "title": "Burial Act repeals the state scheme",
-  "text": "The Burial Act 1852 repeals the Metropolitan Interments Act. In its place it allows individual London burial grounds to be closed by Order in Council and sets up parish burial boards. The closures that follow create the market the Necropolis Company is counting on.",
+  "text": "The Burial Act 1852 repeals the Metropolitan Interments Act. In its place it allows individual London burial grounds to be closed by Order in Council and lets parishes set up burial boards. The closures that follow create the market the Necropolis Company is counting on.",
   "sources": [
-   "https://www.legislation.gov.uk/ukpga/Vict/15-16/85/introduction/enacted"
+   "https://en.wikipedia.org/wiki/Burial_Act_1852",
+   "https://en.wikipedia.org/wiki/Bunhill_Fields",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company"
   ],
-  "confidence": "high"
+  "confidence": "medium"
  },
  {
-  "date": "1852",
+  "date": "1852–1853",
   "year": 1852,
   "title": "Land bought from Lord Onslow",
-  "text": "Under the Act the company acquires Woking common land from Lord Onslow, given by Historic England as 2,268 acres; other accounts round it to about 2,000 acres. Only a few hundred acres at the western end are laid out as cemetery, and the rest becomes a land bank for later sales.",
+  "text": "Under the 1852 Act the company buys Woking common land from Lord Onslow, though Wikipedia places the purchase after the company's reform in September 1853. Historic England gives the area as 2,268 acres; Wikipedia and Victorian Web say about 2,200, the Brookwood Cemetery Society about 2,000. Only some 350–500 acres at the western end are laid out as cemetery, and the rest becomes a land bank for later sales.",
   "sources": [
    "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
-   "https://tbcs.org.uk/about_the_cemetery.html",
-   "https://www.exploringsurreyspast.org.uk/collections/getrecord/SHCOL_6852"
+   "https://victorianweb.org/art/parks/brookwood/history.html",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://tbcs.org.uk/about_the_cemetery.html"
   ],
   "confidence": "medium"
  },
@@ -93,27 +101,29 @@
   "title": "Crisis in the boardroom",
   "text": "Amid allegations of voting irregularities, and unable to pay the dividends it has promised, the company loses several directors, Voules among them, and public confidence collapses. The delays mean that by the time Brookwood opens, rival cemeteries nearer London are already open.",
   "sources": [
-   "https://en.wikipedia.org/wiki/London_Necropolis_Company"
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://wokinghistory.org/onewebmedia/150102.pdf"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "date": "1853",
   "year": 1853,
   "title": "Sydney Smirke takes over",
-  "text": "Sydney Smirke replaces the company's first architect, Henry Abraham, and designs the two cemetery chapels and stations. Smirke and William Broderick Thomas shape the landscape, which follows J. C. Loudon's principles, and the nurseryman Robert Donald of Goldsworth, Woking, carries out the planting.",
+  "text": "Sydney Smirke replaces the company's first architect, Henry Abraham, and designs the two cemetery chapels and stations. Smirke is apparently also responsible, with William Broderick Thomas, for the detailed landscaping, which follows J. C. Loudon's principles, and the local nurseryman Robert Donald of Goldsworth, Woking, carries out the planting.",
   "sources": [
-   "https://victorianweb.org/art/parks/brookwood/history.html",
-   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://victorianweb.org/art/parks/brookwood/history.html"
   ],
   "confidence": "high"
  },
  {
-  "date": "07 November 1854",
+  "date": "7 November 1854",
   "year": 1854,
   "title": "Consecration",
   "text": "Charles Sumner, Bishop of Winchester, consecrates the southern, Church of England part of the cemetery, then called the Woking Necropolis, with its chapel. The northern part is left unconsecrated for Nonconformists and, later, other faiths.",
   "sources": [
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
    "https://en.wikipedia.org/wiki/Brookwood_Cemetery",
    "https://victorianweb.org/art/parks/brookwood/history.html"
   ],
@@ -123,43 +133,48 @@
   "date": "13 November 1854",
   "year": 1854,
   "title": "First train, first burials",
-  "text": "The first funeral train runs from the company's private station beside Waterloo, and the cemetery opens. The first interment is the stillborn twins of Mr and Mrs Hore of Ewer Street, Borough, buried at the expense of St Saviour's, Southwark; all that day's burials are pauper funerals in unmarked graves.",
+  "text": "The first funeral train runs from the company's private station beside Waterloo, and the cemetery opens. The first interment is the stillborn twins of Mr and Mrs Hore of Ewer Street, Borough, buried at the expense of St Saviour's, Southwark; the other burials that day are also pauper funerals in unmarked graves.",
   "sources": [
    "https://www.john-clarke.co.uk/first_burials.html",
-   "https://www.john-clarke.co.uk/wiki-analysis1.html",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+  ],
+  "confidence": "high"
+ },
+ {
+  "date": "21–25 November 1854",
+  "year": 1854,
+  "title": "The first permanent memorial",
+  "text": "Lieutenant-General Sir Henry Goldfinch dies on 21 November and is buried on 25 November in the first private grave (Grant No. 1), the 29th person to be buried at Brookwood. John Clarke identifies his memorial as the first permanent memorial erected in the cemetery, though some older stones were later re-erected from relocated London burial grounds.",
+  "sources": [
+   "https://john-clarke.co.uk/goldfinch.html",
+   "https://www.john-clarke.co.uk/first_burials.html",
    "https://en.wikipedia.org/wiki/Brookwood_Cemetery"
   ],
   "confidence": "high"
  },
  {
-  "date": "21 November 1854",
-  "year": 1854,
-  "title": "The first permanent memorial",
-  "text": "Sir Henry Goldfinch dies. His memorial at Brookwood is identified as the first permanent memorial erected in the cemetery.",
-  "sources": [
-   "https://john-clarke.co.uk/goldfinch.html"
-  ],
-  "confidence": "medium"
- },
- {
-  "date": "1857",
-  "year": 1857,
+  "date": "June 1858",
+  "year": 1858,
   "title": "Actors' Acre",
-  "text": "The actor John W. Anson acquires about an acre for the Dramatic, Equestrian and Musical Sick Fund Association as a burial place for actors and their families. Historic England dates the actors' ground to 1858.",
+  "text": "The Dramatic, Equestrian and Musical Sick Fund inaugurates an Actors' Acre, a burial ground for actors and their families on an acre bought from the company; the site is chosen by the Fund's secretary, John W. Anson. Historic England, John Clarke, the Society and Wikipedia's Royal Dramatic College article give 1858 (June); Wikipedia's Brookwood article has Anson acquiring it in 1857.",
   "sources": [
-   "https://brookwoodcemetery.com/plots-and-section/",
-   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
+   "https://www.john-clarke.co.uk/institutions.html",
+   "https://www.tbcs.org.uk/guilds.html",
+   "https://en.wikipedia.org/wiki/Royal_Dramatic_College"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "date": "1858",
   "year": 1858,
   "title": "Selling land: the invalid convict prison",
-  "text": "Short of money, the company sells 64 acres of surplus land to the Government for the Woking Invalid Convict Prison. It is the first of many sales that fund the company and shape the district around it.",
+  "text": "Short of money, the company sells 64 acres of surplus land to the Government for the Woking Invalid Convict Prison. It is one of many sales that fund the company and shape the district around it.",
   "sources": [
-   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
-   "https://theprison.org.uk/WokingInvalid/"
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery",
+   "https://wokinghistory.org/onewebmedia/150109.pdf",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company"
   ],
   "confidence": "high"
  },
@@ -167,21 +182,25 @@
   "date": "1859",
   "year": 1859,
   "title": "Friendly societies buy in",
-  "text": "A plot is reserved for the Oddfellows' lodges of the Metropolitan District; its central memorial marks the plot's inauguration in October 1861. Guilds, trades and charities follow, including the Corps of Commissionaires and the Ancient Order of Foresters.",
+  "text": "A plot is reserved for the Oddfellows' lodges of the Metropolitan District in 1859; its central memorial marks the plot's inauguration on 14 October 1861. Guilds, trades and charities follow, including the Corps of Commissionaires and the Ancient Order of Foresters.",
   "sources": [
    "https://brookwoodcemetery.com/plots-and-section/",
-   "https://www.tbcs.org.uk/guilds.html"
+   "https://www.tbcs.org.uk/guilds.html",
+   "https://www.john-clarke.co.uk/institutions.html",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
-  "date": "1862",
+  "date": "November 1862",
   "year": 1862,
   "title": "Zoroastrian burial ground opens",
-  "text": "A burial ground for London's Parsi community opens in the north-west of the cemetery, a year after the community's religious trust fund was founded. It is described as the only Zoroastrian burial ground in Europe. One source dates the grant of burial rights to 1863.",
+  "text": "A burial ground for London's Parsi community opens in the north-west of the cemetery, a year after the Zoroastrian Trust Funds of Europe were founded on 31 October 1861. It is described as the only Zoroastrian burial ground in Europe.",
   "sources": [
    "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/the-zoroastrian-burial-ground/",
-   "https://soas-repository.worktribe.com/OutputFile/440116"
+   "https://www.tbcs.org.uk/guilds.html",
+   "https://en.wikipedia.org/wiki/Zoroastrian_Trust_Funds_of_Europe",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
   ],
   "confidence": "high"
  },
@@ -189,30 +208,35 @@
   "date": "1862",
   "year": 1862,
   "title": "A London graveyard moves to Surrey",
-  "text": "Building Charing Cross station and its approaches requires clearing the Cure's College burial ground in Southwark, and some 7,950 bodies are taken to Brookwood. It is the first of many removals of London burial grounds to the cemetery.",
+  "text": "Building Charing Cross station and its approaches requires clearing the Cure's College burial ground in Southwark, and at least 7,950 bodies are taken to Brookwood. It is the first major removal of a London burial ground to the cemetery; at least 21 more follow by rail.",
   "sources": [
-   "https://en.wikipedia.org/wiki/London_Necropolis_Railway",
-   "https://www.historicmysteries.com/history/london-necropolis-railway/37878/"
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery",
+   "https://wokinghistory.org/onewebmedia/150102.pdf"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
-  "date": "1860s",
-  "year": 1862,
+  "date": "1860",
+  "year": 1860,
   "title": "Land for the county asylum",
-  "text": "Some 150 acres of company land are bought for the second Surrey County Asylum at Brookwood, later Brookwood Hospital; a surveyor reports on the site in 1862. The asylum opens later in the decade.",
+  "text": "Over 150 acres of company land are bought in 1860 for the second Surrey County Pauper Lunatic Asylum at Brookwood, later Brookwood Hospital; the county surveyor reports on the plans in 1862, and the first patients are admitted on 17 June 1867.",
   "sources": [
-   "https://wokinghistory.org/onewebmedia/150109.pdf"
+   "https://wokinghistory.org/onewebmedia/150130.pdf",
+   "https://en.wikipedia.org/wiki/Brookwood_Hospital"
   ],
   "confidence": "medium"
  },
  {
-  "date": "1865",
+  "date": "5 June 1865",
   "year": 1865,
   "title": "The Royal Dramatic College",
-  "text": "A college for retired actors opens at Maybury, Woking, on ten acres bought from the company for £750 (some sources date it to 1862). After it fails, its buildings pass by about 1883 to Dr Gottlieb Leitner's Oriental Institute, beside which the Shah Jahan Mosque rises in 1889.",
+  "text": "A college for retired actors is opened at Maybury, Woking, by the Prince of Wales, on a ten-acre site bought from the company for £750 (Wikipedia's History of Woking says it opened in 1862). After it closes in 1877 its building passes to Dr Gottlieb Leitner's Oriental Institute (sources say between 1881 and 1884), beside which the Shah Jahan Mosque rises in 1889.",
   "sources": [
-   "https://en.wikipedia.org/wiki/Royal_Dramatic_College"
+   "https://en.wikipedia.org/wiki/Royal_Dramatic_College",
+   "https://en.wikipedia.org/wiki/Gottlieb_Wilhelm_Leitner",
+   "https://en.wikipedia.org/wiki/Shah_Jahan_Mosque,_Woking",
+   "https://en.wikipedia.org/wiki/History_of_Woking"
   ],
   "confidence": "medium"
  },
@@ -220,32 +244,35 @@
   "date": "1878",
   "year": 1878,
   "title": "Land for Britain's first crematorium",
-  "text": "The Cremation Society buys about an acre at St John's, Woking, from the company, through a third party so that the cemetery company can keep its distance. One historian dates the purchase to 1874. The first cremation, of Jeannette Pickersgill, follows on 26 March 1885.",
+  "text": "The Cremation Society buys about an acre at St John's, Woking, from the company, through a third party; the records are lost and it is not known why. The first cremation at what is Britain's first custom-built crematorium, that of Jeannette Pickersgill, follows on 26 March 1885.",
   "sources": [
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
    "https://en.wikipedia.org/wiki/Woking_Crematorium",
-   "https://goldencharter.co.uk/news-and-info/2018/a-short-history-of-cremation-in-the-uk",
-   "https://victorianweb.org/art/parks/woking/1.html"
+   "https://victorianweb.org/art/parks/brookwood/history.html"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "date": "1884",
   "year": 1884,
   "title": "Britain's first Muslim burial ground",
-  "text": "A small plot, 27 by 24 feet, is set aside for Leitner's Oriental Institute in Woking. Known as the 'Mohammedan Cemetery' and marked by a qibla stone, it is described as the first Muslim burial ground in Britain. Today Muslim burials account for more than 70 per cent of interments at Brookwood.",
+  "text": "A small plot, 27 by 24 feet, is set aside for Leitner's Oriental Institute in Woking. Known as the 'Mohammedan Cemetery' and marked by a qibla stone, it is described as the first Muslim burial ground in Britain; no burial had taken place there by Leitner's death in 1899. In recent years Muslim burials have consistently made up more than 70 per cent of all burials at Brookwood.",
   "sources": [
-   "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/",
-   "https://brookwoodcemetery.com/?p=5514"
+   "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/muslim-burial-space-in-brookwood-cemetery/",
+   "https://brookwoodcemetery.com/types-of-burial/muslim-burials/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
   ],
   "confidence": "medium"
  },
  {
-  "date": "1893",
-  "year": 1893,
+  "date": "1894",
+  "year": 1894,
   "title": "Chelsea Pensioners come to Brookwood",
-  "text": "The Royal Hospital Chelsea, which had buried its in-pensioners at Brompton since 1855, begins using Brookwood; some accounts say 1894. A later pensioners' plot lies within Brookwood Military Cemetery.",
+  "text": "The Royal Hospital Chelsea, which had previously buried its in-pensioners at Brompton Cemetery, begins using Brookwood in 1894 (Wikipedia says 1893) and has two plots there.",
   "sources": [
-   "https://thebignote.com/2024/02/12/brookwood-military-cemetery-the-royal-hospital-burial-ground/"
+   "https://www.john-clarke.co.uk/institutions.html",
+   "https://www.tbcs.org.uk/guilds.html",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery"
   ],
   "confidence": "medium"
  },
@@ -256,17 +283,20 @@
   "text": "Sunday funeral trains end after October 1900. Trains had run once a day when funerals were booked; by the 1930s it was unusual for one to run more than twice a week.",
   "sources": [
    "https://www.tbcs.org.uk/cemetery_railway.html",
-   "https://www.cabinetmagazine.org/issues/20/clarke.php"
+   "https://www.cabinetmagazine.org/issues/20/clarke.php",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Railway"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
-  "date": "08 February 1902",
+  "date": "1902",
   "year": 1902,
   "title": "A new London terminus",
-  "text": "Needing the old site to enlarge Waterloo, the London and South Western Railway builds the company a new station at 121 Westminster Bridge Road, which Wikipedia dates to 8 February 1902. Its office frontage survives as Westminster Bridge House.",
+  "text": "Needing the old site to enlarge Waterloo, the London and South Western Railway builds the company a new station at 121 Westminster Bridge Road. Wikipedia, citing John Clarke, gives its completion as 8 February 1902; a newspaper of 16 April 1902 reports the new offices as just opened. The office block survives as Westminster Bridge House, listed Grade II.",
   "sources": [
+   "https://en.wikipedia.org/wiki/London_Necropolis_Railway",
    "https://en.wikipedia.org/wiki/London_Necropolis_railway_station",
+   "https://britishlistedbuildings.co.uk/101249875-westminster-bridge-house-bishops-ward",
    "https://www.tbcs.org.uk/PDF/new%20necropolis%20station.pdf"
   ],
   "confidence": "medium"
@@ -275,10 +305,10 @@
   "date": "1904",
   "year": 1904,
   "title": "Jamsetji Tata buried at Brookwood",
-  "text": "Jamsetji Nusserwanji Tata (1839–1904), founder of the Tata industrial empire, is buried in the Zoroastrian ground. The Tata mausolea join the earlier Wadia mausoleum, modelled on the tomb of Cyrus at Pasargadae.",
+  "text": "Jamsetji Nusserwanji Tata (1839–1904), founder of the Tata industrial empire, is buried in the Zoroastrian ground. The Tata mausolea join the earlier Wadia mausoleum, modelled on the tomb of Cyrus the Great.",
   "sources": [
    "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/the-zoroastrian-burial-ground/",
-   "https://www.bacsa.org.uk/bacsa-visit-to-brookwood-cemetery/"
+   "https://en.wikipedia.org/wiki/Jamsetji_Tata"
   ],
   "confidence": "medium"
  },
@@ -286,11 +316,11 @@
   "date": "1917",
   "year": 1917,
   "title": "Brookwood Military Cemetery",
-  "text": "The company sets aside land for service men and women who die in the London area, the start of what is now Brookwood Military Cemetery, administered by the Commonwealth War Graves Commission. Burial figures and national plots should be confirmed with the CWGC.",
+  "text": "A section of the cemetery, on land provided by the company, is set aside for service men and women who die in the London District: the start of what is now Brookwood Military Cemetery, administered largely by the Commonwealth War Graves Commission.",
   "sources": [
-   "https://www.exploringsurreyspast.org.uk/collections/getrecord/SHCOL_6852",
-   "https://admin.cwgc.org/media/dlodvxdh/brookwood-military-cemetery-tour.pdf",
-   "https://www.tbcs.org.uk/military_cemeteries.html"
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://www.tbcs.org.uk/military_cemeteries.html",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391047?section=official-list-entry"
   ],
   "confidence": "high"
  },
@@ -298,31 +328,34 @@
   "date": "1927",
   "year": 1927,
   "title": "A shorter name",
-  "text": "The London Necropolis and National Mausoleum Company is renamed the London Necropolis Company.",
+  "text": "Shareholders formally drop the words 'National Mausoleum', unbuilt since 1852, from the company's name, which becomes the London Necropolis Company.",
   "sources": [
-   "https://en.wikipedia.org/wiki/London_Necropolis_railway_station"
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Railway"
   ],
-  "confidence": "low"
+  "confidence": "medium"
  },
  {
   "date": "1937",
   "year": 1937,
   "title": "The American cemetery dedicated",
-  "text": "The Brookwood American Cemetery and Memorial, the only American First World War cemetery in Britain, is dedicated. It holds 468 American dead; another 564 missing, most of them lost at sea, are named on the walls of its chapel.",
+  "text": "The Brookwood American Cemetery and Memorial, the only American First World War cemetery in Britain, is dedicated; the American Battle Monuments Commission gives 1937, though Historic England dates its completion to 1929. It holds 468 American dead; another 564 missing, most of them lost at sea, are named on the walls of its chapel.",
   "sources": [
-   "https://abmc.gov/news-events/news/five-things-you-may-not-know-about-brookwood-american-cemetery",
-   "https://en.wikipedia.org/wiki/Brookwood_American_Cemetery_and_Memorial"
+   "https://www.abmc.gov/cemeteries-memorials/about-brookwood-american-cemetery/",
+   "https://www.abmc.gov/news-events/news/five-things-you-may-not-know-about-brookwood-american-cemetery/",
+   "https://en.wikipedia.org/wiki/Brookwood_American_Cemetery_and_Memorial",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265?section=official-list-entry"
   ],
-  "confidence": "high"
+  "confidence": "medium"
  },
  {
   "date": "11 April 1941",
   "year": 1941,
   "title": "The last funeral train",
-  "text": "The last funeral train leaves Westminster Bridge Road for Brookwood, reportedly carrying the Chelsea Pensioner Edward Irish (1868–1941).",
+  "text": "The last funeral train leaves Westminster Bridge Road for Brookwood on 11 April 1941. Edward Irish (1868–1941), a Chelsea Pensioner, is the last funeral party recorded on it; a second, unidentified coffin was also carried.",
   "sources": [
    "https://en.wikipedia.org/wiki/London_Necropolis_Railway",
-   "https://symbolsandsecrets.london/?p=13639"
+   "https://en.wikipedia.org/wiki/London_Necropolis_railway_station"
   ],
   "confidence": "medium"
  },
@@ -330,7 +363,7 @@
   "date": "16–17 April 1941",
   "year": 1941,
   "title": "The terminus is bombed",
-  "text": "An air raid destroys the company's rolling stock and much of the London terminus. Only the platforms, the first-class waiting rooms and the office block survive. The station is formally closed on 11 May 1941.",
+  "text": "An air raid burns the rolling stock in the siding and destroys much of the London terminus. The platforms, the first-class waiting rooms and the office block survive. The station is officially closed on 11 May 1941, though sometimes the date is given as 15 May.",
   "sources": [
    "https://www.john-clarke.co.uk/demise.html",
    "https://en.wikipedia.org/wiki/London_Necropolis_Railway"
@@ -341,9 +374,10 @@
   "date": "December 1946",
   "year": 1946,
   "title": "The railway is given up",
-  "text": "Having decided in September 1945 that the private train was obsolete, the company settles with the Southern Railway, and funerals use ordinary services from Waterloo to Brookwood instead. The track inside the cemetery is lifted around 1947–48.",
+  "text": "The company's directors decided in September 1945 that the private train was obsolete. A Southern Railway agreement of May 1946 let funerals use ordinary services from Waterloo to Brookwood; in December 1946 the two companies agreed how to divide the London site. The track inside the cemetery was lifted around 1947–48.",
   "sources": [
    "https://www.john-clarke.co.uk/demise.html",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Railway",
    "https://www.tbcs.org.uk/cemetery_railway.html"
   ],
   "confidence": "medium"
@@ -352,21 +386,24 @@
   "date": "25 October 1958",
   "year": 1958,
   "title": "The Brookwood 1939–1945 Memorial",
-  "text": "Queen Elizabeth II unveils Ralph Hobday’s memorial to some 3,500 men and women of the Commonwealth land forces who died in the Second World War and have no known grave.",
+  "text": "Ralph Hobday’s memorial is inaugurated in the presence of Queen Elizabeth II. It commemorates some 3,500 men and women of the forces of the Commonwealth who died in the Second World War and have no known grave. Wikipedia gives 3,428.",
   "sources": [
-   "https://paradata.org.uk/node/11249",
-   "https://www.cwgc.org/"
+   "https://historicengland.org.uk/listing/the-list/list-entry/1391047?section=official-list-entry",
+   "https://en.wikipedia.org/wiki/Ralph_Hobday",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery",
+   "https://www.tbcs.org.uk/military_cemeteries.html"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "date": "1968",
   "year": 1968,
   "title": "Horsell's Muslim soldiers moved",
-  "text": "Because of vandalism, the Indian Army soldiers buried at the Muslim burial ground on Horsell Common near the Shah Jahan Mosque are moved to Brookwood Military Cemetery. The Horsell site became a Peace Garden in 2015.",
+  "text": "Because of vandalism, the Muslim soldiers of the Indian Army buried at the Muslim burial ground on Horsell Common near the Shah Jahan Mosque are moved to Brookwood Military Cemetery. In November 2015 the Horsell site becomes a Peace Garden.",
   "sources": [
-   "https://historicengland.org.uk/listing/the-list/list-entry/1236560",
-   "https://thebignote.com/2024/01/16/brookwood-military-cemetery-the-muslim-burials/"
+   "https://britishlistedbuildings.co.uk/101236560-muslim-burial-ground-woking-canalside-ward",
+   "https://en.wikipedia.org/wiki/Muslim_Burial_Ground,_Horsell_Common",
+   "https://www.tbcs.org.uk/british_colonial_and_muslim.html"
   ],
   "confidence": "high"
  },
@@ -374,30 +411,35 @@
   "date": "1972",
   "year": 1972,
   "title": "A cemetery station is lost",
-  "text": "One of Sydney Smirke's two cemetery stations is destroyed by vandals in 1972; the other had been demolished in the 1950s. Accounts generally identify the 1972 loss as the South station, whose platform survives.",
+  "text": "The South cemetery station, by then a storeroom, is burned in September 1972 and the rest of the building is soon demolished; its platform survives. The North station, the other of Sydney Smirke’s two, had been demolished in the 1960s. Historic England’s register says instead that one was demolished in the 1950s and the other destroyed by vandals in 1972.",
   "sources": [
-   "https://historicengland.org.uk/listing/the-list/list-entry/1001265"
+   "https://www.tbcs.org.uk/cemetery_railway.html",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Railway",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265?section=official-list-entry"
   ],
   "confidence": "medium"
  },
  {
   "date": "c. 1975",
   "year": 1975,
-  "title": "End of the Necropolis Company",
-  "text": "The London Necropolis Company is dissolved, and other private companies run the cemetery for a decade. The company's records were later saved from destruction by a former employee and are now at Surrey History Centre.",
+  "title": "Brookwood Cemetery Act 1975",
+  "text": "After a hostile takeover in 1959 and a succession of owners, the London Necropolis Company, by now little more than the cemetery itself, is sold in July 1973 to the property company Maximillian Investments, which obtains the Brookwood Cemetery Act 1975 to sell land within the cemetery’s operational area. The company, renamed Brookwood Cemetery Ltd, moves to small offices and most of its records are destroyed.",
   "sources": [
-   "https://www.exploringsurreyspast.org.uk/collections/getrecord/SHCOL_6852"
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company",
+   "https://www.john-clarke.co.uk/ramadan_guney.html",
+   "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/into-brookwood-cemetery/"
   ],
   "confidence": "medium"
  },
  {
-  "date": "18 March 1982",
+  "date": "March 1982",
   "year": 1982,
   "title": "Orthodox monks arrive",
-  "text": "Monks of the Russian Orthodox Church Outside Russia arrive to found the St Edward Brotherhood in the former Anglican chapels. In 1984 they enshrine the relics of St Edward the Martyr, the Anglo-Saxon king murdered in 978.",
+  "text": "The St Edward Brotherhood, monks of the Russian Orthodox Church Outside Russia, move into the former Anglican chapels they have bought in the cemetery. On 15–16 September 1984 they receive and enshrine the relics of St Edward the Martyr, the Anglo-Saxon king murdered in 978 (some sources say 979).",
   "sources": [
-   "https://roca.org/oa/volume-x/issue-93/from-st-edwards/",
-   "https://en.orthodoxwiki.org/St._Edward_the_Martyr_Orthodox_Brotherhood_(Surrey,_England)"
+   "https://www.john-clarke.co.uk/st_edward_the_martyr.html",
+   "https://www.tbcs.org.uk/necropolis_notables/st_edward_the_martyr.html",
+   "https://en.wikipedia.org/wiki/Church_of_St_Edward_the_Martyr,_Brookwood"
   ],
   "confidence": "medium"
  },
@@ -405,11 +447,13 @@
   "date": "1985",
   "year": 1985,
   "title": "A private purchase",
-  "text": "The cemetery is bought privately, by the Turkish Cypriot businessman Ramadan Güney according to most accounts. He was later buried there himself. It remains in private hands until Woking Borough Council acquires it.",
+  "text": "The cemetery is bought privately by the Turkish Cypriot businessman Ramadan Güney, chairman of the UK Turkish Islamic Trust, from its then owner. Güney is later buried there himself. It remains in private hands until Woking Borough Council acquires it.",
   "sources": [
-   "https://www.exploringsurreyspast.org.uk/collections/getrecord/SHCOL_6852"
+   "https://www.john-clarke.co.uk/ramadan_guney.html",
+   "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/into-brookwood-cemetery/",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery"
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "date": "25 January 1993",
@@ -417,19 +461,22 @@
   "title": "Grade I landscape",
   "text": "Historic England registers Brookwood at Grade I on the Register of Parks and Gardens of Special Historic Interest, about 145 hectares, describing it as the largest cemetery in England. It is also on the Heritage at Risk register.",
   "sources": [
-   "https://historicengland.org.uk/listing/the-list/list-entry/1001265",
-   "https://historicengland.org.uk/listing/heritage-at-risk/search-register/list-entry/24687"
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265?section=official-list-entry",
+   "https://historicengland.org.uk/listing/heritage-at-risk/search-register/list-entry/24687",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery"
   ],
   "confidence": "high"
  },
  {
-  "date": "02 November 2006",
+  "date": "2 November 2006",
   "year": 2006,
   "title": "Death of Ramadan Güney",
-  "text": "The cemetery’s owner since 1985 dies in Cyprus and is buried at Brookwood in one of the Muslim plots he helped to establish. His family continues to run the cemetery.",
+  "text": "The cemetery’s owner since 1985 dies in Northern Cyprus and is buried in his family vault at Brookwood on 10 November 2006. His son runs the cemetery until, in 2011–12, the courts uphold a challenge to the inheritance by Güney’s former partner, who sells it to Woking Borough Council in 2014.",
   "sources": [
-   "https://masjidramadan.org/ramadan-guney.php",
-   "https://brookwoodcemetery.com/?p=474"
+   "https://en.wikipedia.org/wiki/Ramadan_G%C3%BCney",
+   "https://brookwoodcemetery.com/2018/474/",
+   "https://www.john-clarke.co.uk/ramadan_guney.html",
+   "https://en.wikipedia.org/wiki/Brookwood_Cemetery"
   ],
   "confidence": "medium"
  },
@@ -439,9 +486,10 @@
   "title": "Woking Borough Council takes over",
   "text": "The council buys the companies that own the civilian cemetery, Brookwood Park Limited and Brookwood Cemetery Limited, on confidential terms. The war graves are not part of the sale.",
   "sources": [
-   "https://www.tbcs.org.uk/newsletter_archive/2016/News105.pdf",
    "https://john-clarke.co.uk/woking_advertiser.html",
-   "https://www.woking.gov.uk/node/79923"
+   "https://www.exploringsurreyspast.org.uk/themes/subjects/diversity/the-living-and-the-dead-exploring-minority-burial-grounds-in-brookwood-cemetery/into-brookwood-cemetery/",
+   "https://historicengland.org.uk/listing/the-list/list-entry/1001265?section=official-list-entry",
+   "https://en.wikipedia.org/wiki/London_Necropolis_Company"
   ],
   "confidence": "high"
  }
