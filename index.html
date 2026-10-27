@@ -9,8 +9,14 @@
 <title>Brookwood: The London Necropolis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=League+Gothic&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap">
 <style>
+/* Display types and initials revived from nineteenth-century foundry specimens by Font Revival (MIT); see src/fonts/. */
+@font-face { font-family: "Doric 1889"; src: url("src/fonts/Doric1889-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Modern Antique 1889"; src: url("src/fonts/ModernAntique1889-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Baltimore Title 1832"; src: url("src/fonts/BaltimoreTitle1832-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Baltimore Bold 1832"; src: url("src/fonts/BaltimoreBold1832-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Brookwood Initials"; src: url("src/fonts/BrookwoodInitials.woff2") format("woff2"); font-display: block; }
 /* Layout: a bound Victorian octavo — a justified text block with shoulder-notes in the outer margin;
    the Plan and the Register break out as full-width folding plates. Mourning-card double rules frame it. */
 :root {
@@ -26,10 +32,13 @@
   --mount: #f1ecdf;        /* paper behind plates, light in both themes */
   --plate-ink: #1d1c18;    /* engraving ink on that paper, dark in both themes */
 
-  --f-display: "Abril Fatface", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
+  --f-title: "Baltimore Bold 1832", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
+  --f-display: "Doric 1889", "Old Standard TT", Georgia, serif;   /* missing marks such as £ fall back to the text face */
   --f-text: "Old Standard TT", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --f-black: "UnifrakturMaguntia", "Old English Text MT", "Times New Roman", serif;
-  --f-label: "League Gothic", "Arial Narrow", "Helvetica Neue Condensed", Impact, sans-serif;
+  --f-label: "Modern Antique 1889", "Old Standard TT", Georgia, serif;
+  --f-caps: "Baltimore Title 1832", "Old Standard TT", Georgia, serif;
+  --f-initial: "Brookwood Initials", "Doric 1889", Georgia, serif;
 
   --measure: 38rem;
   --gutter: clamp(16px, 4vw, 48px);
@@ -85,9 +94,8 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   line-height: 1.1;
 }
 .smallcaps { font-variant: small-caps; letter-spacing: .04em; }
-.rule-double { border: 0; height: 6px; margin: 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .rule-thin { border: 0; border-top: 1px solid var(--ink); margin: 0; }
-.fleuron { display: block; width: 120px; height: 24px; margin: 2.2rem auto; color: var(--gilt); }
+.fleuron { display: block; width: 140px; height: 26px; margin: 2.2rem auto; color: var(--gilt); }
 
 /* ——— Title page ——— */
 .titlepage {
@@ -96,7 +104,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   outline: 1px solid var(--ink);
   outline-offset: 5px;
   margin: 8px 8px 0;
-  padding: clamp(28px, 6vw, 72px) clamp(16px, 5vw, 64px) clamp(24px, 4vw, 48px);
+  padding: clamp(28px, 6vw, 72px) clamp(16px, 5vw, 64px) clamp(44px, 5vw, 56px);
   text-align: center;
 }
 .titlepage .corner { position: absolute; width: clamp(36px, 6vw, 60px); height: clamp(36px, 6vw, 60px); color: var(--gilt); }
@@ -104,13 +112,13 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .titlepage .corner.tr { top: 6px; right: 6px; transform: scaleX(-1); }
 .titlepage .corner.bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
 .titlepage .corner.br { bottom: 6px; right: 6px; transform: scale(-1, -1); }
-.tp-kicker { letter-spacing: .32em; font-size: .85rem; text-transform: uppercase; margin: 0; }
+.tp-kicker { font-family: var(--f-caps); letter-spacing: .32em; font-size: .85rem; text-transform: uppercase; margin: 0; }
 .tp-title {
-  font-family: var(--f-display);
+  font-family: var(--f-title);
   font-weight: 400;
-  font-size: clamp(3.2rem, 13vw, 8.5rem);
+  font-size: clamp(2.2rem, 9.6vw, 6.6rem);
   line-height: .92;
-  letter-spacing: .01em;
+  letter-spacing: .02em;
   margin: .25em 0 .1em;
   text-wrap: balance;
 }
@@ -128,9 +136,9 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   font-size: 1.05rem;
   text-wrap: balance;
 }
-.tp-with { margin: 1.1rem auto 0; max-width: 34rem; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; line-height: 1.7; }
+.tp-with { font-family: var(--f-caps); margin: 1.1rem auto 0; max-width: 34rem; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; line-height: 1.7; }
 .tp-vignette { display: block; width: min(100%, 460px); height: auto; aspect-ratio: 480 / 260; margin: 1.6rem auto 0; color: var(--ink); }
-.tp-imprint { margin-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+.tp-imprint { font-family: var(--f-caps); margin-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
 .tp-imprint span + span::before { content: ""; }
 
 /* ——— Running head and thumb-index tabs ——— */
@@ -139,7 +147,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   padding: .4rem 0 .5rem; border-bottom: 3px double var(--ink);
 }
 .rh-title { color: var(--ink); text-decoration: none; display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
-.rh-b { font-family: var(--f-display); font-size: 1.6rem; line-height: 1; }
+.rh-b { font-family: var(--f-title); font-size: 1.4rem; letter-spacing: .02em; line-height: 1; }
 .rh-n { font-family: var(--f-black); font-size: 1.15rem; line-height: 1; }
 .rh-sec { font-style: italic; color: var(--ink-soft); font-size: .92rem; }
 .thumbs {
@@ -157,7 +165,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   border-radius: .7rem .7rem 0 0; cursor: pointer; position: relative; top: 1px;
 }
 .thumb .th-num { font-family: var(--f-text); font-size: .72rem; letter-spacing: .08em; color: var(--gilt); font-variant-numeric: lining-nums; }
-.thumb .th-label { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: 1.02rem; line-height: 1; white-space: nowrap; }
+.thumb .th-label { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .04em; font-size: .84rem; line-height: 1; white-space: nowrap; }
 .thumb:hover { background: var(--yew); border-color: var(--yew); }
 .thumb[aria-selected="true"] { background: var(--paper); color: var(--ink); border-color: var(--ink); z-index: 1; }
 .thumb[aria-selected="true"] .th-num { color: var(--gilt); }
@@ -176,13 +184,13 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .pager a { display: grid; gap: .15rem; text-decoration: none; color: var(--ink); padding: .3rem .2rem; min-width: 0; }
 .pager a:hover .pg-t { text-decoration: underline; text-decoration-color: var(--yew); }
 .pg-next { text-align: right; justify-items: end; }
-.pg-dir { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; font-size: .9rem; color: var(--yew); display: inline-flex; align-items: center; gap: .4rem; }
+.pg-dir { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; color: var(--yew); display: inline-flex; align-items: center; gap: .4rem; }
 .pg-dir svg { width: 1.9em; height: .95em; }
 .pg-t { font-family: var(--f-display); font-size: 1.25rem; line-height: 1.15; text-wrap: balance; }
 
 /* ——— Contents ——— */
 .contents { max-width: var(--measure); margin: 3.5rem auto 0; }
-.contents h2 { text-align: center; font-weight: 400; letter-spacing: .3em; font-size: 1rem; margin: 0 0 1rem; text-transform: uppercase; }
+.contents h2 { font-family: var(--f-caps); text-align: center; font-weight: 400; letter-spacing: .3em; font-size: 1rem; margin: 0 0 1rem; text-transform: uppercase; }
 .contents ol { list-style: none; padding: 0; margin: 0; display: grid; gap: .15rem; }
 .contents a {
   display: grid;
@@ -203,7 +211,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 /* ——— Chapters ——— */
 .chapter { margin-top: clamp(3.5rem, 8vw, 6rem); scroll-margin-top: 5.5rem; }
 .ch-head { text-align: center; max-width: 44rem; margin: 0 auto 2rem; }
-.ch-num { letter-spacing: .3em; font-size: .9rem; text-transform: uppercase; margin: 0; color: var(--ink-soft); }
+.ch-num { font-family: var(--f-caps); letter-spacing: .3em; font-size: .9rem; text-transform: uppercase; margin: 0; color: var(--ink-soft); }
 .ch-title {
   font-family: var(--f-display);
   font-weight: 400;
@@ -213,7 +221,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   text-wrap: balance;
 }
 .ch-dates { font-style: italic; margin: 0; color: var(--ink-soft); }
-.ch-head .rule-double { width: 7rem; margin: 1rem auto 0; }
+.ch-rule { display: block; width: 11rem; height: 1.4rem; margin: .9rem auto 0; color: var(--ink); }
 
 .prose { max-width: var(--measure); margin: 0 auto; position: relative; }
 .prose p { margin: 0 0 1em; hyphens: auto; -webkit-hyphens: auto; }
@@ -221,7 +229,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .prose p.flush, .prose .shoulder + p { text-indent: 0; }
 @media (min-width: 600px) { .prose p { text-align: justify; } }
 .prose h3 {
-  font-family: var(--f-text);
+  font-family: var(--f-caps);
   font-weight: 400;
   font-size: 1.05rem;
   letter-spacing: .16em;
@@ -237,13 +245,14 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .prose blockquote p { text-align: left; text-indent: 0 !important; margin: 0 0 .4rem !important; }
 .prose blockquote cite { display: block; font-style: normal; font-size: .85em; color: var(--ink-soft); text-align: right; }
 .prose blockquote cite::before { content: "— "; }
+/* The initials font draws a leafy blackletter capital for the real first letter, so the text stays plain text. */
 .dropcap::first-letter {
-  font-family: var(--f-display);
+  font-family: var(--f-initial);
   float: left;
-  font-size: 4.1em;
-  line-height: .8;
-  padding: .06em .1em 0 0;
-  margin-top: .05em;
+  font-size: 5.3em;
+  line-height: .86;
+  padding: 0 .06em 0 0;
+  margin: .03em 0 0 -.02em;
   color: var(--ink);
 }
 .prose p.dropcap { text-indent: 0; }
@@ -277,7 +286,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2.6rem; margin: 2rem auto 2.4rem; max-width: 52rem; }
 .fact { text-align: center; min-width: 8rem; }
 .fact b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 2.1rem; line-height: 1; font-variant-numeric: lining-nums; }
-.fact span { display: block; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .35rem; color: var(--ink-soft); }
+.fact span { display: block; font-family: var(--f-caps); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .35rem; color: var(--ink-soft); }
 .fact small { display: block; font-style: italic; font-size: .78rem; color: var(--ink-soft); }
 
 .uncertain { color: var(--mark); font-size: .8em; vertical-align: super; line-height: 0; cursor: help; text-decoration: none; }
@@ -288,7 +297,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem;
   padding: .7rem 1rem; border-bottom: 1px solid var(--ink);
 }
-.plate-cap .plate-no { letter-spacing: .25em; font-size: .85rem; text-transform: uppercase; }
+.plate-cap .plate-no { font-family: var(--f-caps); letter-spacing: .25em; font-size: .85rem; text-transform: uppercase; }
 .plate-cap .plate-title { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.1; }
 .plate-cap .plate-scale { font-style: italic; font-size: .85rem; color: var(--ink-soft); }
 
@@ -317,13 +326,13 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   font-family: var(--f-text); line-height: 1.25; display: grid; gap: .3rem; width: 100%;
 }
 .ticket[aria-pressed="true"] { background: var(--yew-wash); box-shadow: inset 0 0 0 4px var(--paper), inset 0 0 0 5px var(--yew); border-color: var(--yew); }
-.ticket .t-co { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
+.ticket .t-co { font-family: var(--f-caps); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
 .ticket .t-class { font-family: var(--f-label); font-size: 2.1rem; letter-spacing: .06em; text-transform: uppercase; line-height: 1; }
 .ticket .t-route { font-style: italic; font-size: .85rem; }
 .ticket .t-fare { font-family: var(--f-display); font-size: 1.5rem; font-variant-numeric: lining-nums; }
 .ticket .t-no { position: absolute; top: .5rem; right: .7rem; font-size: .7rem; font-variant-numeric: lining-nums tabular-nums; color: var(--ink-soft); }
 .ticket-note { max-width: var(--measure); margin: 1.2rem auto 0; padding: 1rem 1.2rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); min-height: 6.5rem; }
-.ticket-note h4 { margin: 0 0 .3rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .9rem; }
+.ticket-note h4 { font-family: var(--f-caps); margin: 0 0 .3rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .9rem; }
 .ticket-note p { margin: 0; }
 
 /* ——— Plan ——— */
@@ -341,7 +350,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 @media (min-width: 960px) { .plan-side { max-height: 46rem; } }
 .plan-side-sec { padding: .9rem 1rem; border-bottom: 1px solid var(--ink); }
 .plan-side-sec:last-child { border-bottom: 0; }
-.plan-side h3 { margin: 0 0 .5rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; font-size: .82rem; }
+.plan-side h3 { font-family: var(--f-caps); margin: 0 0 .5rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; font-size: .82rem; }
 .walk-pick { display: grid; gap: .35rem; }
 .walk-pick button {
   text-align: left; background: none; border: 0; padding: .3rem .4rem; cursor: pointer; display: grid; grid-template-columns: 1.4rem 1fr; gap: .4rem; align-items: baseline;
@@ -386,7 +395,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .register-wrap { overflow-x: auto; }
 table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .ledger th {
-  font-weight: 400; text-align: left; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+  font-family: var(--f-caps); font-weight: 400; text-align: left; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
   background: var(--paper-deep); padding: .55rem .7rem; border-bottom: 3px double var(--ink); white-space: nowrap;
 }
 .ledger td { padding: .55rem .7rem; border-bottom: 1px solid var(--ink-faint); vertical-align: baseline; }
@@ -424,7 +433,7 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
 @media (min-width: 960px) { .emblems { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 .emblem { text-align: center; min-width: 0; }
 .emblem svg { width: 76px; height: 76px; color: var(--ink); display: block; margin: 0 auto .4rem; }
-.emblem h4 { margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
+.emblem h4 { font-family: var(--f-caps); margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
 .emblem p { margin: .3rem 0 0; font-size: .9rem; line-height: 1.45; color: var(--ink-soft); }
 
 /* ——— Chronology ——— */
@@ -453,13 +462,13 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 .card-inner { border: 6px solid var(--ink); margin: 6px; padding: 1.4rem clamp(1rem, 4vw, 2rem) 1.3rem; position: relative; }
 .card-inner::before { content: ""; position: absolute; inset: 4px; border: 1px solid var(--ink); pointer-events: none; }
 .card-close { position: absolute; top: .5rem; right: .6rem; background: none; border: 0; font-size: 1.6rem; line-height: 1; cursor: pointer; padding: .2rem .4rem; z-index: 1; }
-.card-cat { text-align: center; letter-spacing: .25em; text-transform: uppercase; font-size: .78rem; color: var(--ink-soft); margin: .2rem 0 0; }
+.card-cat { font-family: var(--f-caps); text-align: center; letter-spacing: .25em; text-transform: uppercase; font-size: .78rem; color: var(--ink-soft); margin: .2rem 0 0; }
 .card h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.7rem, 6vw, 2.3rem); line-height: 1.05; text-align: center; margin: .4rem 0 .2rem; text-wrap: balance; }
 .card .c-hon { text-align: center; font-size: .9rem; margin: 0; letter-spacing: .08em; }
 .card .c-life { text-align: center; font-style: italic; margin: .3rem 0 0; font-variant-numeric: lining-nums; }
 .card .fleuron { margin: 1rem auto; }
 .card p { margin: 0 0 .8rem; }
-.card h4 { margin: 1rem 0 .3rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; font-size: .8rem; }
+.card h4 { font-family: var(--f-caps); margin: 1rem 0 .3rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; font-size: .8rem; }
 .card dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: .6rem 0 0; font-size: .92rem; }
 .card dt { font-variant: small-caps; letter-spacing: .05em; color: var(--ink-soft); }
 .card dd { margin: 0; }
@@ -498,19 +507,26 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 .fig-pair .fig { margin: 0 auto; max-width: none; width: 100%; }
 @media (min-width: 760px) { .fig-pair { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
 .card .fig figcaption { font-size: .78rem; }
+/* Printers' cuts from Font Revival, drawn in plate ink: on a paper mount in the dark theme, like the plates */
+.cut { margin: 2.6rem auto 0; max-width: 21rem; clear: both; }
+.cut img { display: block; width: 100%; height: auto; }
+.cut figcaption { margin-top: .7rem; text-align: center; font-size: .88rem; line-height: 1.45; color: var(--ink-soft); text-wrap: balance; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .cut img { background: var(--mount); padding: .8rem; }
+  :root:not([data-theme="light"]) .finis .fin { filter: invert(.9); }
+}
+:root[data-theme="dark"] .cut img { background: var(--mount); padding: .8rem; }
+:root[data-theme="dark"] .finis .fin { filter: invert(.9); }
 
 /* ——— Footer ——— */
 .finis { text-align: center; margin-top: 3rem; }
-.finis .fin { font-family: var(--f-black); font-size: 2.2rem; margin: 0; }
+.finis .fin { display: block; width: min(15rem, 70%); height: auto; margin: 0 auto; }
 .finis p { font-size: .82rem; color: var(--ink-soft); max-width: 36rem; margin: .6rem auto 0; font-style: italic; }
 
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 </style>
 
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs></defs>
-<symbol id="orn-corner" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" d="M64 8h-56v56"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M64 3h-61v61"/><path fill="currentColor" d="M2 2h6.6v6.6h-6.6zM6.1 6.1v-1.5h-1.5v1.5zm8.1 4.8l.6-.5 1.1-.5.9.2.3.3.2.9-.5 1.1-1 .9-1 .1v.4l1 .1 1 .9.5 1.1-.2.9-.3.3-.5.1-1.1-.1-1-.8-.3-.5-.1-1h-.4l-.1 1-.9 1-1.1.5-.9-.2-.3-.3-.1-.5.1-1.1.8-1 .5-.3 1-.1v-.4l-1-.1-1-.9-.5-1.1.2-.9.3-.3.9-.2 1.1.5.9 1 .1 1h.4l.1-1zm9.5 1.8l1.7-1.6 1.6-.4 1.2.1 1 .3 1.2 1.1.5 1.1.1 1-.4 1.4-1.2 1-1.4.2-.6.4h-.9l-.6-.4.4.5.9.5 4.8-.7 2.1-.5 6.1-2.4 6.6-3 5.5-1.7 3.5-.7 2.9-.3 4.8-.3.3.2v.3l-.3.2-4.8.6-2.9.6-3.1.9-3.3 1.3-2 3.2-.4 1.8v1.7l.4 2.3.4.7.7.3 1.2.1.4-.4.3-.8-.3-.6-.4.3h-.6l-.6-.5-.1-.8.5-.6.5-.1.5.1.5.6 1.1.7.2.9-.3 1.5-.5.8-.5.4-.5.2-1.7.2-1.6-.5-1.3-1.3-.5-1-.6-1.9.1-1.7.6-2.4.9-1.4-4.8 2.6-6 2.7-2.5.7-3.5.6h-1.8l-1-.2.8.4 1.1 1.1 1.3 1.8-.1.3-.7-.2-3-1.7-3-.6 4.9 3.1 4 3.5 1.8 2.9 1.4 3.4-.3.1-3.2-1.4-2.9-1.8-3.5-4-3.1-4.9.6 3 1.7 3 .2.7-.3.1-1.8-1.3-1.1-1.1-.4-.8.2 1v1.8l-.6 3.5-.7 2.5-2.7 6-2.6 4.8 1.4-.9 2.4-.6 1.7-.1 1.9.6 1.5.9.8.9.2.5.3 1.7-.4 1.6-.7.8-.5.2-1.5.3-.9-.2-1.4-1.8v-.6l.3-.4.7-.3.7.3.3.7-.3.7.6.3 1.1-.5.1-1.1-.2-.6-.4-.5-1.1-.5-1.1-.2h-1.7l-2.4.4-3.2 2-2.1 6-.6 2.8-.7 5.3-.2.3h-.3l-.2-.3.4-5.9 1.1-5.8 1.5-5 3-6.6 2.4-6.1.5-2.1.7-4.8-.5-.9-.5-.4.4 1-.4 1.1-.2 1.4-.3.5-1.2.9-1.5.2-1.5-.6-1.1-1.2-.4-1.6.2-1.7.6-1 1.2-1.2 1.1-.5 1.7-.3 1.8.3 1.1.5 1.4 1.3.7.8-.3-1.9.6-3 3.1-.7 1.9.3-1.7-1.6-.9-1.6-.3-1.2v-1.2zm2.7.2l-.5.4-.6 1v1.4-.5l.5-.7 1.1-.5 1.2.5.5 1.2.5-.3.4-1.1-.5-1.2-.7-.5-.7-.1zM14.5 25.8l.7-.5h.5l-.8-.1-.6.1-1 .6-.7 1-.1.7.1.7.5.7 1.2.5.7-.1.7-.8-.9-.2-.6-.6-.2-.9z"/></symbol>
-<symbol id="orn-fleuron" viewBox="0 0 120 24"><path fill="currentColor" d="M58.6 9.1l-.2-1.4.3-1.3.9-1h.8l.9 1 .3 1.3-.3 1.9-.9 1-.4.2-.4-.2-.6-.6zm-1.7-1l.5.3.2.5-.2.5-.5.2-.5-.2-.3-.5.3-.5zm6 .1h.6l.3.5v.6l-.5.3-.6-.1-.3-.4.1-.6zm-5.8 5.2l-1.4.2-1.3-.3-1-.9v-.8l1-.9 1.3-.3 1.9.3 1 .9.2.4-.2.4-.6.6zM52.5 9.8l3.6-3.4 3.9-4.8 3.9 4.8 2.7 2.6 2.5 2 .7-.2 5.7 1.8 2-.5 1.6-.8 4.5-4 1.4-1 1.6-.5 1.2-.1 1.6.3 1.1.5 1.5 1.6.5 1.5-.2 1-.6 1-1.1 1-.9.3-1.2-.1-.9-.3-.6-.6-.4-2 .3-1 .4-.4.9-.1.5.3.3.5v.6l-.3.5-.5.3h-.5l.2.7.3.2.9.2.8-.2.6-.6.4-.8v-.8l-.8-1-1-.7-1.3-.1-1.3.2-1.1.5-4.9 4.3-1.8 1h.3l4.1.4 4.1-.2 11.3-3.3.8-2 1.2-1.2 1.4-1 1.6-.4 2 .3.4.2.1.3-2.4 1.3-2.7 2h3l3.5.3 6 1.6.7-.5h.6l.7.5.2.6-.4.8-.8.4-.8-.4-.3-.7-5.3-1.1-4.7-.3-3.6.4-3.6 1.1 1.5.5 1.7.7 2.5 1.6 2.7 2.4 1.9.5h1.1l.6-.4.7-1.2v-.8l-.6-.7-.8-.3-.5.1.1.6-.3.7-.4.3h-.6l-.6-.5-.1-.5.1-.5.4-.4 1.9-.8.8.1.6.3 1 1.1.2.5.1.9-.3.9-.6 1-.7.7-.9.3-1.2.1-1.2-.1-1.5-.5-3.3-2.6-3.1-1.9-1.3-.5-3.2-.5-5.6 1.6-2.9.3h-2.8l5.1 3.7-.1.3-.4.1-1.9.3-1.7-.5-1.4-1.1-1.1-1.3-.6-1.6-5.6-1.2-4.7-1.3-2.5 2-2.7 2.6-3.9 4.8-3.9-4.8-2.7-2.6-2.5-2-4.7 1.3-5.6 1.2-.9 2-1.2 1.3-1.5.9-1.7.3-1.4-.3-.4-.1-.1-.3 5.1-3.7h-2.8l-2.9-.3-5.6-1.6-2.1.3-1.9.5-1.6.8-2.5 1.6-2.8 2.3-1.5.5-1.8.1-1.5-.4-.7-.7-.6-1-.3-.9.1-.9.2-.5 1-1.1.6-.3.8-.1 1.9.8.4.4.1.8-.3.4-.4.3h-.6l-.4-.3-.3-.7.1-.6-.5-.1-.8.3-.6.7v.8l.7 1.2.6.4h1.1l1.9-.5 2.7-2.4 2.5-1.6 1.7-.7 1.5-.5-4.2-1.2-3.6-.3-4.1.3-5.3 1.1-.3.7-.5.3-.9-.1-.4-.4-.2-.6.2-.6.7-.5h.6l.7.5 6-1.6 3.5-.3h3l-2.7-2-2.4-1.3.1-.3.4-.2 1.4-.3 1.6.2 1.6.8 1.6 1.6.8 2 9.7 2.9 2.7.5 3.6.1 3.8-.4-1.8-1-4.9-4.3-1.1-.5-1.3-.2-1.3.1-1 .7-.8 1v.8l.4.8.6.6.8.2.9-.2.3-.2.2-.7h-.5l-.5-.3-.3-.5v-.6l.5-.7.6-.1.6.1.4.4.3 1-.4 2-.6.6-1.5.4-1.5-.3-.5-.3-.6-.7-.6-1-.2-1 .2-1 .6-1 1.2-1.1 1.5-.7h1.8l2.2.5 1.4 1 4.5 4 1.6.8 2 .5 5.7-1.8.7.2zm13.5.4l-2.9-2.6-3.1-3.9-1.8 2.4-2 2.2-2.2 1.9-2.4 1.8 2.4 1.8 2.2 1.9 2 2.2 1.8 2.4 1.8-2.4 2-2.2 2.2-1.9 2.4-1.8zm-6.3.6l.9.1.6.8-.1.9-.8.6-.9-.1-.6-.8.1-.9zm4 2.8l-1.3-.3-1-.9v-.8l.6-.6.9-.4 1.4-.2 1.3.3 1 .9v.8l-.6.6-.9.4zm-7 .8l.6.1.3.4-.1.6-.4.3h-.6l-.3-.5v-.6zm6 .1l.6-.1.5.3v.6l-.3.5h-.6l-.4-.3-.1-.6zM59 18l-.4-.9-.2-1.4.6-1.7.6-.6.4-.2.4.2.9 1 .3 1.9-.3 1.3-.9 1h-.8z"/></symbol>
-<symbol id="orn-manicule" viewBox="0 0 48 24"><path fill="none" stroke="currentColor" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" d="M2.8 5.5v13.7M16 18.4l3.5.6 3 .9m-5.5-3l-3-.7m8.4-7.6l.2-2-1.4-1.8m16.2.4l.2 1.2M43.2 5l1.6 1 .5 1.4"/><path fill="none" stroke="currentColor" stroke-width="1.07" stroke-linecap="round" stroke-linejoin="round" d="M22.2 12l1.5-1.4 1.5-.6 2.9-.4 4.9-.1m-1.6 4.3l-3.9.1-2.3.5M27.4 17l2.6-.1m-2.2 2.8l-2.2.1"/><path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M.8 4.8l4.2-.7M5 20.7l-4.2-.9"/><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" d="M12 5.8l3.4-1 1.6-.2 5 .1 18-.2 2.6.2 2.3.5 1.1.9.6 1.1-.2.7-.7.8-1.4.6-2.8.2-7.3-.1-1.2.1 1.4.5.5.5.4.9-.2 1-1 .9-2.7.5.9 1.1-.1 1-.8.7-1.3.2-.1.2.6 1-.3.7-.9.7-1.6.3-.1.8-1.1.8-1.2.2-2.8.1-5.7-.3-2.9-.5-2-1"/><path fill="currentColor" d="M4.9 5.3l.2-1.4.5-.9.7-.4.9-.2 2.2.1.9.3.7.5.5.9.1 3-.4 5.2.5 6.8-.2 1.4-.5.9-.7.5-.9.3-2.2.1-.9-.2-.7-.4-.5-.9-.2-3.1.4-5.4zm2-1.7v17.6l.4.4.4-.4v-17.6l-.4-.4zm5.4 16.9l-.3-.6v-.3l.6-.4 1.3.7 1.3.3 10.6.4.7-.1 1.3-.7.6.3v.3l-.4.7-1.2 1-1.6.4-3.5.2-3-.1-3.5-.6-1.5-.5z"/></symbol>
 <symbol id="orn-rule-end" viewBox="0 0 24 12"><path fill="currentColor" d="M4 3.1l1.6-.4 2.3.1 10.1 2.3 2.8.3h3.2v1.2l-5.1.2-10.1 2.2-2.3.3-1.8-.1-1.4-.9-.9-1.4-.1-.9.4-1.7zm.9 1.1l-.5.2-.6.6-.1.8.2.6 1-1.4.8-.7z"/></symbol>
 <symbol id="emb-urn" viewBox="0 0 80 80"><path fill="none" stroke="currentColor" stroke-width="1.14" stroke-linecap="round" stroke-linejoin="round" d="M41.1 8l.3 1.2-.5 1.1-1 .6h-1.2M41.4 13l2.2 2.4 1 2.5m.7 3.8l-.1 1.3.4 1.5 2.6 4.1m-1.4.5l1.4 3.2m-2.8 1.3l-.6-3-2-6.1-.1-2.8m7.1 7.4l1 1.3m-.3 4.9l.6 1.2m-2.9.3l.8 1.4m.6 1.1l.6 1.3m-3 0l1.2 2.3m-.5 1.3l-1 2.5m1.4.5l-1.8 2-1.2.9m-3 .4l1.2-1.8 1.3-3.3m-1.4-.5l-1.5-2.8m-.8-1.4l-1-1.9m3-.2l.9 1.7m.7 1.3l1.3 2.5m.6-4.7l-.8-1.5m-9 .4l1.1 2.1m.9 1.6l1.7 3.2m-3.3-.4l-1.2-2.3m0-.4l-.5-.9M32.6 43l-2.5-4.7m-4.9 4.5l.9-10.2M24.4 62.7h31.2m.2-1.7v-1m-2.7 0v1m-2.7 0v-1m-.2 5.3v3m-1.1 1.3v1.8m2.7 0v-1.8m2.7 1.8v-7.6M53.3 73.9v.8m2.7 0v-.8m-5.4 0v.8M45 57.8l-.4-1.5-2.5-2.1-.3-1.6.5-1m7.6-4.9l2-3.5M56 41.1v-5.9m2.3 11.7v5"/><path fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" d="M31.7 26.4h16.6m5.1 5.2l1.6 6.3.6 3.9.3 6.1-.1 6.1M54 50.6l-1-14.6m-3.9.2l-2.6 1.5-2.4.7-2.9.4-2.5-.1-2.9-.7-2.8-1.1-2.1-1.3-3-2.6M29 37.3l2.3 1.9 2.2 1.2 2.8 1.1 2.8.6h2.5l2.5-.4 2.8-.9 2.6-1.5m2.9 24.5v5h-24.8v-5h24.8m5.6-4h-36M22 73h36"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M31.6 18.5l-1.1.5-.4.7.1.5 1.2 1h17.2l1.2-1 .1-.5-.4-.7-1.1-.5m-1.1 2.8l-.4 1.5.7 1.8 4.5 5m.1 0l2.9 2.7 1.4 2.8 1.6 7.2 1.3 8.7.2 2.2-.2.4-2-1.6-1.6 2.8-1.8-3.6-1.4 2.1-.2.1-.2-.4.2-7 1-6.6-1.2-9.8m0 1l-3.5 2.5-1.7.9-3.4 1-3.6.3-3.6-.6-3.4-1.3-1.8-1-3.8-3m0 0l-1.8 7.4 5 4.8 2.1 1.4 2.4 1.1 2.5.8 2.4.3 3.9-.5 4.4-1.6 4.9-3.9m-1 6.9l-1.7 1.8-2.1 1.5-4 1.8h-8.8l-3.2-1.4-2.1-1.3-2.3-2.1-1.4-2m-.1-6.5l.3 4.3-1 4-.2.2-.2-.2-.4-2.2-.4-1-2 1.6-.1-1.3.9-4.7 1.1-3.8 1.1-2.5 1.6-2.6m.2-.4l.2-.3m0 0v.3m.3.3l4.5-5 .7-1.8-.4-1.5m5.4-8.7l-4.7 3-1 1.2-.7 1.7h16.6l-.7-1.7-1-1.2-4.7-3m-.4-.8l.3 1h-3.6l.3-1m4.2-2.4l-.4-1.4-.4-.5-1.2-.7-.7-.1-1.4.4-.5.4-.4.5-.4 1.4.1.7.7 1.2 1.2.7.7.1 1.4-.4.5-.4.4-.5.4-1.4m1.6 42l-1.1 1.2.1 1.2.7.6 2.2.8 2.1 1.2.4.8.1 1.2h-17.6l.1-1.2.4-.8 2.1-1.2 2.2-.8.7-.6.1-1.2-1.1-1.2m-4.6 7h-9.5m0 0v1.2l1 1.4h34.8l1-1.4v-1.2h-9.5m6.7 2.8v10.2h-31.2v-10.2m-.2 10.2h-1.6m0 0l-1.2 1.6v2h37.2v-2l-1.2-1.6h-1.6"/></symbol>
 <symbol id="emb-torch" viewBox="0 0 80 80"><path fill="none" stroke="currentColor" stroke-width="1.14" stroke-linecap="round" stroke-linejoin="round" d="M38.2 8.4l1.3.3 1.3-.5.7-1.2v-1.4m1.1 15.2v3.9m-.2-1.3l7.1 12.2M46 41v1.4m-2 .7v-2.8m-.1-.7l-.3-8.8M45 23.2l-1.1-1.8m1.6-1.9l1.9 3.2m2.4-.3l-2.5-4.4m2-1l2.7 4.7M53.2 19l-1.2-2M33.7 20.6l1.6 2.7m-3-.6l-1.2-2.1m-2.7 0l1 1.7M42 40.3v2.8m3.3 9.6v2.4m-.2 1.3l4.6 10M48 67.8l-4.3-9.2m-.6 4l2.8 6m-1.7 1.6l-1.7-3.8m-1 3.1l1 2.2m8.8-7.2l-3.8-8.1m0-1.3v-2.4m2.2 0v2.4m.2 1.3l2.4 5"/><path fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" d="M37.5 11.1l3.7-1.3m1.4 3.1l-5.3 1.8M37 18.4l5.9-2M41.2 27.8l-3.4 1.2M36 33.2l7.4-2.6M44 34l-8.2 2.8m2.4 2.8l6-2.1m-.7 6.4l1.8 4.1 1.2 4.1m2.5 0l-1.7-4.1m.1 9.2l1 3.2-.4 3.2M41.4 57l1.9 3.3.3 1.1v1.2l-.5 2-1 2.4-2.5 3.6m-5.1-3.4l1.8-3.9.5-1.7-.2-4.6m-.2-4.9l.6-4.1 1.1-4.1m-2.4 0l-2.3 4.1-1.5 4.1M31.4 57l-1.8 2.6-1.2 3M41.8 52.1l-.8-8.2"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M37.4 9h-.4l-.9.8.5 1.2h6.8l.5-1.2-.9-.8m0 0h-.4m.3 2.2l.6 9.3m.2.1l3-2.9 2.3-1.3 1.7-.2 1.8.3 1.1.7.2.6-.4 2.7-.8 1.5-.7.5-1.9.5-5.2.9m-.2.5l2.7 3.4 1.8 3.7 2.4 6.3-.2.8-.4.4-1.5-2.8-1.1 2.4-1.7-4.3-1.8-3.7-1.3-2-2.3-2.6m0 0l-.3-.5m-1.8 0l-2.6 3.2-1.3 2-1.5 3.3-1.7 4.5-1-2.5-1.5 2.8-.4-.4-.2-.8 2.2-6.5m0 0l2-3.7 2.3-3m-.2-.5l-5.2-.9-1.9-.5-.7-.5-.8-1.5-.4-2.7.2-.6 1.1-.7 1.8-.3 1.7.2 2.3 1.3 3 2.9m.2-.1l.6-9.3m6.2-4.4l-.4-1.6-.6-.7-.7-.6-1.6-.4-1.6.4-.7.6-.6.6-.4 1.7.1.9.9 1.4 1.4.9.9.1 1.6-.4.7-.6.6-.6.4-1.7M36 21l.6-.4 1.6-.5 2.7-.1 1.8.3 1.3.7.3.6.3 2.2-.2.6-.5.4-1.9.5-3 .1-2-.3-1.4-.7-.2-.6v-1.5l.6-1.3m-.1 8.9l-.7 10.1h9.6l-.7-10.3M44.9 40h.1m0 0l1.2.8.3.7-.3 1.1-1 .8h-10.4l-1-.8-.3-1.1.3-.7 1.3-.8m-.4 3.5l-3.5 4.7-1.3 2.6-.5 1.4m-1.6 1.4l-1.1-.6-.5-.6-.2-.9.1-1.8h-.2l-.7 1.6m0 0l-.1 1.4.5 1.4 1.1 1.2 1.2.7-1.7 3.6-.7 2.3v1.6l.8 4.2h.2l2.2-3.5 2.8-1.6 1.5-1.2.6 1.3.1.9.1 3.3-.3 4.5 1.9 6.6 2.8-3.4 5.2-2.6 3.9-3.8-.5 1.2.3.1 2.9-2.3 1.3-1.5 1-1.9.8-3.2-.1-1.7-.9-3 .8-.2 1.2-1.2.6-1 .3-1.4-.9-2.4h-.2l.1 1.8-.2.9-.5.6-1.1.6M51 52.4l1 1-.1.9-.5.7-1.4.4h-20l-1.6-.6-.4-1.1.1-.5.9-.8h22m-.4-.2l-.5-1.4-1.3-2.6-3.5-4.7"/></symbol>
@@ -526,6 +542,13 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 <symbol id="vig-loco" viewBox="0 0 200 80"><path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M22.2 28.4l.8-1 .9.9m-.2.4l.8-1 .9.9m.2 0l.8-1 .9.9m.4-.7l.8-1 .9.9m.7 1.7l.8-1 .9.9m-.1-1.2l.8-1 .9.9m1 1.7l.8-1 .9.9m.2-1.1l.8-1 .9.9m.8-.7l.6-.8m.4 0l.7.7m.1.6l.8-1 .9.9m-.5-.2l.8-1 .9.9m.5 1.6l.8-1 .9.9m.1-.4l.8-1 .9.9m.9-.4l.8-1 .9.9m.2-.6l.8-1 .9.9m-.3.5l.8-1 .9.9m1 .5l.8-1 .9.9m-.1.5l.8-1 .9.9m.4-.5l.8-1 .9.9m.8.9l.8-1 .9.9m-.4-.1l.8-1 .9.9m.6.7l.8-1 .9.9m.6-1.2l.8-1 .9.9m.6-.2l.8-1 .9.9m-.6-14.2h38.2m10.9.9v10M110.8 32h-6.3m2.1 3.4h53.4m.9-.4h2.6m1-.6h20.9m.1 1.6h-21m0 1.6h20.9m-.1 1.6h-20.8m0 1.6h20.8m-.3 1.6h-20.5m-1 .2h-1.9m0-2h1.9m0-2h-1.9m0-.6h1.9m0-6h-10.5m11.5.8h20.8m0-1.6h-20.8m0-1.6h20.5m-.2-1.6h-20.3m0-1.6h19.8m-.5-1.6h-19.3m12.4-1.7v-16.6m1.6 0v16.6m1.6-14.5v-2.1M184.8 44h-20.3m-1 .6h-1.9m0 2h1.9m1 .6h19.3m.5-1.6h-19.8m1.1 3.9h16.8m1.6 4.3h-16.5m.8 1.8h15.7m0 1.8h-15m.3 1.7h14.7m16 20.1h-200M16 59.1h7.7m3.2-1.7h-10.9m0-1.8h89.7m-.7 1.8h-49.9m3.2 1.7h46.4m1.8-5.3h-90.5m16 1.6l9 1.8 9-1.8m-1.1 2h-15.8m1.1-1.1l6.8 1.8 6.8-1.8m-2.2.9l-4.6 1.8-4.6-1.8m-.1 1.9h9.4M17.6 33.4h50.4v15.2h-50.4v-15.2m63.6 7v-17.5m1.7-.9v18.4m1.7 0v-18.8m1.7-.1v18.9m1.7 0v-19m1.7.1v18.9m1.7 0v-18.8m1.7.4v18.4m1.7 0v-17.5M110 37.6h47v11h-47v-11m23.5 16.2h7m-.8 1.8h-5.4m.7 1.8h4m-.3 1.7h-3.4m6.4-34.6v-11m1.8 1.9v9.1"/><path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M9 53.6l-4.6.8v3.2l4.6.8v-4.8m0 5.8h-3.4l-.4 2m19.9.7l3.5 3.5m1.1-.5l-.8-5m4.3.7l-2.3 4.5m.8.8l4.5-2.3m.7 4.3l-5-.8m-.5 1.1l3.5 3.5m-3.8 2l-.8-5m-1.2-.2l-2.3 4.5m-3-3l4.5-2.3m-.2-1.2l-5-.8m22 0l5 .8m.2 1.2l-4.5 2.3m3 3l2.3-4.5m1.2.2l.8 5m.3-5.5l3.5 3.5m2-3.8l-5-.8m-.2-1.2l4.5-2.3m-3-3l-2.3 4.5m-1.2-.2l-.8-5m-.3 5.5l-3.5-3.5M80 41l-.5-13.9.5-3.1.8-1.5 1.2-.9 2.5-.6 3.5-.2 3.5.2 2.5.6.7.4.5.5.8 1.5.5 3.1-.5 13.9h-16m30-8.2h53m-13-.7v-7.6m-24 0v7.2m-1.4 26.1l-2.3 1.9m.6 1l2.8-.8m-2.7 2l9.3.9m-1.4 4.6l-8.3-4.4m-.7.9l6 7.3m-4.3 2.3l-2.7-9m-1.2.1l-.9 9.3m-4.6-1.4l4.4-8.3m-.9-.7l-7.3 6m-2.3-4.3l9-2.7m-.1-1.2l-9.3-.9m1.4-4.6l8.3 4.4m.7-.9l-6-7.3m4.3-2.3l2.7 9m1.2-.1l.3-3m2.2.7l-1.4 2.7m20.3 1.4l9.3.9m.1 1.2l-9 2.7m2.3 4.3l7.3-6m.9.7l-4.4 8.3m4.6 1.4l.9-9.3m1.2-.1l2.7 9m4.3-2.3l-6-7.3m.7-.9l8.3 4.4m1.4-4.6l-9.3-.9m-.1-1.2l2.8-.8m-1.1-2.1l-2.3 1.9m-.9-.7l1.4-2.7m-2.2-.7l-.3 3m-1.2.1l-2.7-9M146.1 52l6 7.3m-.7.9l-8.3-4.4M190 53.6l4.6.8v3.2l-4.6.8v-4.8m0 5.8h3.4l.4 2m-13-52.6h-9.6M104 10.6v4"/><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" d="M16.9 30h-.9l-3 1.6v19.4m0 0h58.8m.2 0v-35.8M69 15l.5-1.8.5-.8 1.1-.6 1.5-.4 10.4-1.3 6-.3 6 .3 10.4 1.3 1.5.4 1.1.6.5.8.5 1.8h-40m2.8 12.6l-.2-.6-.6-.6-.9-.5-2.1-.7h-1.7l-4.2.9-2.1.3-10-1-10 1.2-2.5-.2-5.1-.7-2.4-.1-4.2.4-3.8 1-1.4.6-3.6 2.4m0 0h54.8M72 51h33.8m.2 0l-.4-13.6.4-2.8.4-.7.8-.5 8.9-1 15.7-.2 16 .3 9.6.9 1.8.8.8 1.1.6 2.7v13h-54.6m-.2-3.4h-1.8v-23.2h10.2m6.6 0h11.2m-.4.6l1.3-1.2.5-.8.2-.8.2-4.3.2-.9 1-2.1.9-1.1 1.4-.9 2.1-.3 2.1.3 1.4.9.9 1.1 1 2.1.2.9.2 4.3.2.8.5.8 1.3 1.2h-15.6m15.2-.6h17m.2-1h6.4m0 .2l2.2-2 .2-12-1.6-.8v-2.8h9.6v2.8l-1.6.8.2 12 2.2 2h-11.2m-6.4-.2v23.8m1.7 1.4h15.1m2.6 1.6l.6.8h-16.1m-1.6-1.7l-1.7-1.5-1.9-1.3-1.9-.9m0 5.4h7l-1.5-1.7m18.8-4.5l.7-4 .2-4.8-.2-4.8-.7-4.1-1-2.7-1.1-1h-1.4m2.8 20.2h-2.4v1.4h-1v5h4.4v-5h-1v-1.4M188 51h-179m97-26.8v-9m10.8.4h1.4v3.4h-1.4v-3.4m3.4-1.4h-5.4v1.4h.8v3.4h-1.2v5.8h6.2v-5.8h-1.2v-3.4h.8v-1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M0 77.3h200"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M105.8 61.6a14.2 14.2 0 1 0 28.3 0a14.2 14.2 0 1 0 -28.3 0M139.8 61.6a14.2 14.2 0 1 0 28.3 0a14.2 14.2 0 1 0 -28.3 0M21.2 67a8.8 8.8 0 1 0 17.5 0a8.8 8.8 0 1 0 -17.5 0M43.2 67a8.8 8.8 0 1 0 17.5 0a8.8 8.8 0 1 0 -17.5 0"/><path fill="none" stroke="currentColor" stroke-width="1" d="M107.6 61.6a12.4 12.4 0 1 0 24.8 0a12.4 12.4 0 1 0 -24.8 0M141.6 61.6a12.4 12.4 0 1 0 24.8 0a12.4 12.4 0 1 0 -24.8 0M23 67a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M45 67a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path fill="none" stroke="currentColor" stroke-width="1.65" d="M117.8 61.6a2.2 2.2 0 1 0 4.3 0a2.2 2.2 0 1 0 -4.3 0M151.8 61.6a2.2 2.2 0 1 0 4.3 0a2.2 2.2 0 1 0 -4.3 0"/><path fill="none" stroke="currentColor" stroke-width="1.06" d="M28.6 67a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0 -2.8 0M50.6 67a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0 -2.8 0"/><path fill="currentColor" d="M103 8h2v2.8h-2zm16.7 45.4h-106.7v7.6h-4v-10h110.6v-1.8l2.8.2 1.4.4 2.6 1.2h27.2v-1.8l2.8.2 1.4.4 2.6 1.2h29.6v10h-4v-7.6h-22.7l1.2 1.6.7 1.3.9 2.7-5.9 1.3-.9-2-1.4-1.7-2-1-2.1-.3-.1-1.9h-24.4l1.2 1.6.7 1.3.9 2.7-5.9 1.3-.9-2-1.4-1.7-2-1-2.1-.3zM2.4 59.6v-7.2h2v7.2zm194.2 0h-2v-7.2h2zM32.4 63.4h-4.8v-4.8h4.8zm17.2 0v-4.8h4.8v4.8zm64 3.1l.5-.9.5-.4 1.1-.3 1.1.3.6.6h30.5l.7-.6 1.1-.3 1.1.3.4.4.6.9.1.6-.1.6-.6 1-.4.3-1.1.3-1.1-.3-.7-.6h-30.5l-.6.6-1.1.3-.6-.1-1-.5-.5-1zm1.9 1.5l.6-.1.5-.6-.1-.6-.6-.5-.7.1-.4.6.1.7zm34 0l.6-.1.5-.6-.1-.6-.6-.5-.7.1-.4.6.1.7z"/></symbol>
 <symbol id="vig-hearse" viewBox="0 0 160 80"><path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M18.4 23.4v22h-4.8v-22h4.8m17.6 2v8h-12v-8h12m0 10v8h-12v-8h12m20 0v8h-12v-8h12m0-10v8h-12v-8h12m20 0v8h-12v-8h12m0 10v8h-12v-8h12m20 0v8h-12v-8h12m0-10v8h-12v-8h12m20 0v8h-12v-8h12m0 10v8h-12v-8h12m20 0v8h-12v-8h12m0-10v8h-12v-8h12m10.4-2v22h-4.8v-22h4.8"/><path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M10.5 15.4h139m.3 1.4h-139.6m2.8-3h134m.4 6.8h-134.8m11.8 5.9h11.2m3.8-2.7v21.2m.2 11.4l-9.6 1.8-9.6-1.8m2.2.9l7.4 1.8 7.4-1.8m-2.2.9l-5.2 1.8-5.2-1.8m.3.3h-13.1m0-1.6h136m0 1.6h-13.1m.3-.3l-5.2 1.8-5.2-1.8m.3.3h-40.2m.3-.3l-5.2 1.8-5.2-1.8m.3.3h-40.2m.7-22h-11.2m20 0h11.2m8.8 0h11.2m8.8 0h11.2m8.8 0h11.2m8.8 0h11.2m0-10h-11.2m-5-2.7v21.2m1 11.4l9.6 1.8 9.6-1.8m-2.2.9l-7.4 1.8-7.4-1.8M139.4 45v-21.2m-23.8 2.7h-11.2m-5-2.7v21.2m-20 0v-21.2m-3.8 2.7h-11.2m-5-2.7v21.2M55.6 26.5h-11.2m40 0h11.2m-6 29.9l-9.6 1.8-9.6-1.8m2.2.9l7.4 1.8 7.4-1.8m60-5.7h-134.8m0-1.5h134.8m0-1.5h-134.8M0 79.2h160"/><path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M12 47h136m2 5.4v4.2h-140v-4.2h140m4 1.2l3.6.8v3.2l-3.6.8v-4.8m0 5.8l2.6.2 1.4 1.8 1.8.2m-23.7 2.5l-4.4 2.2m.2 1.2l4.8.8m-5.4.2l3.5 3.5m-3.7 1.9l-.8-4.8m-1.2-.2l-2.2 4.4m-3-3l4.4-2.2m-.2-1.2l-4.8-.8m1.9-3.7l3.5 3.5m1-.6l-.8-4.8m4.2.6l-2.2 4.4M86.1 64.1l-4.4 2.2m.2 1.2l4.8.8m-5.4.2l3.5 3.5m-3.7 1.9l-.8-4.8m-1.2-.2l-2.2 4.4m-3-3l4.4-2.2m-.2-1.2l-4.8-.8m1.9-3.7l3.5 3.5m1-.6l-.8-4.8m4.2.6l-2.2 4.4M78 23.4v22h-16v-22h16m-20 0v22h-16v-22h16m-20 0v22h-16v-22h16M36.1 64.1l-4.4 2.2m.2 1.2l4.8.8m-5.4.2l3.5 3.5m-3.7 1.9l-.8-4.8m-1.2-.2l-2.2 4.4m-3-3l4.4-2.2m-.2-1.2l-4.8-.8m5.4-.2l-3.5-3.5m3.7-1.9l.8 4.8m1.2.2l2.2-4.4M6 53.6l-3.6.8v3.2l3.6.8v-4.8M98 23.4v22h-16v-22h16m20 0v22h-16v-22h16m20 0v22h-16v-22h16"/><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" d="M9.6 17.6l.3-2.1.7-1.1 1.2-.7 1.7-.6 4.7-.7 16.9-1.4 11.9-.6 13.2-.3 19.8-.1 19.8.1 13.2.3 11.9.6 16.9 1.4 4.7.7 1.7.6 1.2.7.7 1.1.3 2.1h-140.8m1.4.2v1.8h138v-1.8m-1 2v32.6h-136v-32.6"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M0 77.3h160"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M21.4 67.2a8.6 8.6 0 1 0 17.1 0a8.6 8.6 0 1 0 -17.1 0M71.4 67.2a8.6 8.6 0 1 0 17.1 0a8.6 8.6 0 1 0 -17.1 0M121.4 67.2a8.6 8.6 0 1 0 17.1 0a8.6 8.6 0 1 0 -17.1 0"/><path fill="none" stroke="currentColor" stroke-width="1" d="M23.2 67.2a6.8 6.8 0 1 0 13.6 0a6.8 6.8 0 1 0 -13.6 0M73.2 67.2a6.8 6.8 0 1 0 13.6 0a6.8 6.8 0 1 0 -13.6 0M123.2 67.2a6.8 6.8 0 1 0 13.6 0a6.8 6.8 0 1 0 -13.6 0"/><path fill="none" stroke="currentColor" stroke-width="1.03" d="M28.6 67.2a1.4 1.4 0 1 0 2.7 0a1.4 1.4 0 1 0 -2.7 0M78.6 67.2a1.4 1.4 0 1 0 2.7 0a1.4 1.4 0 1 0 -2.7 0M128.6 67.2a1.4 1.4 0 1 0 2.7 0a1.4 1.4 0 1 0 -2.7 0"/><path fill="currentColor" d="M42 8.6v2.2h-4v-2.2zm36 2.2v-2.2h4v2.2zM22.4 27.6v-1.2h1.2v1.2zm20-1.2h1.2v1.2h-1.2zm20 1.2v-1.2h1.2v1.2zM36.3 34l.4-.3.6.1.3.4-.1.6-.4.3-.6-.1-.3-.4zm20.1-.1l.5-.3.5.3.2.5-.2.5-.5.3-.5-.3-.2-.5zm20 0l.5-.3.5.3.2.5-.2.5-.5.3-.5-.3-.2-.5zm-54 8.5v-1.2h1.2v1.2zm20 0v-1.2h1.2v1.2zm20 0v-1.2h1.2v1.2zM.4 59.6v-7.2h2v7.2zM27.6 63v-4.2h4.8v4.2zm54.8-4.2v4.2h-4.8v-4.2zm35.6-48v-2.2h4v2.2zM82.4 27.6v-1.2h1.2v1.2zm20 0v-1.2h1.2v1.2zm20 0v-1.2h1.2v1.2zM96.3 34l.4-.3.6.1.3.4-.1.6-.4.3-.6-.1-.3-.4zm20 0l.4-.3.6.1.3.4-.1.6-.4.3-.6-.1-.3-.4zm20.1-.1l.5-.3.5.3.2.5-.2.5-.5.3-.5-.3-.2-.5zm-54 8.5v-1.2h1.2v1.2zm20 0v-1.2h1.2v1.2zm20 0v-1.2h1.2v1.2zm27.6 18v-3.8h-140v3.8h-4v-8.8h4v3.4h140v-3.4h4v8.8zm7.6-.8v-7.2h2v7.2zm-30 3.4v-4.2h4.8v4.2z"/></symbol>
 <symbol id="vig-compass" viewBox="0 0 100 100"><path fill="none" stroke="currentColor" stroke-width="1.11" stroke-linecap="round" stroke-linejoin="round" d="M38.2 34.5l3.4-2.1m1.9-.8l3.2-.8m6.6 0l3.2.8m1.9.8l3.4 2.1m3.7 3.7l2.1 3.4m.8 1.9l.6 2.4m-4.8-.8l9.8-5-12.9 4.1m-5.3-5.3l4.1-12.9-5.3 10.5m-9.2 0l-5.3-10.5 4.1 12.9m-9.7-.7l-2.1 3.4m-.8 1.9l-.6 2.4m4.8-.8l-9.8-5 12.9 4.1m0 11.6l-12.9 4.1 9.8-5M31 54.1l.6 2.4m.8 1.9l2.1 3.4m3.7 3.7l3.4 2.1m1.9.8l2.4.6m-.8-4.8l-5 9.8 4.1-12.9m11.6 0l4.1 12.9-5-9.8M54.1 69l2.4-.6m1.9-.8l3.4-2.1m3.7-3.7l2.1-3.4m.8-1.9l.6-2.4m-4.8.8l9.8 5-12.9-4.1"/><path fill="none" stroke="currentColor" stroke-width="1.11" stroke-linecap="round" stroke-linejoin="round" d="M39.5 44.4l-12.1-17 16.2 16.2m12.8 0l16.2-16.2-17.2 12.3m1 16.7l16.2 16.2-12.1-17m-16.9.8l-16.2 16.2 17-12.1"/><path fill="none" stroke="currentColor" stroke-width="1.11" stroke-linecap="round" stroke-linejoin="round" d="M50 50l-6-6 6-24.4v30.4m0 0l6-6 33 6h-39m0 0l6 6-6 33v-39m0 0l-6 6-33-6h39"/><path fill="none" stroke="currentColor" stroke-width="1.3" d="M59.4 6A45 45 0 1 1 40.6 6M59.4 9.6A41.5 41.5 0 1 1 40.6 9.6"/><path fill="none" stroke="currentColor" stroke-width="3.5" stroke-dasharray="5.66" d="M63.9 9A43.2 43.2 0 1 1 36.1 9"/><path fill="currentColor" d="M47.3 8.1l1.3-3.8.9-1.8.4-.5h.2l1.1 1.9.8 1.8.8 3 .3 1.7 1.6-1.6 1-.5 2.1-.4 2 .4 1.6 1.4.5 1.1.3 1.8-.4 1.7-.5 1-.8.8-1.9.4-.5-.1-.5-.6.1-.8.4-.4.5-.1.8.4.1-.1.3-.5v-1.3l-.7-1.1-.5-.3-.8-.2-1.1.1-1.4.8-1.2 1.1-2 3.8h3.3v2.4h-10.8v-2.4h3.3l-2-3.8-1.2-1.1-1.4-.8h-1.5l-.9.4-.7 1.1.1 1.5.3.4.5-.4.8.1.4.4.1.5-.1.5-.4.4-.8.1-.4-.3-1.2-.1-1.1-1.2-.6-1.7.1-1.7.7-1.8 1.6-1.4 2-.4 2.1.4 1 .5 1.6 1.6zM27.4 27.4l17 12.1-1 3.9zm45.2 0l-11.9 16.7-4.1-.7zM50.6 49l.5.7-.1.9-.7.5-.9-.1-.5-.7.1-.9.7-.5zM50 89l-6-33 3.6-3.6-.9-1.5-.1-.9h-35.6l33-6 3.6 3.6 1.5-.9.9-.1v-27l6 24.4-3.6 3.6.9 1.5.1.9h35.6l-33 6-3.6-3.6-1.5.9-.9.1zm1.6-40.6l-.5-.3-1.1-.3-1.1.3-.5.3-.3.5-.3 1.1.3 1.1.3.5.5.3 1.1.3 1.1-.3.5-.3.3-.5.3-1.1-.3-1.1zM27.4 72.6l11.9-16.7 4.1.7zm45.2 0l-16.7-11.9.7-4.1z"/></symbol>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+<!-- Cuts from Font Revival (MIT), after nineteenth-century type-foundry specimens; made by tools/fonts/fontrevival.py -->
+<symbol id="fr-corner" viewBox="56 -1798 1816 1795"><path fill="currentColor" transform="scale(1,-1)" d="M142 1781C132 1776 124 1763 124 1753C124 1742 112 1730 95 1723C52 1705 54 1669 98 1651L129 1637L132 1515C134 1423 138 1389 150 1379C162 1366 163 1380 161 1499C159 1621 163 1657 179 1641C182 1638 186 1575 188 1503C190 1378 192 1367 216 1330C270 1249 390 1272 390 1364C390 1402 374 1418 335 1418C300 1418 281 1403 281 1373C281 1343 317 1335 341 1360C360 1379 360 1379 360 1359C360 1338 325 1300 305 1300C299 1300 279 1314 262 1329C235 1354 231 1363 238 1387C242 1401 246 1453 248 1502C249 1551 251 1598 251 1608C252 1622 264 1624 349 1624C411 1624 450 1628 454 1635C463 1650 547 1640 558 1623C591 1572 568 1516 514 1516H483L508 1529C537 1544 542 1564 524 1589C506 1616 461 1603 448 1568C434 1530 463 1493 510 1489C538 1487 551 1492 571 1513C593 1536 596 1548 593 1578C588 1617 558 1655 523 1668C512 1671 437 1675 353 1675C268 1675 203 1679 203 1683C203 1688 219 1695 240 1698C297 1708 312 1714 306 1724C302 1729 280 1733 257 1733C218 1733 214 1735 211 1760C209 1780 202 1788 183 1789C169 1791 151 1787 142 1781ZM183 1742C183 1738 179 1733 173 1733C168 1733 163 1738 163 1742C163 1748 168 1752 173 1752C179 1752 183 1748 183 1742ZM193 1682C193 1678 186 1674 178 1674C163 1674 159 1685 169 1696C177 1704 193 1695 193 1682ZM124 1683C124 1679 122 1674 120 1674C117 1674 112 1679 109 1683C106 1689 108 1693 113 1693C119 1693 124 1689 124 1683ZM352 1721C355 1712 384 1706 450 1703C501 1700 551 1692 562 1686C624 1652 651 1575 623 1520C596 1469 571 1454 512 1454C466 1454 452 1459 421 1484C401 1500 380 1528 374 1547C360 1588 343 1594 337 1559L334 1531L332 1559C332 1575 325 1585 315 1585C303 1585 301 1576 303 1549C306 1515 309 1511 335 1508C380 1504 421 1442 421 1380C421 1313 400 1276 347 1253C297 1231 265 1238 219 1280C190 1307 172 1317 168 1310C159 1295 210 1242 250 1225C267 1217 281 1209 281 1207C281 1204 275 1191 267 1178C237 1134 232 1089 226 809L220 528L256 479C303 414 305 407 291 391C277 374 252 371 252 386C252 392 239 396 222 396C188 396 169 369 179 333C186 304 213 292 248 301C277 309 301 289 301 259C301 248 305 237 310 233C315 230 323 203 327 172C332 130 330 111 317 90C304 68 303 58 312 38C333 -8 399 8 399 57C399 69 393 84 384 91C367 105 372 156 396 223C426 303 431 309 461 303C505 294 527 312 527 352C527 379 522 389 503 397C483 406 471 405 447 394C418 381 413 381 394 397L373 416L400 446C416 462 433 492 439 512C444 531 449 609 449 684V819L478 797C504 778 511 777 527 787C564 809 591 798 565 771C557 763 552 719 551 641L550 522L584 479C619 434 629 427 640 445C651 463 626 566 604 589C587 607 583 623 584 668C584 699 591 742 600 761C617 801 676 862 686 850C689 846 695 827 699 808C705 778 702 771 682 760C658 747 635 700 635 663C635 651 636 641 638 641C649 641 730 686 736 694C740 700 744 723 744 745V784L766 758C788 733 848 715 858 732C860 736 873 740 886 740C899 740 912 744 915 748C922 761 835 808 803 808C778 809 778 809 798 826C833 855 835 877 807 919C794 939 776 956 768 956C753 956 740 905 745 872C747 863 744 853 737 851C722 845 710 906 719 945C725 975 728 976 777 976C845 976 875 955 866 916C860 887 860 886 898 888C938 891 983 871 1013 839C1024 827 1037 818 1044 818C1070 818 1068 837 1040 869C1003 912 979 959 979 990C979 1008 975 1015 961 1015C933 1015 922 1034 916 1100C908 1166 905 1162 977 1177C1002 1182 1015 1179 1030 1166C1039 1157 1048 1147 1048 1143C1048 1140 1023 1139 990 1141C958 1143 930 1141 926 1135C918 1120 975 1064 1000 1064C1013 1064 1035 1076 1050 1091C1081 1119 1095 1116 1079 1085C1070 1068 1073 1055 1093 1015C1107 988 1123 966 1128 966C1156 966 1168 1082 1141 1103C1133 1111 1122 1125 1116 1134C1108 1150 1110 1152 1136 1147C1175 1139 1202 1155 1215 1198C1225 1226 1225 1235 1215 1241C1199 1252 1149 1236 1123 1213C1108 1200 1093 1196 1071 1199C1053 1202 1038 1208 1038 1212C1038 1226 1120 1290 1141 1291C1152 1292 1186 1292 1215 1291C1262 1289 1273 1285 1295 1260C1318 1234 1326 1231 1381 1231C1413 1231 1443 1235 1445 1240C1453 1252 1403 1300 1379 1304C1263 1327 1210 1331 1157 1326L1097 1319V1353C1097 1372 1093 1390 1088 1393C1061 1410 1090 1415 1228 1421C1380 1427 1434 1439 1461 1471C1494 1510 1519 1465 1492 1416C1478 1391 1479 1388 1496 1369C1518 1343 1552 1343 1574 1369C1589 1386 1590 1392 1580 1414C1567 1443 1579 1467 1605 1467C1613 1467 1626 1471 1636 1476C1711 1514 1755 1519 1798 1497C1831 1479 1834 1479 1849 1496C1865 1514 1868 1534 1858 1560C1851 1580 1801 1580 1786 1560C1775 1548 1761 1546 1718 1552C1687 1555 1659 1562 1653 1566C1648 1571 1637 1575 1628 1575C1619 1575 1602 1586 1590 1599C1573 1618 1568 1630 1573 1649C1582 1685 1564 1713 1531 1713C1509 1713 1501 1706 1491 1683C1480 1659 1482 1652 1500 1629C1518 1605 1518 1602 1503 1579C1496 1566 1487 1556 1485 1556C1483 1556 1464 1574 1443 1598L1403 1639H767L716 1614L665 1588L641 1639C610 1709 572 1727 445 1731C367 1734 349 1732 352 1721ZM1540 1658C1540 1650 1535 1646 1530 1649C1524 1653 1522 1660 1525 1665C1534 1679 1540 1676 1540 1658ZM1420 1559C1443 1544 1461 1527 1461 1521C1461 1516 1445 1501 1427 1488C1394 1466 1384 1465 1174 1460C1053 1457 953 1453 951 1451C948 1448 947 1425 949 1398C953 1313 905 1260 805 1244C752 1235 743 1218 789 1213C804 1212 831 1200 846 1187C869 1167 873 1154 880 1090C887 1016 907 976 937 976C944 976 950 965 950 951C950 916 928 921 892 966C868 996 854 1005 831 1005C814 1005 782 1010 757 1016C711 1028 679 1061 666 1111C654 1154 641 1139 634 1077C627 1003 613 976 569 947C543 930 520 924 476 923C445 923 416 921 414 917C410 911 401 667 399 551C399 513 394 498 370 472L340 440L316 469C288 503 290 475 289 854C288 1114 293 1137 352 1187C376 1207 393 1212 435 1212C489 1212 543 1189 531 1171C528 1166 533 1162 541 1162C550 1162 557 1154 557 1145C557 1135 562 1122 568 1116C582 1101 556 1043 523 1017C508 1005 486 998 470 1000C455 1001 439 1003 432 1004C426 1004 411 1021 399 1039C366 1094 389 1153 444 1153C476 1153 498 1132 498 1101C497 1080 497 1080 482 1106C467 1134 441 1141 421 1121C392 1092 422 1035 467 1035C521 1036 554 1088 532 1140C517 1173 494 1185 436 1185C406 1185 391 1178 368 1155L338 1125L334 862C332 716 325 584 320 569C306 525 309 506 330 499C368 487 398 518 381 552C376 561 369 669 367 793L362 1016L384 998C426 963 444 958 494 967C531 974 549 983 574 1012C601 1044 606 1056 606 1101C606 1141 600 1162 584 1185C545 1240 531 1251 484 1260C431 1270 419 1277 439 1290C460 1304 514 1292 578 1261C609 1246 636 1235 639 1238C641 1241 631 1268 616 1299C588 1354 573 1425 590 1430C594 1432 606 1411 617 1385C639 1324 666 1296 713 1281C794 1258 846 1272 894 1333C921 1369 930 1430 911 1443C906 1446 901 1457 901 1468C901 1478 897 1487 891 1487C886 1487 881 1492 881 1497C881 1510 1317 1509 1330 1496C1347 1479 1387 1489 1390 1512C1394 1541 1355 1558 1312 1545C1294 1540 1191 1536 1083 1535C817 1535 762 1528 724 1492C664 1435 696 1349 779 1349C828 1349 845 1366 840 1410C836 1447 801 1472 771 1456C747 1444 748 1407 773 1401C797 1395 800 1379 776 1379C728 1379 705 1453 745 1481C796 1516 866 1489 876 1432C885 1383 868 1346 825 1322C776 1295 738 1300 695 1341C615 1420 651 1542 763 1573C782 1578 928 1583 1088 1584L1379 1585L1420 1559ZM1626 1534C1652 1522 1657 1517 1643 1516C1632 1516 1609 1507 1591 1497C1549 1471 1537 1472 1523 1503C1512 1525 1513 1533 1531 1558C1552 1585 1553 1586 1571 1568C1582 1559 1607 1544 1626 1534ZM488 1414C494 1406 498 1390 496 1379C493 1361 491 1360 477 1371C453 1389 444 1428 461 1428C469 1428 481 1421 488 1414ZM812 1403C812 1400 810 1398 807 1398C804 1398 802 1400 802 1403C802 1406 804 1408 807 1408C810 1408 812 1406 812 1403ZM1537 1391C1533 1388 1530 1391 1530 1398C1530 1405 1533 1408 1537 1405C1540 1401 1540 1395 1537 1391ZM1053 1379C1056 1374 1054 1369 1049 1369C1043 1369 1038 1374 1038 1379C1038 1385 1040 1388 1042 1388C1045 1388 1050 1385 1053 1379ZM1038 1329C1044 1329 1048 1317 1048 1301C1048 1247 936 1177 890 1203C867 1214 865 1231 886 1231C906 1231 979 1306 979 1325C979 1332 985 1348 991 1359C1003 1378 1004 1378 1017 1354C1024 1340 1034 1329 1038 1329ZM573 1294C570 1291 552 1298 531 1309C500 1327 497 1329 516 1329C531 1329 541 1336 544 1350C549 1369 552 1367 565 1335C572 1316 576 1297 573 1294ZM481 1332C474 1330 462 1330 456 1332C450 1335 454 1337 468 1337C482 1337 487 1335 481 1332ZM1368 1271C1371 1266 1369 1261 1364 1261C1358 1261 1353 1266 1353 1271C1353 1276 1355 1280 1357 1280C1360 1280 1365 1276 1368 1271ZM1166 1192C1166 1187 1161 1182 1155 1182C1151 1182 1149 1187 1152 1192C1154 1198 1159 1202 1162 1202C1164 1202 1166 1198 1166 1192ZM1009 1098C1009 1096 1007 1094 1004 1094C1001 1094 999 1096 999 1098C999 1101 1001 1103 1004 1103C1007 1103 1009 1101 1009 1098ZM1127 1059C1127 1056 1125 1054 1122 1054C1119 1054 1117 1056 1117 1059C1117 1062 1119 1064 1122 1064C1125 1064 1127 1062 1127 1059ZM683 1003C714 972 671 884 609 851C569 830 568 830 551 849C542 859 522 867 509 867C495 867 477 871 470 876C460 882 466 886 488 891C506 894 530 897 543 897C570 897 655 974 655 998C655 1018 666 1020 683 1003ZM793 887C793 882 789 877 783 877C778 877 773 882 773 887C773 893 778 897 783 897C789 897 793 893 793 887ZM505 831C501 828 495 828 491 831C488 835 491 838 498 838C505 838 508 835 505 831ZM827 769C830 764 829 759 823 759C818 759 810 764 807 769C804 775 805 779 811 779C816 779 824 775 827 769ZM714 720C714 715 707 710 699 710C691 710 685 715 685 720C685 726 691 730 699 730C707 730 714 726 714 720ZM593 526C589 523 586 526 586 533C586 540 589 543 593 540C596 536 596 530 593 526ZM375 364C389 352 399 339 399 335C399 331 390 306 378 281C357 236 357 236 344 259C337 272 332 290 331 300C331 309 327 317 321 317C297 317 319 384 342 386C347 386 361 376 375 364ZM488 350C488 334 466 337 460 354C458 361 463 366 472 366C481 366 488 359 488 350ZM242 346C242 341 235 337 226 337C219 337 215 341 218 346C220 352 227 356 233 356C238 356 242 352 242 346ZM711 1176C704 1169 710 1150 737 1096C769 1030 833 1027 840 1091C842 1115 837 1125 814 1142C798 1154 776 1162 765 1162C753 1162 742 1167 739 1172C732 1183 720 1185 711 1176ZM1336 1323C1340 1320 1346 1320 1350 1323C1353 1327 1350 1329 1343 1329C1336 1329 1333 1327 1336 1323Z"/></symbol>
+<symbol id="fr-dash" viewBox="55 -1009 1812 223"><path fill="currentColor" transform="scale(1,-1)" d="M924 995C906 991 883 987 874 991C859 994 858 992 862 974C868 952 862 929 850 929C846 929 843 934 843 941C843 975 780 991 764 961C753 941 753 905 764 905C768 905 772 901 772 897C772 890 674 892 660 901C650 907 650 937 660 937C665 937 668 941 668 948C668 964 635 969 614 956C600 946 596 937 598 918L600 893L565 895C541 897 526 903 518 913C505 933 483 933 465 913C455 901 440 897 416 897C397 897 380 901 377 905C371 915 336 915 330 905C326 899 281 896 208 897C143 897 84 897 77 897C69 897 63 891 63 885C63 874 82 873 190 873C270 873 325 870 338 863C353 856 360 856 367 863C379 875 458 876 465 865C467 861 476 854 484 849C495 843 504 845 518 856C529 865 551 874 567 877L596 882V854C596 821 621 799 651 807C670 811 673 825 658 839C651 847 652 852 662 862C672 872 689 876 720 876C744 876 765 874 768 871C771 869 768 859 763 850C745 823 762 821 788 847C801 862 818 873 825 873C835 873 831 881 809 903C793 920 780 937 780 940C780 945 785 942 791 933C798 925 809 920 817 922C837 928 846 916 858 870C864 845 865 827 859 818C850 799 858 792 877 802C888 808 899 807 916 801C929 796 952 793 972 796C991 800 1018 802 1032 802C1056 803 1057 804 1053 828C1050 843 1052 857 1056 859C1061 862 1061 885 1057 913C1054 939 1053 968 1056 976C1059 987 1055 990 1037 990C1025 991 1002 994 987 998C967 1003 948 1003 924 995ZM991 960C993 956 990 955 983 957C969 963 967 968 978 968C983 968 988 965 991 960ZM979 933C979 918 959 912 948 923C933 937 937 944 959 944C971 944 979 940 979 933ZM935 893C935 870 912 873 909 895C906 910 909 913 920 911C928 909 935 901 935 893ZM1010 897C1010 881 990 869 982 882C975 893 984 913 999 913C1005 913 1010 905 1010 897ZM1031 866C1022 858 1020 869 1025 893L1030 917L1033 894C1034 882 1034 870 1031 866ZM889 891C885 889 883 891 883 897C883 902 885 905 889 902C891 899 891 894 889 891ZM979 861C979 854 971 849 959 849C946 849 939 854 939 861C939 868 946 873 959 873C971 873 979 868 979 861ZM944 828C942 826 935 825 929 827C923 830 925 832 934 832C943 833 948 831 944 828ZM987 825C980 821 969 817 963 817C952 817 952 818 963 825C969 829 980 833 987 833C997 833 997 832 987 825ZM1108 967C1113 951 1146 948 1146 964C1146 972 1139 976 1125 976C1112 976 1106 972 1108 967ZM1254 958C1241 948 1241 947 1253 937C1260 931 1265 924 1265 921C1265 912 1220 897 1193 897C1181 897 1169 894 1167 891C1165 887 1181 885 1202 884C1249 883 1275 866 1258 846C1233 815 1281 794 1308 823C1323 841 1325 858 1312 871C1293 890 1366 882 1401 863L1432 845L1450 863C1461 873 1474 881 1480 881C1493 881 1433 928 1420 929C1415 929 1403 920 1394 909C1377 891 1368 890 1327 896C1323 896 1321 909 1321 923C1321 937 1317 953 1312 959C1299 972 1272 971 1254 958ZM1135 933C1127 921 1125 912 1131 909C1142 901 1162 920 1162 937C1162 958 1150 956 1135 933ZM1530 899 1512 887 1538 873C1560 862 1566 861 1581 870C1594 878 1635 881 1726 881C1802 881 1855 884 1859 889C1862 893 1816 897 1726 896C1639 896 1587 898 1581 904C1570 916 1551 914 1530 899ZM1122 873C1112 867 1112 865 1124 860C1132 858 1138 847 1138 838C1137 822 1137 822 1127 835C1117 847 1112 848 1095 840C1072 829 1069 823 1085 811C1106 794 1131 792 1147 806C1177 833 1155 893 1122 873ZM784 824C764 805 777 789 806 796C829 802 841 825 826 835C811 844 801 842 784 824Z"/></symbol>
+<symbol id="fr-fleuron" viewBox="58 -1022 1803 244"><path fill="currentColor" transform="scale(1,-1)" d="M982 1008C964 1003 924 1000 894 1000C859 1001 834 997 821 987C802 972 802 972 826 952C855 929 849 928 780 948C727 964 686 964 535 946C501 942 478 944 471 951C463 960 464 965 474 972C486 980 486 981 472 986C451 995 435 984 435 963C435 941 454 923 476 923C502 923 498 906 472 900C406 885 351 884 252 897C116 917 61 918 66 901C69 894 98 886 138 882C175 878 239 872 280 867C373 856 461 870 531 907C570 927 602 936 653 938C714 942 720 941 694 932C678 925 653 910 637 897C623 885 604 877 596 880C589 884 575 884 567 880C554 875 554 872 569 857C596 830 637 815 685 815C743 815 781 840 772 871C768 887 771 894 781 894C789 894 802 896 810 899C823 904 826 898 826 868C826 847 833 821 841 811C855 793 855 793 879 814L902 836L929 811C948 793 967 786 993 786C1015 786 1031 788 1031 791C1031 794 1026 805 1019 815C1002 843 1014 847 1061 829C1128 804 1283 807 1358 835C1391 848 1422 860 1427 864C1444 877 1490 885 1490 875C1490 870 1486 862 1481 859C1463 849 1471 825 1495 813C1516 804 1524 805 1537 818C1552 834 1552 835 1531 835C1503 835 1504 849 1535 873C1559 892 1574 894 1706 894C1849 894 1896 904 1807 917C1781 920 1698 923 1621 923C1504 923 1475 920 1437 903C1411 893 1374 884 1353 884C1318 884 1313 888 1298 917C1278 959 1245 975 1192 966C1159 961 1150 963 1144 977C1137 997 1119 986 1119 961C1119 935 1158 879 1188 860C1218 843 1271 840 1280 854C1283 860 1302 864 1321 864C1341 864 1355 862 1353 859C1350 857 1316 849 1278 841C1225 829 1195 828 1147 836C1113 842 1084 848 1081 850C1079 853 1085 865 1094 878C1114 910 1113 925 1093 922C1059 917 1031 933 1031 957C1031 970 1036 983 1041 986C1047 989 1051 996 1051 1000C1051 1014 1018 1018 982 1008ZM988 946C980 926 953 930 953 952C953 976 985 997 990 976C992 968 991 954 988 946ZM908 963C936 932 918 873 877 859C857 853 854 855 857 870C859 881 874 895 890 902L918 916L896 931C885 938 875 953 875 963C875 986 887 986 908 963ZM1251 934C1254 928 1249 920 1240 915C1230 909 1226 899 1229 890C1237 870 1231 870 1196 891C1150 918 1162 937 1224 941C1235 941 1247 938 1251 934ZM777 923C777 910 758 910 738 923C726 931 729 933 751 933C765 933 777 929 777 923ZM1051 903C1063 895 1063 893 1051 884C1043 879 1032 874 1026 874C1021 874 1010 879 1002 884C989 893 989 895 1002 903C1010 908 1021 913 1026 913C1032 913 1043 908 1051 903ZM693 879C689 869 693 864 708 864C732 864 735 850 713 841C691 832 667 834 650 845C638 853 638 856 655 873C678 896 701 899 693 879ZM1510 889C1510 886 1508 884 1505 884C1502 884 1500 886 1500 889C1500 892 1502 894 1505 894C1508 894 1510 892 1510 889ZM972 860C985 835 979 815 958 815C944 815 933 836 933 865C933 892 957 889 972 860Z"/></symbol>
+<symbol id="fr-hand" viewBox="68 -1263 1805 725"><path fill="currentColor" transform="scale(1,-1)" d="M845 1212C553 1150 564 1151 508 1181C468 1201 433 1206 326 1207C121 1210 126 1210 126 1184C126 1150 145 1141 164 1164C173 1174 184 1182 190 1182C208 1182 203 1149 183 1127C161 1106 158 1050 176 1039C184 1034 189 1046 189 1066C189 1085 194 1109 200 1119C216 1145 239 1124 239 1081C239 1061 245 1045 251 1045C259 1045 264 1031 264 1015C264 999 271 970 281 952C295 925 300 922 306 939C310 950 305 972 294 989C283 1005 278 1025 281 1031C286 1037 284 1046 276 1051C256 1064 261 1102 285 1121C304 1137 305 1135 298 1099C291 1067 294 1057 308 1057C319 1057 326 1045 326 1027C326 1010 333 992 339 989C346 985 351 962 353 941C353 919 359 890 365 876C373 859 375 881 373 949C370 1002 371 1040 378 1031C384 1021 391 1034 400 1065C408 1091 423 1127 434 1145C448 1166 450 1169 445 1151C426 1091 405 870 413 801L420 726L470 719C498 715 541 699 568 684C626 647 674 636 849 620C958 610 994 610 1014 622C1034 636 1046 634 1083 615C1116 596 1123 587 1113 574C1101 561 1108 557 1144 557C1195 557 1251 602 1251 642C1251 682 1204 731 1156 740C1114 747 1093 765 1106 780C1111 784 1144 772 1180 754C1275 705 1303 701 1343 732C1361 747 1376 769 1376 781C1376 812 1326 855 1259 881C1226 894 1200 909 1201 915C1203 929 1243 924 1308 899C1426 854 1464 865 1464 946C1464 1006 1439 1025 1321 1050C1275 1060 1230 1074 1223 1082C1210 1095 1253 1096 1420 1087C1538 1081 1670 1076 1718 1076C1791 1077 1805 1081 1834 1110C1896 1171 1894 1172 1545 1240C1493 1250 1375 1256 1251 1255C1065 1255 1025 1251 845 1212ZM276 1157C276 1151 271 1145 265 1145C258 1145 249 1151 245 1157C241 1165 246 1170 256 1170C268 1170 276 1165 276 1157ZM364 1102C364 1092 359 1080 351 1076C345 1072 339 1080 339 1094C339 1109 345 1120 351 1120C359 1120 364 1112 364 1102ZM1151 1040C1151 1036 1146 1030 1139 1026C1133 1022 1126 1025 1126 1031C1126 1039 1133 1045 1139 1045C1146 1045 1151 1042 1151 1040ZM89 1109C89 1077 96 1075 105 1101C110 1111 108 1122 101 1126C94 1131 89 1122 89 1109ZM204 1030C184 1010 185 964 205 947C216 937 220 947 221 990C221 1020 221 1045 220 1045C220 1045 213 1039 204 1030ZM129 995C129 971 131 961 135 974C138 985 138 1005 135 1017C131 1029 129 1019 129 995ZM76 982C76 974 80 970 85 974C89 979 89 986 85 991C80 995 76 991 76 982ZM151 905C151 889 158 867 164 857C173 844 176 849 176 879C176 900 171 922 164 926C156 930 151 921 151 905ZM240 912C240 899 244 895 248 905C251 914 250 925 246 929C243 934 239 926 240 912ZM91 895C91 877 94 871 98 880C100 887 100 902 98 911C94 919 91 912 91 895ZM301 884C301 869 308 857 314 857C321 857 326 865 326 875C326 885 321 897 314 901C308 905 301 897 301 884ZM264 835C264 807 293 745 305 745C314 745 314 750 304 760C295 769 289 787 289 802C289 819 284 835 276 839C270 842 264 841 264 835ZM359 774C370 709 376 706 376 767C376 796 370 820 364 820C355 820 354 802 359 774ZM76 780C76 749 91 707 103 707C109 707 114 727 114 751C114 781 108 795 95 795C85 795 76 787 76 780ZM208 746C204 740 206 731 214 726C220 722 226 727 226 737C226 760 219 764 208 746ZM315 712C315 699 319 695 323 705C326 714 325 725 321 729C318 734 314 726 315 712ZM181 686C186 666 199 645 210 636C220 629 225 616 220 609C211 594 155 602 130 624C115 635 109 627 113 602C114 597 105 585 93 576C71 560 71 559 93 551C104 546 150 550 194 557C255 570 286 570 330 560C408 540 459 541 481 564C498 580 498 590 484 630C475 655 460 676 450 676C423 676 423 636 450 609C469 590 471 582 459 582C449 582 425 601 405 625C386 647 358 671 343 675C311 685 303 665 333 652C359 642 356 605 330 610C318 612 308 620 308 627C308 635 298 650 286 662C274 675 264 692 264 702C264 712 258 720 251 720C236 720 250 654 266 647C271 645 276 637 276 631C276 625 260 627 239 639C213 652 201 667 201 689C201 706 195 720 188 720C179 720 176 707 181 686ZM516 632C516 615 519 609 523 617C525 625 525 640 523 649C519 656 516 650 516 632Z"/></symbol>
 </svg>
 
 <style>.im-enon{--img:url("src/img/enon.webp");aspect-ratio:1600/1044}.im-disused{--img:url("src/img/disused.webp");aspect-ratio:1600/1199}.im-columbarium{--img:url("src/img/columbarium.webp");aspect-ratio:1600/962}.im-waterloo{--img:url("src/img/waterloo.webp");aspect-ratio:1400/788}.im-wbr{--img:url("src/img/wbr.webp");aspect-ratio:1100/1821}.im-bombed{--img:url("src/img/bombed.webp");aspect-ratio:1600/1259}.im-clinton{--img:url("src/img/clinton.webp");aspect-ratio:1100/1385}.im-drake{--img:url("src/img/drake.webp");aspect-ratio:1300/975}.im-bent{--img:url("src/img/bent.webp");aspect-ratio:1000/1576}.im-sargent{--img:url("src/img/sargent.webp");aspect-ratio:1100/1405}.im-demorgan{--img:url("src/img/demorgan.webp");aspect-ratio:1100/1350}.im-tata{--img:url("src/img/tata.webp");aspect-ratio:1500/1413}.im-stedward{--img:url("src/img/stedward.webp");aspect-ratio:1600/990}.im-uschapel2{--img:url("src/img/uschapel2.webp");aspect-ratio:1600/1020}.im-memorial{--img:url("src/img/memorial.webp");aspect-ratio:1600/997}</style>
@@ -553,10 +576,10 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 
 <div class="tabpanel" id="tab-home" role="tabpanel" aria-labelledby="t-home" data-tab="home" data-tab-label="Title Page" data-tab-num="§" data-tab-title="Title and Contents">
 <header class="titlepage" id="top">
-  <svg class="corner tl" aria-hidden="true"><use href="#orn-corner"/></svg>
-  <svg class="corner tr" aria-hidden="true"><use href="#orn-corner"/></svg>
-  <svg class="corner bl" aria-hidden="true"><use href="#orn-corner"/></svg>
-  <svg class="corner br" aria-hidden="true"><use href="#orn-corner"/></svg>
+  <svg class="corner tl" aria-hidden="true"><use href="#fr-corner"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#fr-corner"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#fr-corner"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#fr-corner"/></svg>
   <p class="tp-kicker">A Visitor’s Guide to</p>
   <h1 class="tp-title">Brookwood</h1>
   <p class="tp-sub"><span class="the">The</span>London Necropolis</p>
@@ -584,7 +607,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   </ol>
   <p class="toc-help">Choose a chapter, or use the tabs above. Each tab is one part of the guide.</p>
 </nav>
-<nav class="pager" aria-label="Turn the page"><span></span><a class="pg-next" href="#history" data-tab-link="history"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">The Burial Question to the Present Day</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><span></span><a class="pg-next" href="#history" data-tab-link="history"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">The Burial Question to the Present Day</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-history" role="tabpanel" aria-labelledby="t-history" data-tab="history" data-tab-label="History" data-tab-num="I–III" data-tab-title="The Burial Question to the Present Day" hidden>
@@ -593,7 +616,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter I.</p>
   <h2 class="ch-title">The Burial Question</h2>
   <p class="ch-dates">London, 1840–1852</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <span class="shoulder">London’s churchyards full</span>
@@ -615,7 +638,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter II.</p>
   <h2 class="ch-title">A City of the Dead at Woking</h2>
   <p class="ch-dates">The land, the design and the opening, 1852–1890</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="facts" role="list">
   <div class="fact" role="listitem"><b>2,268</b><span>acres bought</span><small>Historic England’s figure, about 918 ha, from Lord Onslow</small></div>
@@ -648,7 +671,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter III.</p>
   <h2 class="ch-title">Decline and Revival</h2>
   <p class="ch-dates">1941 to the present day</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <span class="shoulder">After the railway</span>
@@ -663,7 +686,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  </div>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#home" data-tab-link="home"><span class="pg-dir">‹ Previous</span><span class="pg-t">Title Page</span></a><a class="pg-next" href="#railway" data-tab-link="railway"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">The Necropolis Railway</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#home" data-tab-link="home"><span class="pg-dir">‹ Previous</span><span class="pg-t">Title Page</span></a><a class="pg-next" href="#railway" data-tab-link="railway"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">The Necropolis Railway</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-railway" role="tabpanel" aria-labelledby="t-railway" data-tab="railway" data-tab-label="Railway" data-tab-num="IV" data-tab-title="The Necropolis Railway" hidden>
@@ -672,7 +695,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter IV.</p>
   <h2 class="ch-title">The Necropolis Railway</h2>
   <p class="ch-dates">Westminster Bridge Road to Brookwood, 1854–1941</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <span class="shoulder">A private terminus at Waterloo</span>
@@ -787,7 +810,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  </div>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#history" data-tab-link="history"><span class="pg-dir">‹ Previous</span><span class="pg-t">History</span></a><a class="pg-next" href="#plan" data-tab-link="plan"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">Plan of the Cemetery</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#history" data-tab-link="history"><span class="pg-dir">‹ Previous</span><span class="pg-t">History</span></a><a class="pg-next" href="#plan" data-tab-link="plan"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">Plan of the Cemetery</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-plan" role="tabpanel" aria-labelledby="t-plan" data-tab="plan" data-tab-label="The Plan" data-tab-num="V" data-tab-title="Plan of the Cemetery" hidden>
@@ -796,7 +819,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter V.</p>
   <h2 class="ch-title">Plan of the Cemetery</h2>
   <p class="ch-dates">With a key to the principal graves, monuments and grounds</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <p class="flush">The cemetery lies on the south side of the main line from Waterloo to Southampton, south of Brookwood station, and is crossed from north-east to south-west by the road called Cemetery Pales. The Nonconformist ground and most of the faith grounds occupy the northern part; the Anglican cemetery and the St Edward Brotherhood lie to the south, and the military cemeteries along the western edge. Choose a number on the plan or a name in the key to learn more, or choose one of the suggested walks to trace it on the plan. Positions marked as approximate are estimated from published descriptions, not surveyed.</p>
@@ -827,7 +850,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  </figure>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#railway" data-tab-link="railway"><span class="pg-dir">‹ Previous</span><span class="pg-t">Railway</span></a><a class="pg-next" href="#register" data-tab-link="register"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">A Register of Notable Interments</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#railway" data-tab-link="railway"><span class="pg-dir">‹ Previous</span><span class="pg-t">Railway</span></a><a class="pg-next" href="#register" data-tab-link="register"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">A Register of Notable Interments</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-register" role="tabpanel" aria-labelledby="t-register" data-tab="register" data-tab-label="Notable Graves" data-tab-num="VI" data-tab-title="A Register of Notable Interments" hidden>
@@ -836,7 +859,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter VI.</p>
   <h2 class="ch-title">A Register of Notable Interments</h2>
   <p class="ch-dates">Painters, peers, reformers, saints and scoundrels</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <p class="flush">Brookwood’s dead are as various as London itself. The register below records some of the most interesting, with the plot numbers given by the Brookwood Cemetery Society and the cemetery where these are known. Choose a row to open the full entry. A few, among them Edith Thompson, Dodi Fayed and Sir Thomas Beecham, were buried here and later moved; they are included because their stories belong to the cemetery’s history.</p>
@@ -872,7 +895,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  </figure>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#plan" data-tab-link="plan"><span class="pg-dir">‹ Previous</span><span class="pg-t">The Plan</span></a><a class="pg-next" href="#monuments" data-tab-link="monuments"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">Monuments and Mausolea</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#plan" data-tab-link="plan"><span class="pg-dir">‹ Previous</span><span class="pg-t">The Plan</span></a><a class="pg-next" href="#monuments" data-tab-link="monuments"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">Monuments and Mausolea</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-monuments" role="tabpanel" aria-labelledby="t-monuments" data-tab="monuments" data-tab-label="Monuments" data-tab-num="VII" data-tab-title="Monuments and Mausolea" hidden>
@@ -881,7 +904,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter VII.</p>
   <h2 class="ch-title">Monuments and Mausolea</h2>
   <p class="ch-dates">A catalogue of tombs, buildings and grounds</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <p class="flush">First-class funerals bought the right to build, and Victorian and Edwardian families built lavishly: Grecian stelae, Egyptian mausolea, bronze allegories and Gothic chapels in miniature. Many are now listed by Historic England. The catalogue below gives the principal monuments, buildings and grounds, each numbered as on the plan.</p>
@@ -893,7 +916,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  <div class="monuments" id="mon-list"></div>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#register" data-tab-link="register"><span class="pg-dir">‹ Previous</span><span class="pg-t">Notable Graves</span></a><a class="pg-next" href="#grounds" data-tab-link="grounds"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">Parishes, Guilds, Faiths and the Military Cemeteries</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#register" data-tab-link="register"><span class="pg-dir">‹ Previous</span><span class="pg-t">Notable Graves</span></a><a class="pg-next" href="#grounds" data-tab-link="grounds"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">Parishes, Guilds, Faiths and the Military Cemeteries</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-grounds" role="tabpanel" aria-labelledby="t-grounds" data-tab="grounds" data-tab-label="Faiths &amp; War Graves" data-tab-num="VIII–IX" data-tab-title="Parishes, Guilds, Faiths and the Military Cemeteries" hidden>
@@ -902,7 +925,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter VIII.</p>
   <h2 class="ch-title">Parishes, Guilds and Faiths</h2>
   <p class="ch-dates">The grounds within the ground</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <span class="shoulder">London parishes</span>
@@ -934,7 +957,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter IX.</p>
   <h2 class="ch-title">The Military Cemeteries</h2>
   <p class="ch-dates">Commonwealth, American and Allied war graves</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="facts" role="list">
   <div class="fact" role="listitem"><b>1,601</b><span>Commonwealth burials</span><small>First World War</small></div>
@@ -958,7 +981,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  </div>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#monuments" data-tab-link="monuments"><span class="pg-dir">‹ Previous</span><span class="pg-t">Monuments</span></a><a class="pg-next" href="#emblems" data-tab-link="emblems"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">Reading the Stones</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#monuments" data-tab-link="monuments"><span class="pg-dir">‹ Previous</span><span class="pg-t">Monuments</span></a><a class="pg-next" href="#emblems" data-tab-link="emblems"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">Reading the Stones</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-emblems" role="tabpanel" aria-labelledby="t-emblems" data-tab="emblems" data-tab-label="Emblems" data-tab-num="X" data-tab-title="Reading the Stones" hidden>
@@ -967,7 +990,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Chapter X.</p>
   <h2 class="ch-title">Reading the Stones</h2>
   <p class="ch-dates">The emblems of Victorian mourning</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="prose">
   <p class="flush">Victorian monuments were meant to be read. Carvers drew on a shared vocabulary of emblems, classical, Christian and sentimental, that many mourners of the day would have understood. Meanings were never fixed, and many stones mix several, but these are among the commonest.</p>
@@ -985,9 +1008,13 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <div class="emblem"><svg aria-hidden="true" viewBox="0 0 80 80"><use href="#emb-lily"/></svg><h4>The lily</h4><p>Purity and resurrection; the white lily is the flower of the Virgin, and the Easter lily of the Resurrection.</p></div>
   <div class="emblem"><svg aria-hidden="true" viewBox="0 0 80 80"><use href="#emb-hands"/></svg><h4>Clasped hands</h4><p>Commonly read as a bond between two people, a farewell, or a reunion in heaven. Cuffs can show which hand is the husband’s and which the wife’s.</p></div>
  </div>
+ <figure class="cut">
+  <img src="src/img/cuts/mourner.svg" width="1781" height="1823" loading="lazy" decoding="async" alt="A woman in mourning, holding a cross, leans on a memorial topped by an urn, beneath a weeping willow.">
+  <figcaption><span class="fig-cap">The emblems in use: a mourner with a cross at an urn-topped memorial beneath a willow, a printer’s cut of 1832.</span> <span class="fig-credit">From the specimen book of the Boston Type and Stereotype Foundry, revived by <a href="https://font-revival.com/" target="_blank" rel="noopener">Font Revival</a>, MIT licence.</span></figcaption>
+ </figure>
 </section>
 
-<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#grounds" data-tab-link="grounds"><span class="pg-dir">‹ Previous</span><span class="pg-t">Faiths &amp; War Graves</span></a><a class="pg-next" href="#appendices" data-tab-link="appendices"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span><span class="pg-t">Chronology, Sources and Method</span></a></nav>
+<nav class="pager" aria-label="Turn the page"><a class="pg-prev" href="#grounds" data-tab-link="grounds"><span class="pg-dir">‹ Previous</span><span class="pg-t">Faiths &amp; War Graves</span></a><a class="pg-next" href="#appendices" data-tab-link="appendices"><span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span><span class="pg-t">Chronology, Sources and Method</span></a></nav>
 </div>
 
 <div class="tabpanel" id="tab-appendices" role="tabpanel" aria-labelledby="t-appendices" data-tab="appendices" data-tab-label="Chronology &amp; Sources" data-tab-num="A–B" data-tab-title="Chronology, Sources and Method" hidden>
@@ -996,7 +1023,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <p class="ch-num">Appendix A.</p>
   <h2 class="ch-title">Chronology</h2>
   <p class="ch-dates">From the railway’s arrival at Woking to the council’s purchase</p>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <ol class="chrono" id="chrono"></ol>
 </section>
@@ -1005,7 +1032,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
  <header class="ch-head">
   <p class="ch-num">Appendix B.</p>
   <h2 class="ch-title">Sources and Method</h2>
-  <hr class="rule-double">
+  <svg class="ch-rule" aria-hidden="true"><use href="#fr-dash"/></svg>
  </header>
  <div class="sources">
   <h3 class="smallcaps" style="font-weight:400;font-size:1.05rem">A note on method</h3>
@@ -1013,6 +1040,8 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
   <h3 class="smallcaps" style="font-weight:400;font-size:1.05rem">The illustrations</h3>
   <p>The engravings and watercolours were made for this guide from photographs and prints on Wikimedia Commons. The photographs were redrawn by computer in the manner of Victorian line engravings and topographical watercolours; the 1847 print of Enon Chapel is reproduced as it is. Each caption names the photographer or source and the licence. The renderings are derivative works and are offered under the same licence as their source, or, where the source is in the public domain or CC0, under CC BY-SA 4.0. They show the places as photographed in recent years, except where the caption says otherwise.</p>
   <div class="conf-key"><span><span class="conf high">Well attested</span> reliable sources agree</span><span><span class="conf medium">Probable</span> one good source, or several that share an origin</span><span><span class="conf low">Uncertain</span> sources thin or in conflict</span></div>
+  <h3 class="smallcaps" style="font-weight:400;font-size:1.05rem">Type and ornaments</h3>
+  <p>The display types, initials, rules and cuts come from <a href="https://font-revival.com/" target="_blank" rel="noopener">Font Revival</a>, an open collection of nineteenth-century typefaces and ornaments revived from founders’ specimen books, and are used under its <a href="https://github.com/fontrevival/font-revival/blob/main/LICENSE" target="_blank" rel="noopener">MIT licence</a>. Headings are set in Doric 1889 and labels in Modern Antique 1889, both from the Boston Type Foundry’s specimen book of 1889, which also supplied the leafy blackletter initials, the corner pieces, the rules and the pointing hand. The title is set in Baltimore Bold 1832 and the spaced capitals in Baltimore Title 1832, from the Baltimore Type Foundry’s specimen of 1832, which also supplied the Finis. The mourner beneath the willow comes from the 1832 specimen of the Boston Type and Stereotype Foundry. Doric 1889 and Modern Antique 1889 have been given a, e, o and u with a dieresis, made from their own letters. The text is set in Old Standard TT and the blackletter in UnifrakturMaguntia.</p>
   <h3 class="smallcaps" style="font-weight:400;font-size:1.05rem">Principal sources</h3>
   <ol>
    <li>Historic England, <i>Brookwood Cemetery</i>, Register of Parks and Gardens, list entry 1001265, and individual list entries for monuments at Brookwood. <a href="https://historicengland.org.uk/listing/the-list/list-entry/1001265" target="_blank" rel="noopener">historicengland.org.uk</a></li>
@@ -1035,8 +1064,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 
 
 <footer class="finis" id="finis">
-  <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
-  <p class="fin">Finis.</p>
+  <img class="fin" src="src/img/cuts/finis.svg" width="1821" height="661" loading="lazy" decoding="async" alt="Finis.">
   <p>Compiled October 2026 from published sources listed in Appendix B. Plot numbers and positions on the plan are as given in those sources; please confirm with the cemetery office before visiting a particular grave.</p>
 </footer>
 
@@ -2614,7 +2642,7 @@ function openCard(id) {
       <h3 id="card-name">${esc(it.name)}</h3>
       ${it.honorifics ? `<p class="c-hon">${esc(it.honorifics)}</p>` : ""}
       ${life ? `<p class="c-life">${life}</p>` : ""}
-      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#fr-fleuron"/></svg>
       ${figMarkup(figFor(id))}
       <p>${esc(it.summary)}</p>
       ${it.grave ? `<h4>The grave</h4><p>${esc(it.grave)}</p>` : ""}
@@ -2633,7 +2661,7 @@ function openCard(id) {
       <p class="card-cat">${esc(it.type)}${it.date ? ` · ${esc(it.date)}` : ""}</p>
       <h3 id="card-name">${esc(it.name)}</h3>
       ${it.designer ? `<p class="c-life">${esc(it.designer)}</p>` : ""}
-      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#fr-fleuron"/></svg>
       ${figMarkup(figFor(id))}
       <p>${esc(it.description)}</p>
       ${here.length ? `<h4>${it.type === "Ground" ? "Among those buried here" : "Buried or commemorated here"}</h4><p>${here.map(r => `<button class="linkbtn" type="button" data-card="${esc(r.id)}">${esc(r.name)}</button>`).join(", ")}</p>` : ""}
@@ -2852,7 +2880,7 @@ function renderMonuments() {
       <h4>${esc(p.name)}</h4>
       ${meta ? `<span class="m-meta">${meta}</span>` : ""}
       <p>${esc(p.description)}</p>
-      <div class="m-act"><button class="linkbtn" type="button" data-card="${esc(p.id)}"><svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg>Particulars${p.confidence === "low" ? " (uncertain)" : ""}</button></div>
+      <div class="m-act"><button class="linkbtn" type="button" data-card="${esc(p.id)}"><svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg>Particulars${p.confidence === "low" ? " (uncertain)" : ""}</button></div>
     </article>`;
   }).join("");
 }

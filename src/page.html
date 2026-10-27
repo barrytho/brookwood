@@ -1,8 +1,14 @@
 <title>Brookwood: The London Necropolis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=League+Gothic&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap">
 <style>
+/* Display types and initials revived from nineteenth-century foundry specimens by Font Revival (MIT); see src/fonts/. */
+@font-face { font-family: "Doric 1889"; src: url("src/fonts/Doric1889-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Modern Antique 1889"; src: url("src/fonts/ModernAntique1889-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Baltimore Title 1832"; src: url("src/fonts/BaltimoreTitle1832-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Baltimore Bold 1832"; src: url("src/fonts/BaltimoreBold1832-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Brookwood Initials"; src: url("src/fonts/BrookwoodInitials.woff2") format("woff2"); font-display: block; }
 /* Layout: a bound Victorian octavo — a justified text block with shoulder-notes in the outer margin;
    the Plan and the Register break out as full-width folding plates. Mourning-card double rules frame it. */
 :root {
@@ -18,10 +24,13 @@
   --mount: #f1ecdf;        /* paper behind plates, light in both themes */
   --plate-ink: #1d1c18;    /* engraving ink on that paper, dark in both themes */
 
-  --f-display: "Abril Fatface", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
+  --f-title: "Baltimore Bold 1832", "Bodoni 72", Didot, "Bodoni MT", "Times New Roman", serif;
+  --f-display: "Doric 1889", "Old Standard TT", Georgia, serif;   /* missing marks such as £ fall back to the text face */
   --f-text: "Old Standard TT", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --f-black: "UnifrakturMaguntia", "Old English Text MT", "Times New Roman", serif;
-  --f-label: "League Gothic", "Arial Narrow", "Helvetica Neue Condensed", Impact, sans-serif;
+  --f-label: "Modern Antique 1889", "Old Standard TT", Georgia, serif;
+  --f-caps: "Baltimore Title 1832", "Old Standard TT", Georgia, serif;
+  --f-initial: "Brookwood Initials", "Doric 1889", Georgia, serif;
 
   --measure: 38rem;
   --gutter: clamp(16px, 4vw, 48px);
@@ -77,9 +86,8 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   line-height: 1.1;
 }
 .smallcaps { font-variant: small-caps; letter-spacing: .04em; }
-.rule-double { border: 0; height: 6px; margin: 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .rule-thin { border: 0; border-top: 1px solid var(--ink); margin: 0; }
-.fleuron { display: block; width: 120px; height: 24px; margin: 2.2rem auto; color: var(--gilt); }
+.fleuron { display: block; width: 140px; height: 26px; margin: 2.2rem auto; color: var(--gilt); }
 
 /* ——— Title page ——— */
 .titlepage {
@@ -88,7 +96,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   outline: 1px solid var(--ink);
   outline-offset: 5px;
   margin: 8px 8px 0;
-  padding: clamp(28px, 6vw, 72px) clamp(16px, 5vw, 64px) clamp(24px, 4vw, 48px);
+  padding: clamp(28px, 6vw, 72px) clamp(16px, 5vw, 64px) clamp(44px, 5vw, 56px);
   text-align: center;
 }
 .titlepage .corner { position: absolute; width: clamp(36px, 6vw, 60px); height: clamp(36px, 6vw, 60px); color: var(--gilt); }
@@ -96,13 +104,13 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .titlepage .corner.tr { top: 6px; right: 6px; transform: scaleX(-1); }
 .titlepage .corner.bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
 .titlepage .corner.br { bottom: 6px; right: 6px; transform: scale(-1, -1); }
-.tp-kicker { letter-spacing: .32em; font-size: .85rem; text-transform: uppercase; margin: 0; }
+.tp-kicker { font-family: var(--f-caps); letter-spacing: .32em; font-size: .85rem; text-transform: uppercase; margin: 0; }
 .tp-title {
-  font-family: var(--f-display);
+  font-family: var(--f-title);
   font-weight: 400;
-  font-size: clamp(3.2rem, 13vw, 8.5rem);
+  font-size: clamp(2.2rem, 9.6vw, 6.6rem);
   line-height: .92;
-  letter-spacing: .01em;
+  letter-spacing: .02em;
   margin: .25em 0 .1em;
   text-wrap: balance;
 }
@@ -120,9 +128,9 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   font-size: 1.05rem;
   text-wrap: balance;
 }
-.tp-with { margin: 1.1rem auto 0; max-width: 34rem; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; line-height: 1.7; }
+.tp-with { font-family: var(--f-caps); margin: 1.1rem auto 0; max-width: 34rem; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; line-height: 1.7; }
 .tp-vignette { display: block; width: min(100%, 460px); height: auto; aspect-ratio: 480 / 260; margin: 1.6rem auto 0; color: var(--ink); }
-.tp-imprint { margin-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+.tp-imprint { font-family: var(--f-caps); margin-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.6rem; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
 .tp-imprint span + span::before { content: ""; }
 
 /* ——— Running head and thumb-index tabs ——— */
@@ -131,7 +139,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   padding: .4rem 0 .5rem; border-bottom: 3px double var(--ink);
 }
 .rh-title { color: var(--ink); text-decoration: none; display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
-.rh-b { font-family: var(--f-display); font-size: 1.6rem; line-height: 1; }
+.rh-b { font-family: var(--f-title); font-size: 1.4rem; letter-spacing: .02em; line-height: 1; }
 .rh-n { font-family: var(--f-black); font-size: 1.15rem; line-height: 1; }
 .rh-sec { font-style: italic; color: var(--ink-soft); font-size: .92rem; }
 .thumbs {
@@ -149,7 +157,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   border-radius: .7rem .7rem 0 0; cursor: pointer; position: relative; top: 1px;
 }
 .thumb .th-num { font-family: var(--f-text); font-size: .72rem; letter-spacing: .08em; color: var(--gilt); font-variant-numeric: lining-nums; }
-.thumb .th-label { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: 1.02rem; line-height: 1; white-space: nowrap; }
+.thumb .th-label { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .04em; font-size: .84rem; line-height: 1; white-space: nowrap; }
 .thumb:hover { background: var(--yew); border-color: var(--yew); }
 .thumb[aria-selected="true"] { background: var(--paper); color: var(--ink); border-color: var(--ink); z-index: 1; }
 .thumb[aria-selected="true"] .th-num { color: var(--gilt); }
@@ -168,13 +176,13 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .pager a { display: grid; gap: .15rem; text-decoration: none; color: var(--ink); padding: .3rem .2rem; min-width: 0; }
 .pager a:hover .pg-t { text-decoration: underline; text-decoration-color: var(--yew); }
 .pg-next { text-align: right; justify-items: end; }
-.pg-dir { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .1em; font-size: .9rem; color: var(--yew); display: inline-flex; align-items: center; gap: .4rem; }
+.pg-dir { font-family: var(--f-label); text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; color: var(--yew); display: inline-flex; align-items: center; gap: .4rem; }
 .pg-dir svg { width: 1.9em; height: .95em; }
 .pg-t { font-family: var(--f-display); font-size: 1.25rem; line-height: 1.15; text-wrap: balance; }
 
 /* ——— Contents ——— */
 .contents { max-width: var(--measure); margin: 3.5rem auto 0; }
-.contents h2 { text-align: center; font-weight: 400; letter-spacing: .3em; font-size: 1rem; margin: 0 0 1rem; text-transform: uppercase; }
+.contents h2 { font-family: var(--f-caps); text-align: center; font-weight: 400; letter-spacing: .3em; font-size: 1rem; margin: 0 0 1rem; text-transform: uppercase; }
 .contents ol { list-style: none; padding: 0; margin: 0; display: grid; gap: .15rem; }
 .contents a {
   display: grid;
@@ -195,7 +203,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 /* ——— Chapters ——— */
 .chapter { margin-top: clamp(3.5rem, 8vw, 6rem); scroll-margin-top: 5.5rem; }
 .ch-head { text-align: center; max-width: 44rem; margin: 0 auto 2rem; }
-.ch-num { letter-spacing: .3em; font-size: .9rem; text-transform: uppercase; margin: 0; color: var(--ink-soft); }
+.ch-num { font-family: var(--f-caps); letter-spacing: .3em; font-size: .9rem; text-transform: uppercase; margin: 0; color: var(--ink-soft); }
 .ch-title {
   font-family: var(--f-display);
   font-weight: 400;
@@ -205,7 +213,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   text-wrap: balance;
 }
 .ch-dates { font-style: italic; margin: 0; color: var(--ink-soft); }
-.ch-head .rule-double { width: 7rem; margin: 1rem auto 0; }
+.ch-rule { display: block; width: 11rem; height: 1.4rem; margin: .9rem auto 0; color: var(--ink); }
 
 .prose { max-width: var(--measure); margin: 0 auto; position: relative; }
 .prose p { margin: 0 0 1em; hyphens: auto; -webkit-hyphens: auto; }
@@ -213,7 +221,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .prose p.flush, .prose .shoulder + p { text-indent: 0; }
 @media (min-width: 600px) { .prose p { text-align: justify; } }
 .prose h3 {
-  font-family: var(--f-text);
+  font-family: var(--f-caps);
   font-weight: 400;
   font-size: 1.05rem;
   letter-spacing: .16em;
@@ -229,13 +237,14 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .prose blockquote p { text-align: left; text-indent: 0 !important; margin: 0 0 .4rem !important; }
 .prose blockquote cite { display: block; font-style: normal; font-size: .85em; color: var(--ink-soft); text-align: right; }
 .prose blockquote cite::before { content: "— "; }
+/* The initials font draws a leafy blackletter capital for the real first letter, so the text stays plain text. */
 .dropcap::first-letter {
-  font-family: var(--f-display);
+  font-family: var(--f-initial);
   float: left;
-  font-size: 4.1em;
-  line-height: .8;
-  padding: .06em .1em 0 0;
-  margin-top: .05em;
+  font-size: 5.3em;
+  line-height: .86;
+  padding: 0 .06em 0 0;
+  margin: .03em 0 0 -.02em;
   color: var(--ink);
 }
 .prose p.dropcap { text-indent: 0; }
@@ -269,7 +278,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2.6rem; margin: 2rem auto 2.4rem; max-width: 52rem; }
 .fact { text-align: center; min-width: 8rem; }
 .fact b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 2.1rem; line-height: 1; font-variant-numeric: lining-nums; }
-.fact span { display: block; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .35rem; color: var(--ink-soft); }
+.fact span { display: block; font-family: var(--f-caps); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .35rem; color: var(--ink-soft); }
 .fact small { display: block; font-style: italic; font-size: .78rem; color: var(--ink-soft); }
 
 .uncertain { color: var(--mark); font-size: .8em; vertical-align: super; line-height: 0; cursor: help; text-decoration: none; }
@@ -280,7 +289,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem;
   padding: .7rem 1rem; border-bottom: 1px solid var(--ink);
 }
-.plate-cap .plate-no { letter-spacing: .25em; font-size: .85rem; text-transform: uppercase; }
+.plate-cap .plate-no { font-family: var(--f-caps); letter-spacing: .25em; font-size: .85rem; text-transform: uppercase; }
 .plate-cap .plate-title { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.1; }
 .plate-cap .plate-scale { font-style: italic; font-size: .85rem; color: var(--ink-soft); }
 
@@ -309,13 +318,13 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
   font-family: var(--f-text); line-height: 1.25; display: grid; gap: .3rem; width: 100%;
 }
 .ticket[aria-pressed="true"] { background: var(--yew-wash); box-shadow: inset 0 0 0 4px var(--paper), inset 0 0 0 5px var(--yew); border-color: var(--yew); }
-.ticket .t-co { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
+.ticket .t-co { font-family: var(--f-caps); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
 .ticket .t-class { font-family: var(--f-label); font-size: 2.1rem; letter-spacing: .06em; text-transform: uppercase; line-height: 1; }
 .ticket .t-route { font-style: italic; font-size: .85rem; }
 .ticket .t-fare { font-family: var(--f-display); font-size: 1.5rem; font-variant-numeric: lining-nums; }
 .ticket .t-no { position: absolute; top: .5rem; right: .7rem; font-size: .7rem; font-variant-numeric: lining-nums tabular-nums; color: var(--ink-soft); }
 .ticket-note { max-width: var(--measure); margin: 1.2rem auto 0; padding: 1rem 1.2rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); min-height: 6.5rem; }
-.ticket-note h4 { margin: 0 0 .3rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .9rem; }
+.ticket-note h4 { font-family: var(--f-caps); margin: 0 0 .3rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .9rem; }
 .ticket-note p { margin: 0; }
 
 /* ——— Plan ——— */
@@ -333,7 +342,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 @media (min-width: 960px) { .plan-side { max-height: 46rem; } }
 .plan-side-sec { padding: .9rem 1rem; border-bottom: 1px solid var(--ink); }
 .plan-side-sec:last-child { border-bottom: 0; }
-.plan-side h3 { margin: 0 0 .5rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; font-size: .82rem; }
+.plan-side h3 { font-family: var(--f-caps); margin: 0 0 .5rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; font-size: .82rem; }
 .walk-pick { display: grid; gap: .35rem; }
 .walk-pick button {
   text-align: left; background: none; border: 0; padding: .3rem .4rem; cursor: pointer; display: grid; grid-template-columns: 1.4rem 1fr; gap: .4rem; align-items: baseline;
@@ -378,7 +387,7 @@ svg.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12e
 .register-wrap { overflow-x: auto; }
 table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .ledger th {
-  font-weight: 400; text-align: left; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+  font-family: var(--f-caps); font-weight: 400; text-align: left; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
   background: var(--paper-deep); padding: .55rem .7rem; border-bottom: 3px double var(--ink); white-space: nowrap;
 }
 .ledger td { padding: .55rem .7rem; border-bottom: 1px solid var(--ink-faint); vertical-align: baseline; }
@@ -416,7 +425,7 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: .95rem; }
 @media (min-width: 960px) { .emblems { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 .emblem { text-align: center; min-width: 0; }
 .emblem svg { width: 76px; height: 76px; color: var(--ink); display: block; margin: 0 auto .4rem; }
-.emblem h4 { margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
+.emblem h4 { font-family: var(--f-caps); margin: 0; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; font-size: .88rem; }
 .emblem p { margin: .3rem 0 0; font-size: .9rem; line-height: 1.45; color: var(--ink-soft); }
 
 /* ——— Chronology ——— */
@@ -445,13 +454,13 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 .card-inner { border: 6px solid var(--ink); margin: 6px; padding: 1.4rem clamp(1rem, 4vw, 2rem) 1.3rem; position: relative; }
 .card-inner::before { content: ""; position: absolute; inset: 4px; border: 1px solid var(--ink); pointer-events: none; }
 .card-close { position: absolute; top: .5rem; right: .6rem; background: none; border: 0; font-size: 1.6rem; line-height: 1; cursor: pointer; padding: .2rem .4rem; z-index: 1; }
-.card-cat { text-align: center; letter-spacing: .25em; text-transform: uppercase; font-size: .78rem; color: var(--ink-soft); margin: .2rem 0 0; }
+.card-cat { font-family: var(--f-caps); text-align: center; letter-spacing: .25em; text-transform: uppercase; font-size: .78rem; color: var(--ink-soft); margin: .2rem 0 0; }
 .card h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.7rem, 6vw, 2.3rem); line-height: 1.05; text-align: center; margin: .4rem 0 .2rem; text-wrap: balance; }
 .card .c-hon { text-align: center; font-size: .9rem; margin: 0; letter-spacing: .08em; }
 .card .c-life { text-align: center; font-style: italic; margin: .3rem 0 0; font-variant-numeric: lining-nums; }
 .card .fleuron { margin: 1rem auto; }
 .card p { margin: 0 0 .8rem; }
-.card h4 { margin: 1rem 0 .3rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; font-size: .8rem; }
+.card h4 { font-family: var(--f-caps); margin: 1rem 0 .3rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; font-size: .8rem; }
 .card dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: .6rem 0 0; font-size: .92rem; }
 .card dt { font-variant: small-caps; letter-spacing: .05em; color: var(--ink-soft); }
 .card dd { margin: 0; }
@@ -490,10 +499,20 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 .fig-pair .fig { margin: 0 auto; max-width: none; width: 100%; }
 @media (min-width: 760px) { .fig-pair { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
 .card .fig figcaption { font-size: .78rem; }
+/* Printers' cuts from Font Revival, drawn in plate ink: on a paper mount in the dark theme, like the plates */
+.cut { margin: 2.6rem auto 0; max-width: 21rem; clear: both; }
+.cut img { display: block; width: 100%; height: auto; }
+.cut figcaption { margin-top: .7rem; text-align: center; font-size: .88rem; line-height: 1.45; color: var(--ink-soft); text-wrap: balance; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .cut img { background: var(--mount); padding: .8rem; }
+  :root:not([data-theme="light"]) .finis .fin { filter: invert(.9); }
+}
+:root[data-theme="dark"] .cut img { background: var(--mount); padding: .8rem; }
+:root[data-theme="dark"] .finis .fin { filter: invert(.9); }
 
 /* ——— Footer ——— */
 .finis { text-align: center; margin-top: 3rem; }
-.finis .fin { font-family: var(--f-black); font-size: 2.2rem; margin: 0; }
+.finis .fin { display: block; width: min(15rem, 70%); height: auto; margin: 0 auto; }
 .finis p { font-size: .82rem; color: var(--ink-soft); max-width: 36rem; margin: .6rem auto 0; font-style: italic; }
 
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -517,10 +536,10 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 
 <div class="tabpanel" id="tab-home" role="tabpanel" aria-labelledby="t-home" data-tab="home" data-tab-label="Title Page" data-tab-num="§" data-tab-title="Title and Contents">
 <header class="titlepage" id="top">
-  <svg class="corner tl" aria-hidden="true"><use href="#orn-corner"/></svg>
-  <svg class="corner tr" aria-hidden="true"><use href="#orn-corner"/></svg>
-  <svg class="corner bl" aria-hidden="true"><use href="#orn-corner"/></svg>
-  <svg class="corner br" aria-hidden="true"><use href="#orn-corner"/></svg>
+  <svg class="corner tl" aria-hidden="true"><use href="#fr-corner"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#fr-corner"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#fr-corner"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#fr-corner"/></svg>
   <p class="tp-kicker">A Visitor’s Guide to</p>
   <h1 class="tp-title">Brookwood</h1>
   <p class="tp-sub"><span class="the">The</span>London Necropolis</p>
@@ -543,8 +562,7 @@ dialog.card::backdrop { background: rgba(20, 18, 14, .55); }
 <!--__CHAPTERS__-->
 
 <footer class="finis" id="finis">
-  <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
-  <p class="fin">Finis.</p>
+  <img class="fin" src="src/img/cuts/finis.svg" width="1821" height="661" loading="lazy" decoding="async" alt="Finis.">
   <p>Compiled October 2026 from published sources listed in Appendix B. Plot numbers and positions on the plan are as given in those sources; please confirm with the cemetery office before visiting a particular grave.</p>
 </footer>
 
