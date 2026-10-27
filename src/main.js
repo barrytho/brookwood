@@ -73,7 +73,7 @@ function openCard(id) {
       <h3 id="card-name">${esc(it.name)}</h3>
       ${it.honorifics ? `<p class="c-hon">${esc(it.honorifics)}</p>` : ""}
       ${life ? `<p class="c-life">${life}</p>` : ""}
-      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#fr-fleuron"/></svg>
       ${figMarkup(figFor(id))}
       <p>${esc(it.summary)}</p>
       ${it.grave ? `<h4>The grave</h4><p>${esc(it.grave)}</p>` : ""}
@@ -92,7 +92,7 @@ function openCard(id) {
       <p class="card-cat">${esc(it.type)}${it.date ? ` · ${esc(it.date)}` : ""}</p>
       <h3 id="card-name">${esc(it.name)}</h3>
       ${it.designer ? `<p class="c-life">${esc(it.designer)}</p>` : ""}
-      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#orn-fleuron"/></svg>
+      <svg class="fleuron" viewBox="0 0 120 24" aria-hidden="true"><use href="#fr-fleuron"/></svg>
       ${figMarkup(figFor(id))}
       <p>${esc(it.description)}</p>
       ${here.length ? `<h4>${it.type === "Ground" ? "Among those buried here" : "Buried or commemorated here"}</h4><p>${here.map(r => `<button class="linkbtn" type="button" data-card="${esc(r.id)}">${esc(r.name)}</button>`).join(", ")}</p>` : ""}
@@ -311,7 +311,7 @@ function renderMonuments() {
       <h4>${esc(p.name)}</h4>
       ${meta ? `<span class="m-meta">${meta}</span>` : ""}
       <p>${esc(p.description)}</p>
-      <div class="m-act"><button class="linkbtn" type="button" data-card="${esc(p.id)}"><svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg>Particulars${p.confidence === "low" ? " (uncertain)" : ""}</button></div>
+      <div class="m-act"><button class="linkbtn" type="button" data-card="${esc(p.id)}"><svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg>Particulars${p.confidence === "low" ? " (uncertain)" : ""}</button></div>
     </article>`;
   }).join("");
 }

@@ -5,12 +5,14 @@ Inputs (all under src/):
   page.html       the shell: <title>, fonts, CSS, title page, dialog, script slots
   chapters.html   the chapters; each <section class="chapter"> carries data-toc-* attributes
   ornaments.svg   the inline SVG sprite of ornaments and emblems
+  ornaments-revival.svg  corners, rules, fleuron and pointing hand from Font Revival (tools/fonts/fontrevival.py)
   plan.js         the interactive plan of the cemetery (window.BrookwoodPlan)
   main.js         page behaviour; contains the /*__DATA__*/ slot
   data/*.json     people, places, timeline, walks, geo
+  fonts/, img/    webfonts and illustrations, loaded by the page from src/
 
 Outputs:
-  index.html           the complete page (GitHub Pages); it loads its illustrations from src/img/
+  index.html           the complete page (GitHub Pages); it loads its fonts and illustrations from src/
   build/artifact.html  the same page without the document skeleton, for a claude.ai Artifact
 
 The engravings are drawn through CSS masks, which browsers refuse to load from file:// pages, so preview
@@ -122,7 +124,7 @@ def build_pager(panels, i):
     )
     out += (
         f'<a class="pg-next" href="#{next_p["key"]}" data-tab-link="{next_p["key"]}">'
-        f'<span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#orn-manicule"/></svg></span>'
+        f'<span class="pg-dir">Turn to <svg aria-hidden="true" viewBox="0 0 48 24"><use href="#fr-hand"/></svg></span>'
         f'<span class="pg-t">{next_p["title"]}</span></a>'
         if next_p else "<span></span>"
     )
@@ -146,7 +148,7 @@ def main():
         raise SystemExit("slot /*__DATA__*/null missing from src/main.js")
 
     slots = {
-        "<!--__ORNAMENTS__-->": read("ornaments.svg", ""),
+        "<!--__ORNAMENTS__-->": read("ornaments.svg", "") + read("ornaments-revival.svg", ""),
         "<!--__FIGURE_CSS__-->": fig_css,
         "<!--__TOC__-->": build_toc(chapters),
         "<!--__CHAPTERS__-->": chapters,
